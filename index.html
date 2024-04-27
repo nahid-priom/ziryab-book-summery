@@ -15,7 +15,7 @@
     />
     <style>
       .hero-section {
-        background-image: url("https://earthbuddies.net/wp-content/uploads/2022/03/AdobeStock_246948710.jpeg");
+        background-image: url("./images/background.jpeg");
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
@@ -32,10 +32,12 @@
 
       @media (max-width: 840px) {
         .hero-section {
-          background-image:none;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+          background-image: url("./images/background.jpeg");
+          background-position: left;
+          background-size: cover;
+          background-repeat: no-repeat;
+          animation: none;
+       
         }
 
         @keyframes growShrinkMobile {
@@ -294,7 +296,7 @@
                 type="button"
                 class="px-6 py-3 m-1 font-semibold text-white transition-colors duration-300 transform bg-[#F37016] rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
               >
-                Appoinment
+                Book Now
               </button>
               <button
                 type="button"
