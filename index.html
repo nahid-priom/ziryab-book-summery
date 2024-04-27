@@ -13,10 +13,45 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .hero-section {
+        background-image: url("https://earthbuddies.net/wp-content/uploads/2022/03/AdobeStock_246948710.jpeg");
+        background-size: cover;
+        background-position: center;
+        animation: growShrink 10s infinite alternate;
+      }
+
+      @keyframes growShrink {
+        0% {
+          background-size: 100%;
+        }
+        100% {
+          background-size: 122%;
+        }
+      }
+
+      @media (max-width: 840px) {
+        .hero-section {
+          background-image:none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+
+        @keyframes growShrinkMobile {
+          0% {
+            background-size: 100%;
+          }
+          100% {
+            background-size: 120%;
+          }
+        }
+      }
+    </style>
   </head>
   <body>
     <!--Navbar-->
-    <section class="">
+    <section>
       <div class="shadow-md">
         <nav
           class="relative max-w-7xl mx-auto px-4 py-2 flex justify-between items-center bg-white"
@@ -120,7 +155,7 @@
           </ul>
 
           <a
-            class="hidden lg:block py-2 px-6 bg-[#F37016] text-base text-white font-bold rounded-xl transition duration-200"
+            class="hidden lg:block py-3 px-6 bg-[#F37016] text-base text-white font-bold rounded-xl transition duration-200"
             href="#"
             >REPAIR NOW</a
           >
@@ -205,78 +240,70 @@
     <!--End Navbar-->
 
     <!--Hero Section-->
-    <section class="bg-orange-100">
+    <section class="hero-section bg-orange-100">
       <div
-        class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center"
+        class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
       >
-        <div class="w-full lg:w-1/2">
-          <div class="lg:max-w-lg">
+        <div
+          class="w-full lg:w-1/2 flex items-center justify-center lg:justify-start"
+        >
+          <div class="lg:max-w-lg text-center lg:text-start">
             <h1
-              class="text-3xl font-extrabold text-center lg:text-start tracking-wide text-gray-900  lg:text-4xl"
+              class="text-4xl lg:text-5xl font-extrabold tracking-wide text-gray-900"
             >
               PHONE REPAIR & CRACKED SCREEN FIXED
             </h1>
 
-            <div class="mt-8 space-y-2 lg:space-y-6">
+            <div class="mt-8 space-y-6">
               <div
-                class="flex gap-2 justify-center lg:justify-start items-center"
+                class="flex gap-4 justify-center lg:justify-start items-center"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/9759/9759793.png"
                   alt="quality service"
-                  class="w-12"
+                  class="w-16"
                 />
-                <p class="text-xl font-semibold">Quality Repair</p>
+                <p class="text-2xl lg:text-3xl font-semibold">Quality Repair</p>
               </div>
               <div
-                class="flex gap-2 justify-center lg:justify-start items-center"
+                class="flex gap-4 justify-center lg:justify-start items-center"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/5396/5396915.png"
-                  alt="quality service"
-                  class="w-12"
+                  alt="affordable pricing"
+                  class="w-16"
                 />
-                <p class="text-xl font-semibold">Affordable Pricing</p>
+                <p class="text-2xl lg:text-3xl font-semibold">
+                  Affordable Pricing
+                </p>
               </div>
               <div
-                class="flex gap-2 justify-center lg:justify-start items-center"
+                class="flex gap-4 justify-center lg:justify-start items-center"
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/4388/4388230.png"
-                  alt="quality service"
-                  class="w-12"
+                  alt="fast service"
+                  class="w-16"
                 />
-                <p class="text-xl font-semibold">Fast Service</p>
+                <p class="text-2xl lg:text-3xl font-semibold">Fast Service</p>
               </div>
             </div>
-          </div>
 
-          <div
-            class="w-full mt-8 bg-white p-2 border rounded-md lg:max-w-sm  focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300  focus-within:ring-opacity-40"
-          >
-            <form class="flex flex-col lg:flex-row">
-              <input
-                type="email"
-                placeholder="Enter Zip Code"
-                class="flex-1 text-center lg:text-start h-10 px-4 py-2 bg-white m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none  focus:outline-none focus:placeholder-transparent focus:ring-0"
-              />
-
+            <div class="mt-4">
               <button
                 type="button"
-                class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-[#F37016] rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
+                class="px-6 py-3 m-1 font-semibold text-white transition-colors duration-300 transform bg-[#F37016] rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
               >
-                Start Repair
+                Appoinment
               </button>
-            </form>
+              <button
+                type="button"
+                class="px-6 py-3 m-1 font-semibold text-white transition-colors duration-300 transform bg-black rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
+              >
+                Contact
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-          <img
-            class="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl"
-            src="https://t3.ftcdn.net/jpg/01/77/64/28/360_F_177642837_y3v0oUFNMDC2xW2N1incgPQcXZCzGtb5.jpg"
-            alt="glasses photo"
-          />
         </div>
       </div>
     </section>
@@ -398,7 +425,7 @@
     </section>
     <!--End Service Catgory-->
     <!-- ====== Services Section Start -->
-    <section class="pt-20 bg-orange-100 pb-12 lg:pb-[90px] ">
+    <section class="pt-20 bg-orange-100 pb-12 lg:pb-[90px]">
       <div class="max-w-7xl mx-auto">
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4">
@@ -407,7 +434,7 @@
                 Our Services
               </span>
               <h2
-                class="text-dark  mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
+                class="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
               >
                 What We Offer
               </h2>
@@ -425,9 +452,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Battery Repair
               </h4>
               <button
@@ -448,9 +473,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Camera Repair
               </h4>
               <button
@@ -471,9 +494,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Charger Port Repair
               </h4>
               <button
@@ -494,9 +515,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Power Button Repair
               </h4>
               <button
@@ -517,9 +536,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Screen Repair
               </h4>
               <button
@@ -540,9 +557,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Speaker Repair
               </h4>
               <button
@@ -563,9 +578,7 @@
                 class="w-40"
               />
 
-              <h4
-                class="text-dark  mb-[14px] text-xl font-semibold"
-              >
+              <h4 class="text-dark mb-[14px] text-xl font-semibold">
                 Water Damage Repair
               </h4>
               <button
@@ -736,14 +749,16 @@
       <div class="max-w-7xl mx-auto py-20">
         <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
           <h2
-            class="text-dark  mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
+            class="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
           >
             Blogs
           </h2>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <!-- CARD 1 -->
-          <div class="bg-white rounded mx-4 overflow-hidden shadow-lg flex flex-col">
+          <div
+            class="bg-white rounded mx-4 overflow-hidden shadow-lg flex flex-col"
+          >
             <a href="#"></a>
             <div class="relative">
               <a href="#">
@@ -822,7 +837,9 @@
             </div>
           </div>
           <!-- CARD 2 -->
-          <div class="rounded bg-white mx-4 overflow-hidden shadow-lg flex flex-col">
+          <div
+            class="rounded bg-white mx-4 overflow-hidden shadow-lg flex flex-col"
+          >
             <a href="#"></a>
             <div class="relative">
               <a href="#">
@@ -844,10 +861,10 @@
                 HELP</a
               >
               <p class="text-gray-500 text-sm">
-                In a world that often lauds the do-it-yourself ethos, the idea of
-                fixing your own phone may seem tempting. The plethora of online
-                tutorials and repair kits available make it seem like a simple
-                weekend project. However...
+                In a world that often lauds the do-it-yourself ethos, the idea
+                of fixing your own phone may seem tempting. The plethora of
+                online tutorials and repair kits available make it seem like a
+                simple weekend project. However...
               </p>
             </div>
             <div
@@ -902,7 +919,9 @@
             </div>
           </div>
           <!-- CARD 3 -->
-          <div class="rounded mx-4 bg-white overflow-hidden shadow-lg flex flex-col">
+          <div
+            class="rounded mx-4 bg-white overflow-hidden shadow-lg flex flex-col"
+          >
             <a href="#"></a>
             <div class="relative">
               <a href="#">
@@ -925,8 +944,8 @@
               >
               <p class="text-gray-500 text-sm">
                 In the hustle and bustle of modern life, our mobile phones have
-                become indispensable companions, keeping us connected to the world
-                at the touch of a screen.
+                become indispensable companions, keeping us connected to the
+                world at the touch of a screen.
               </p>
             </div>
             <div
