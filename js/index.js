@@ -38,3 +38,25 @@
       }
     }
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.selectable-button');
+    const makeAppointmentBtn = document.getElementById('makeAppointmentBtn');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Toggle the 'selected' class on the clicked button
+        this.classList.toggle('selected');
+      });
+    });
+  
+    makeAppointmentBtn.addEventListener('click', function() {
+      const selectedButtons = document.querySelectorAll('.selectable-button.selected');
+      if (selectedButtons.length > 0) {
+        // Handle appointment booking here
+        console.log('Appointment booked for:', selectedButtons);
+      } else {
+        alert('Please select at least one service.');
+      }
+    });
+  });
+  
