@@ -29,7 +29,7 @@
       }
 
       .dropdown:hover .dropdown-content {
-        margin-top: 13px;
+        margin-top: 5px;
         display: flex;
 
         flex-direction: column;
@@ -58,6 +58,17 @@
         color: white;
       }
     </style>
+    <style>
+      @keyframes phoneBeep {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+    
     <style>
       .hero-section {
         background-image: url("./images/background.jpeg");
@@ -96,6 +107,19 @@
     </style>
   </head>
   <body>
+    <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
+      <img src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png" alt="Phone Icon" class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none" />
+    </div>
+    
+     <!-- Preloader -->
+  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
+    <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
+      <img src="images/logo-preloader.png" alt="Loading Icon" class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto">
+    </div>
+  </div>
+
+  
+  <div class="content hidden">
     <!--Navbar-->
     <section>
       <div class="shadow-md">
@@ -1624,5 +1648,6 @@
     <!--End Footer-->
 
     <script src="js/index.js"></script>
+    </div>
   </body>
 </html>

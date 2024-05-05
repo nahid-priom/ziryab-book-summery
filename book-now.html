@@ -29,7 +29,7 @@
       }
     
       .dropdown:hover .dropdown-content {
-        margin-top: 13px;
+        margin-top: 5px;
         display: flex; 
        
         flex-direction: column;
@@ -96,6 +96,15 @@
     </style>
   </head>
   <body>
+     <!-- Preloader -->
+  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
+    <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
+      <img src="images/logo-preloader.png" alt="Loading Icon" class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto">
+    </div>
+  </div>
+
+  
+  <div class="content hidden">
     <!--Navbar-->
     <section>
       <div class="shadow-md">
@@ -867,5 +876,6 @@
     <!--End Footer-->
 
     <script src="js/index.js"></script>
+    </div>
   </body>
 </html>

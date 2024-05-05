@@ -44,7 +44,7 @@
   
     buttons.forEach(button => {
       button.addEventListener('click', function() {
-        // Toggle the 'selected' class on the clicked button
+        
         this.classList.toggle('selected');
       });
     });
@@ -52,23 +52,38 @@
     makeAppointmentBtn.addEventListener('click', function() {
       const selectedButtons = document.querySelectorAll('.selectable-button.selected');
       if (selectedButtons.length > 0) {
-        // Handle appointment booking here
+        
         console.log('Appointment booked for:', selectedButtons);
       } else {
         alert('Please select at least one service.');
       }
     });
   });
-  // Get all the buttons
+  
 const buttons = document.querySelectorAll('.grid button');
 
-// Loop through each button and add an event listener
+
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    // Remove active class from all buttons
+    
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // Add active class to the clicked button
+    
     button.classList.add('active');
   });
+});
+document.addEventListener("DOMContentLoaded", function() {
+ 
+  document.querySelector('.content').classList.remove('hidden');
+  document.querySelector('.preloader').classList.add('hidden');
+});
+const phoneIcon = document.getElementById('phoneIcon');
+const phoneNumber = document.getElementById('phoneNumber');
+
+phoneIcon.addEventListener('mouseenter', () => {
+  phoneNumber.classList.remove('hidden');
+});
+
+phoneIcon.addEventListener('mouseleave', () => {
+  phoneNumber.classList.add('hidden');
 });
