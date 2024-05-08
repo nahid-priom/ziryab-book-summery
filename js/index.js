@@ -72,11 +72,12 @@ buttons.forEach(button => {
     button.classList.add('active');
   });
 });
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
  
   document.querySelector('.content').classList.remove('hidden');
   document.querySelector('.preloader').classList.add('hidden');
-});
+};
+
 const phoneIcon = document.getElementById('phoneIcon');
 const phoneNumber = document.getElementById('phoneNumber');
 
