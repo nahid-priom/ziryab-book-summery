@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phone Repair Stop</title>
+    <title>MLK Soul Food</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -23,7 +23,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 200px;
+        min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -68,31 +68,24 @@
         }
       }
     </style>
-    
+
     <style>
       .hero-section {
-        background-image: url("./images/background.jpeg");
+        background-image: url("./images/background.png");
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-      }
-
-      @keyframes growShrink {
-        0% {
-          background-size: 100%;
-        }
-        100% {
-          background-size: 122%;
-        }
+        height: 800px;
       }
 
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.jpeg");
+          background-image: url("./images/background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
+          height: 480px;
         }
 
         @keyframes growShrinkMobile {
@@ -107,179 +100,210 @@
     </style>
   </head>
   <body>
-    <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
+    <!-- <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
       <a href="tel:+1230392029">
-        <img src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png" alt="Phone Icon" class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png"
+          alt="Phone Icon"
+          class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none"
+        />
       </a>
-    </div>
-    
-     <!-- Preloader -->
-  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
-    <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
-      <img src="images/logo-preloader.png" alt="Loading Icon" class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto">
-    </div>
-  </div>
+    </div> -->
 
-  
-  <div class="content hidden">
-    <!--Navbar-->
-    <section>
-      <div class="shadow-md">
-        <nav
-          class="relative max-w-7xl mx-auto px-4 py-2 flex justify-between items-center bg-white"
-        >
-          <a class="text-3xl font-bold leading-none" href="index.html">
-            <img src="images/logo.png" alt="logo" class="w-36 lg:w-52" />
-          </a>
-          <div class="lg:hidden">
-            <button
-              class="navbar-burger flex items-center text-[#3A3A3C] text-white rounded-md bg-[#F37016] p-3"
-            >
-              <svg
-                class="block h-4 w-4 fill-current"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Mobile menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-              </svg>
-            </button>
-          </div>
-          <ul
-            class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+    <!-- Preloader -->
+    <div
+      class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50"
+    >
+      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
+        <img
+          src="images/logo-preloader.png"
+          alt="Loading Icon"
+          class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto"
+        />
+      </div>
+    </div>
+
+    <div class="content hidden">
+      <!--Navbar-->
+      <section>
+        <div class="shadow-md bg-white">
+          <nav
+            id="navbar"
+            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
           >
-            <div class="dropdown">
-              <a
-                class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
-                href="#"
+            <a class="text-3xl font-bold leading-none" href="index.html">
+              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
+            </a>
+            <div class="lg:hidden">
+              <button
+                id="navbar-burger"
+                class="navbar-burger flex items-center text-white rounded-md bg-orange-500 rounded-md p-3"
               >
-                Services <i class="fas fa-chevron-down ml-2"></i>
-              </a>
-              <div class="dropdown-content">
-                <a href="iphone.html">
-                  <img
-                    src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                    alt="iPhone"
-                  />
-                  <p class="font-bold ml-4">iPhone</p>
-                </a>
-                <a href="#">
-                  <img
-                    src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                    alt="Samsung"
-                  />
-                  <p class="font-bold ml-4">Samsung</p>
-                </a>
-                <a href="#">
-                  <img
-                    src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                    alt="Laptop"
-                  />
-                  <p class="font-bold ml-4">Laptop</p>
-                </a>
-                <a href="#">
-                  <img
-                    src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                    alt="iPad"
-                  />
-                  <p class="font-bold ml-4">iPad</p>
-                </a>
-              </div>
+                <svg
+                  class="block h-4 w-4 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Services</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
             </div>
-            <li class="text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                class="w-4 h-4 current-fill"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
-            </li>
-            <li>
-              <a
-                class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
-                href="about.html"
-                >About</a
-              >
-            </li>
-            <li class="text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                class="w-4 h-4 current-fill"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
-            </li>
-            <li>
-              <a
-                class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                href="blog.html"
-                >Blog</a
-              >
-            </li>
-            <li class="text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                class="w-4 h-4 current-fill"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
-            </li>
-            <li>
-              <a
-                class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                href="contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <a
-            class="hidden lg:block py-3 border-8 border-orange-400 px-6 hover:bg-gray-100 hover:text-black bg-[#F37016] text-base text-white font-bold rounded-full transition duration-200"
-            href="book-now.html"
-            >REPAIR NOW</a
-          >
-        </nav>
+            <ul
+              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
+            >
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-orange-500 rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Menu <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="appetizer.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
+                    <img
+                      src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                      alt="Appetizers"
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <p class="font-bold ml-4">Appetizers</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
+                    <img
+                      src="https://t3.ftcdn.net/jpg/04/68/93/94/360_F_468939407_9Q02XfVQJsKW0ZUEU4axdITcRgu7OPLd.jpg"
+                      alt="Entrees"
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <p class="font-bold ml-4">Entrees</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
+                    <img
+                      src="https://static01.nyt.com/images/2020/03/04/dining/tr-meen-gassi/tr-meen-gassi-square640.jpg"
+                      alt="Curries (Sea-Food)"
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <p class="font-bold ml-4">Curries (Sea-Food)</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
+                    <img
+                      src="https://pinchofyum.com/wp-content/uploads/Thai-Yellow-Chicken-Curry-Square.jpg"
+                      alt="Curries (Vegetarian)"
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <p class="font-bold ml-4">Curries (Vegetarian)</p>
+                  </a>
+                </div>
+              </div>
+              <li class="text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4 current-fill"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-orange-500 rounded-md font-bold"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4 current-fill"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-orange-500 rounded-md font-bold"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4 current-fill"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-orange-500 rounded-md font-bold"
+                  href="blog.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+            <a
+              class="hidden lg:inline-block py-4 px-8 bg-orange-500 rounded-full hover:bg-[#100d20] border text-lg text-white font-bold transition duration-200"
+              href="#"
+              >Order Now</a
+            >
+          </nav>
+        </div>
         <div class="navbar-menu relative z-50 hidden">
           <div
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
           <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
           >
             <div class="flex items-center mb-8">
               <a
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" alt="logo" class="w-36 lg:w-60" />
+                <img src="images/logo.png" class="w-32" />
               </a>
               <button class="navbar-close">
                 <svg
-                  class="h-6 w-6 text-white bg-[#F37016] font-bold cursor-pointer hover:text-gray-500"
+                  class="h-6 w-6 text-white cursor-pointer hover:text-[#F37016]"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -290,1366 +314,588 @@
                     stroke-linejoin="round"
                     stroke-width="2"
                     d="M6 18L18 6M6 6l12 12"
-                  ></path>
+                  />
                 </svg>
               </button>
             </div>
             <div>
-              <ul class="z-50">
+              <ul>
                 <div class="dropdown">
                   <a
-                    class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
+                    id="menu-button"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
                     href="#"
                   >
-                    Services <i class="fas fa-chevron-down ml-2"></i>
+                    Menu <i class="fas fa-chevron-down ml-2"></i>
                   </a>
-                  <div class="dropdown-content">
-                    <a href="iphone.html">
+                  <div id="dropdown-content" class="dropdown-content hidden">
+                    <a
+                      href="appetizer.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
                       <img
-                        src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                        alt="iPhone"
+                        src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                        alt="Appetizers"
+                        class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">iPhone</p>
+                      <p class="font-bold ml-4">Appetizers</p>
                     </a>
-                    <a href="iphone.html">
+                    <a
+                      href="entrees.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
                       <img
-                        src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                        alt="Samsung"
+                        src="https://t3.ftcdn.net/jpg/04/68/93/94/360_F_468939407_9Q02XfVQJsKW0ZUEU4axdITcRgu7OPLd.jpg"
+                        alt="Entrees"
+                        class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">Samsung</p>
+                      <p class="font-bold ml-4">Entrees</p>
                     </a>
-                    <a href="#">
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
                       <img
-                        src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                        alt="Laptop"
+                        src="https://static01.nyt.com/images/2020/03/04/dining/tr-meen-gassi/tr-meen-gassi-square640.jpg"
+                        alt="Curries (Sea-Food)"
+                        class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">Laptop</p>
+                      <p class="font-bold ml-4">Curries (Sea-Food)</p>
                     </a>
-                    <a href="#">
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
                       <img
-                        src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                        alt="iPad"
+                        src="https://pinchofyum.com/wp-content/uploads/Thai-Yellow-Chicken-Curry-Square.jpg"
+                        alt="Curries (Vegetarian)"
+                        class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">iPad</p>
+                      <p class="font-bold ml-4">Curries (Vegetarian)</p>
                     </a>
                   </div>
                 </div>
-                <li class="text-gray-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    stroke="currentColor"
-                    class="w-4 h-4 current-fill"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                  </svg>
-                </li>
-                <li>
+                <li class="mb-1">
                   <a
-                    class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
                     href="about.html"
                     >About</a
                   >
                 </li>
-                <li class="text-gray-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    stroke="currentColor"
-                    class="w-4 h-4 current-fill"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                  </svg>
-                </li>
-                <li>
+                <li class="mb-1">
                   <a
-                    class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                    href="blog.html"
-                    >Blog</a
-                  >
-                </li>
-                <li class="text-gray-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    stroke="currentColor"
-                    class="w-4 h-4 current-fill"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                  </svg>
-                </li>
-                <li>
-                  <a
-                    class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
                     href="contact.html"
                     >Contact</a
                   >
                 </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="blog.html"
+                    >Blog</a
+                  >
+                </li>
               </ul>
             </div>
-
-            <a
-              class="block mt-10 py-2 text-center px-4 bg-[#F37016] text-base text-white font-bold rounded-xl transition duration-200"
-              href="book-now.html"
-              >REPAIR NOW</a
-            >
+            <div class="mt-auto">
+              <div class="pt-6">
+                <a
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-white rounded-xl"
+                  href="#"
+                  >Online Orders</a
+                >
+              </div>
+              <p class="my-4 text-xs text-center text-white">
+                <span>Copyright © [#100d20]tech Consultancy</span>
+              </p>
+            </div>
           </nav>
         </div>
-      </div>
-    </section>
-    <!--End Navbar-->
+      </section>
+      <!-- End Navbar -->
 
-    <!--Hero Section-->
-    <section class="hero-section bg-orange-100">
-      <div
-        class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
-      >
+      <!--Hero Section-->
+      <section class="hero-section bg-orange-100">
         <div
-          class="w-full lg:w-1/2 flex items-center justify-center md:justify-start"
+          class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
         >
-          <div class="lg:max-w-lg text-center md:text-start">
-            <h1
-              class="text-4xl lg:text-5xl font-extrabold tracking-wide text-gray-900"
-            >
-              PHONE REPAIR & CRACKED SCREEN FIXED
-            </h1>
-
-            <div class="mt-8 space-y-6">
-              <div
-                class="flex gap-4 justify-center md:justify-start items-center"
-              >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/9759/9759793.png"
-                  alt="quality service"
-                  class="w-16"
-                />
-                <p class="text-2xl lg:text-3xl font-semibold">Quality Repair</p>
-              </div>
-              <div
-                class="flex gap-4 justify-center md:justify-start items-center"
-              >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/5396/5396915.png"
-                  alt="affordable pricing"
-                  class="w-16"
-                />
-                <p class="text-2xl lg:text-3xl font-semibold">
-                  Affordable Pricing
-                </p>
-              </div>
-              <div
-                class="flex gap-4 justify-center md:justify-start items-center"
-              >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/4388/4388230.png"
-                  alt="fast service"
-                  class="w-16"
-                />
-                <p class="text-2xl lg:text-3xl font-semibold">Fast Service</p>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="px-6 py-3 m-1 font-semibold text-white transition-colors duration-300 transform bg-[#F37016] rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
-                >
-                  Book Now
-                </button>
-              </a>
-              <a href="contact.html">
-                <button
-                  type="button"
-                  class="px-6 py-3 m-1 font-semibold text-white transition-colors duration-300 transform bg-black rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
-                >
-                  Contact
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--End Hero Section-->
-    <!--Service Catgory-->
-    <section class="bg-gray-900 pb-20">
-      <div class="pt-20 w-full px-4">
-        <div class="mx-auto mb-12 max-w-[510px] text-center">
-          <h2
-            class="text-white mb-3 text-3xl leading-[1.2] font-extrabold sm:text-4xl md:text-[40px]"
+          <div
+            class="w-full lg:w-1/2 lg:h-[400px] flex items-center justify-center md:justify-start"
           >
-            What You Need to Fix Today
-          </h2>
-        </div>
-      </div>
-      <div class="font-[sans-serif]">
-        <div class="p-4 mx-auto lg:max-w-7xl max-w-xl md:max-w-full">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
-              class="bg-white flex flex-col justify-center rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
+              class="flex flex-col justify-center items-center lg:items-start text-center md:text-start"
             >
-              <a href="product-details.html">
-                <div
-                  class="max-lg:w-11/12 w-4/5 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8"
-                >
-                  <img
-                    src="https://w7.pngwing.com/pngs/450/269/png-transparent-space-gray-iphone-x-showing-ios-and-iphone-4-iphone-8-plus-iphone-5-iphone-x-iphone-apple-gadget-electronics-mobile-phone-thumbnail.png"
-                    alt="Product 1"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <div class="text-center mt-4">
-                  <h3 class="text-lg font-bold text-gray-800">IPhone</h3>
-                  <a href="iphone.html">
-                    <button
-                      type="button"
-                      class="w-full mt-6 px-4 py-3 bg-[#F37016] hover:bg-[#222] text-white rounded-full"
-                    >
-                      View More
-                    </button>
-                  </a>
-                </div>
-              </a>
-            </div>
-            <div
-              class="bg-white flex flex-col justify-center rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
-            >
-              <a href="product-details.html">
-                <div
-                  class="max-lg:w-11/12 w-4/5 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8"
-                >
-                  <img
-                    src="images/samsung.png"
-                    alt="Product 1"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <div class="text-center mt-4">
-                  <h3 class="text-lg font-bold text-gray-800">Samsung</h3>
+              <p
+                class="font-bold my-4 mb-8 text-xl w-80 text-center bg-white rounded-md"
+              >
+                WELCOME TO OUR RESTAURENT
+              </p>
+              <h1
+                class="text-4xl lg:text-5xl font-extrabold tracking-wide text-gray-900"
+              >
+                Delicious Foods for Every Occasion and Festival
+              </h1>
+              <p class="font-bold text-base text-gray-700 py-4">
+                Get delivery or takeaway from MLK soul food at 7109 Martin
+                Luther King Junior Highway in Greater Landover. Order online and
+                track your order live.
+              </p>
+
+              <div class="mt-4">
+                <a href="#">
                   <button
                     type="button"
-                    class="w-full mt-6 px-4 py-3 bg-[#F37016] hover:bg-[#222] text-white rounded-full"
+                    class="px-6 py-3 m-1 font-bold border-4 border-gray-100 transition-colors duration-300 transform bg-orange-500 rounded-full hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-black"
                   >
-                    View More
+                    ORDER NOW
                   </button>
-                </div>
-              </a>
-            </div>
-            <div
-              class="bg-white flex flex-col justify-center rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
-            >
-              <a href="product-details.html">
-                <div
-                  class="max-lg:w-11/12 w-4/5 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8"
-                >
-                  <img
-                    src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                    alt="Product 1"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <div class="text-center mt-4">
-                  <h3 class="text-lg font-bold text-gray-800">Laptop</h3>
-                  <button
-                    type="button"
-                    class="w-full mt-6 px-4 py-3 bg-[#F37016] hover:bg-[#222] text-white rounded-full"
-                  >
-                    View More
-                  </button>
-                </div>
-              </a>
-            </div>
-            <div
-              class="bg-white flex flex-col justify-center rounded-2xl p-6 cursor-pointer hover:-translate-y-2 transition-all relative"
-            >
-              <a href="product-details.html">
-                <div
-                  class="max-lg:w-11/12 w-4/5 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8"
-                >
-                  <img
-                    src="images/ipad.png"
-                    alt="Product 1"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <div class="text-center mt-4">
-                  <h3 class="text-lg font-bold text-gray-800">IPad</h3>
-                  <button
-                    type="button"
-                    class="w-full mt-6 px-4 py-3 bg-[#F37016] hover:bg-[#222] text-white rounded-full"
-                  >
-                    View More
-                  </button>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--End Service Catgory-->
-    <!-- ====== Services Section Start -->
-    <section class="pt-20 bg-orange-100 pb-12 lg:pb-[90px]">
-      <div class="max-w-7xl mx-auto">
-        <div class="-mx-4 flex flex-wrap">
-          <div class="w-full px-4">
-            <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
-              <span class="text-[] mb-2 block text-lg font-semibold">
-                Our Services
-              </span>
+      </section>
+
+      <!--End Hero Section-->
+      <!-- Content -->
+      <section>
+        <div class="bg-white py-10">
+          <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
               <h2
-                class="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
+                class="text-3xl lg:text-4xl font-bold text-center text-white bg-orange-500 py-4 mb-8 rounded-md"
               >
-                What We Offer
+                Our Menu
               </h2>
             </div>
-          </div>
-        </div>
-        <div class="-mx-4 flex flex-wrap">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/battery.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Battery Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <a
+                href="appetizer.html"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                    alt="Appetizers"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">Appetizers</h3>
+                  <p class="text-gray-600">
+                    Start your meal with our delicious appetizers.
+                  </p>
+                </div>
               </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/camera.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
 
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Camera Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+              <a
+                href="entrees.html"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://t3.ftcdn.net/jpg/04/68/93/94/360_F_468939407_9Q02XfVQJsKW0ZUEU4axdITcRgu7OPLd.jpg"
+                    alt="entrees"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">Entrees</h3>
+                  <p class="text-gray-600">
+                    Enjoy our range of delicious noodle dishes.
+                  </p>
+                </div>
               </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/charger port.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Charger Port Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+              <a
+                href="#"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://static01.nyt.com/images/2020/03/04/dining/tr-meen-gassi/tr-meen-gassi-square640.jpg"
+                    alt="Curries (Sea-Food)"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">
+                    Curries (Sea-Food)
+                  </h3>
+                  <p class="text-gray-600">
+                    Savor our rich and flavorful seafood curries.
+                  </p>
+                </div>
               </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/power button.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Power Button Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+              <a
+                href="#"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://pinchofyum.com/wp-content/uploads/Thai-Yellow-Chicken-Curry-Square.jpg"
+                    alt="Curries (Vegetarian)"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">
+                    Curries (Vegetarian)
+                  </h3>
+                  <p class="text-gray-600">
+                    Delight in our hearty and delicious vegetarian curries.
+                  </p>
+                </div>
               </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/screen.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Screen Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+              <a
+                href="#"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://5.imimg.com/data5/RR/RR/GLADMIN-/chicken-biryani-rice-500x500.jpg"
+                    alt="Rice and Biriyani"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">
+                    Rice and Biriyani
+                  </h3>
+                  <p class="text-gray-600">
+                    Aromatic basmati rice, cooked with richly flavored saffron,
+                    nuts, and raisins.
+                  </p>
+                </div>
               </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/speaker.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Speaker Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-            <div
-              class="mb-9 mx-4 rounded-[20px] flex flex-col justify-center items-center bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-2 xl:px-4"
-            >
-              <img
-                src="images/service/water damage.jpeg"
-                alt="battery service"
-                class="w-40"
-              />
-
-              <h4 class="text-dark mb-[14px] text-xl font-semibold">
-                Water Damage Repair
-              </h4>
-              <a href="book-now.html">
-                <button
-                  type="button"
-                  class="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray-200 focus:text-black"
-                >
-                  Appoinment
-                </button>
+              <a
+                href="#"
+                class="transform transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                  <img
+                    src="https://res.cloudinary.com/the-infatuation/image/upload/f_auto/q_auto/v1664814507/images/Gage_and_Tollner_Dessert_and_Drinks-87_nx0gsa.jpg"
+                    alt="Drinks & Desserts"
+                    class="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h3 class="text-xl font-bold text-black mb-2">
+                    Drinks & Desserts
+                  </h3>
+                  <p class="text-gray-600">
+                    Delight in our hearty and delicious drinks and desserts like
+                    Gulab Jamun Kheer.
+                  </p>
+                </div>
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--ENd Sevice Section-->
-    <!-- ====== Why Choose US -->
-    <section class="py-12 bg-gray-900 text-gray-100 sm:py-12 lg:py-16">
-      <div class="px-4 mx-auto max-w-7xl">
-        <div class="max-w-xl mx-auto text-center xl:max-w-2xl">
+      </section>
+
+      <!-- Popular Foods Section -->
+      <section class="popular-foods py-8 py-4 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
           <h2
-            class="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6"
+            class="text-3xl lg:text-4xl font-bold text-center text-white bg-orange-500 py-3 mb-8 rounded-md"
           >
-            Why Choose Us
+            Our Popular Foods
           </h2>
-        </div>
-        <div
-          class="grid max-w-4xl lg:max-w-7xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left"
-        >
-          <div class="relative">
-            <div class="absolute -inset-1">
-              <div
-                class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-              ></div>
-            </div>
-            <div
-              class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-            >
-              <div class="p-9 flex flex-col items-center">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/9759/9759793.png"
-                  alt="quality service"
-                  class="w-20"
-                />
-                <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                  Quality Repair
-                </h3>
-                <p class="mt-6 text-base text-center text-gray-600">
-                  Discover excellence in repairs at Phone Repair Stop. Our
-                  certified technicians, genuine parts, and transparent pricing
-                  ensure superior service. Choose quality, choose us for
-                  unparalleled device solutions.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="overflow-hidden bg-white shadow-md rounded-xl">
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/7263/7263655.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                Quality Parts
-              </h3>
-              <p class="mt-6 text-base text-center text-gray-600">
-                Ensure customers that you use high-quality, genuine parts for
-                replacements. This can instill confidence in the durability and
-                longevity of the repairs.
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute -inset-1">
-              <div
-                class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-              ></div>
-            </div>
-            <div
-              class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-            >
-              <div class="p-9 flex flex-col items-center">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/4388/4388230.png"
-                  alt="quality service"
-                  class="w-20"
-                />
-                <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                  Fast Services
-                </h3>
-                <p class="mt-6 text-base text-center text-gray-600">
-                  Assure customers of quick turnaround times for repairs.
-                  Mention same-day or express services for common issues like
-                  screen replacements or battery changes
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="overflow-hidden bg-white shadow-md rounded-xl">
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/5396/5396915.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                Affordable Pricing
-              </h3>
-              <p class="mt-6 text-base text-center text-gray-600">
-                Highlight competitive and transparent pricing. Consider offering
-                package deals for common repairs or discounts for returning
-                customers.
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute -inset-1">
-              <div
-                class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-              ></div>
-            </div>
-            <div
-              class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-            >
-              <div class="p-9 flex flex-col items-center">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/3301/3301556.png"
-                  alt="quality service"
-                  class="w-20"
-                />
-                <h3
-                  class="mt-6 text-2xl text-center font-bold text-gray-900 sm:mt-10"
-                >
-                  Easy Appointment Scheduling
-                </h3>
-                <p class="mt-6 text-base text-gray-600">
-                  Provide an easy and efficient process for customers to
-                  schedule appointments or drop off their devices. Online
-                  booking systems or walk-in options can be highlighted.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="overflow-hidden bg-white shadow-md rounded-xl">
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://icons.veryicon.com/png/o/miscellaneous/color-icon-circle/customer-service-72.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3
-                class="mt-6 text-2xl text-center font-bold text-gray-900 sm:mt-10"
-              >
-                Responsive Customer Support
-              </h3>
-              <p class="mt-6 text-base text-gray-600">
-                Highlight responsive and helpful customer support. Make it clear
-                that you are available to address inquiries, provide updates on
-                repairs, and assist with any concerns.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End WHy Choose Us-->
-    <!--Blogs Section-->
-    <section class="bg-orange-100">
-      <div class="max-w-7xl mx-auto py-20">
-        <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
-          <h2
-            class="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
-          >
-            Blogs
-          </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- CARD 1 -->
-          <div
-            class="bg-white rounded mx-4 overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="#"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2022/08/Promos-7-792x534.png"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="#"
-                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-                >TOP 4 REASONS TO BUY REFURBISHED PHONES</a
-              >
-              <p class="text-gray-500 text-sm">
-                According to the US Environmental Protection Agency (EPA),
-                approximately 11 million smartphones are discarded each month,
-                attributing the largest fraction of electronic waste (e-waste).
-                Studies show our e-waste increases by 4% every year.
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">6 mins ago</span>
-              </span>
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">39 Comments</span>
-              </span>
-            </div>
-          </div>
-          <!-- CARD 2 -->
-          <div
-            class="rounded bg-white mx-4 overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="#"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2023/10/pexels-dan-cristian-paduret-1476321-792x649.jpg"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="#"
-                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-                >DIY DANGERS: WHEN TO CALL STOP PHONE REPAIRS FOR PROFESSIONAL
-                HELP</a
-              >
-              <p class="text-gray-500 text-sm">
-                In a world that often lauds the do-it-yourself ethos, the idea
-                of fixing your own phone may seem tempting. The plethora of
-                online tutorials and repair kits available make it seem like a
-                simple weekend project. However...
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">6 mins ago</span>
-              </span>
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">39 Comments</span>
-              </span>
-            </div>
-          </div>
-          <!-- CARD 3 -->
-          <div
-            class="rounded mx-4 bg-white overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="#"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2023/10/pexels-skitterphoto-1388947-792x649.jpg"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="#"
-                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-                >THE ART OF MOBILE PHONE CPR: STOP PHONE REPAIRS UNVEILS REPAIR
-                SECRETS</a
-              >
-              <p class="text-gray-500 text-sm">
-                In the hustle and bustle of modern life, our mobile phones have
-                become indispensable companions, keeping us connected to the
-                world at the touch of a screen.
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">16 hours ago</span>
-              </span>
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">9 Comments</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End Blogs Section-->
-    <!--Testmonial Section-->
-    <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6">
-        <div class="flex flex-col items-center">
-          <div class="text-center">
-            <p class="text-lg font-medium text-gray-600 font-pj">
-              157 people have said how good Phone Stop Repair
-            </p>
-            <h2
-              class="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj"
-            >
-              Our happy clients say about us
-            </h2>
-          </div>
-
-          <div class="mt-8 text-center md:mt-16 md:order-3">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <a
-              href="#"
-              title=""
-              class="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"
+              href="samosa.html"
+              class="duration-300 ease-in-out hover:scale-105"
             >
-              Check all 2,157 reviews
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://www.vegrecipesofindia.com/wp-content/uploads/2017/01/samosa-chaat-recipe-1.jpg"
+                  alt="Appetizers"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">Samosa Chaat</h3>
+                <p class="text-gray-600">
+                  Samosa split open and covered with spicy chickpeas, minced
+                  onion, cilantro
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a
+              href="chili-chicken.html"
+              class="duration-300 ease-in-out hover:scale-105"
+            >
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://i.ytimg.com/vi/pMCS1TR4Wyo/maxresdefault.jpg"
+                  alt="Main Course"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">Chili Chicken</h3>
+                <p class="text-gray-600">
+                  Chicken spiked with red peppers accompanied with suteed
+                  vagetables
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="duration-300 ease-in-out hover:scale-105">
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://www.ndtv.com/cooks/images/chicken.seekh.jpg"
+                  alt="Desserts"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">
+                  Chicken Seekh Kabab
+                </h3>
+                <p class="text-gray-600">
+                  Mildly spiced minced chicken skewered and cooled in clay oven
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="duration-300 ease-in-out hover:scale-105">
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://www.allrecipes.com/thmb/us00EX6PHgu4Dwfq9xfH6SyliA0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/220597-Simple-garlic-shrimp-beauty3x4_38539-63f687e1ec6a41e88dfb5a9c9021e194.jpg"
+                  alt="Appetizers"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">Garlic Shrimp</h3>
+                <p class="text-gray-600">
+                  Shirmp sauteed with garlic butter, onions, and green pepper
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="duration-300 ease-in-out hover:scale-105">
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2021/Murgh_Malai_Kebab_Recipe_Chicken_Malai_Kebab_1.jpg"
+                  alt="Main Course"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">
+                  Malai Chicken Kebob
+                </h3>
+                <p class="text-gray-600">
+                  Creamy grilled chicken marinated in fresh cream, mild spices
+                  and nuts
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="duration-300 ease-in-out hover:scale-105">
+              <div class="bg-white shadow-lg h-88 rounded-lg p-6">
+                <img
+                  src="https://media.istockphoto.com/id/848708640/photo/asian-food-vegetarian-samsa-with-tomato-sauce-and-herbs-dark-background.jpg?s=612x612&w=0&k=20&c=bVznPeT3rQPKKx99xfPb-yiVFvWYpML8TGLb3jfZO28="
+                  alt="Desserts"
+                  class="w-full h-48 object-cover mb-4 rounded-lg"
+                />
+                <h3 class="text-xl font-bold text-black mb-2">
+                  Vegetable Samosa
+                </h3>
+                <p class="text-gray-600">
+                  Crispy turnover stuffed with mildly spice potatoes and green
+                  peas
+                </p>
+                <div class="flex mt-4">
+                  <h6
+                    class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
+                  >
+                    $6.99
+                  </h6>
+                  <button
+                    class="bg-orange-500 px-3 py-2 text-white font-bold rounded-full"
+                  >
+                    Order Now
+                  </button>
+                </div>
+              </div>
             </a>
           </div>
+        </div>
+      </section>
 
-          <div class="relative mt-10 md:mt-24 md:order-2">
-            <div
-              class="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6"
-            >
-              <div
-                class="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    #44ff9a -0.55%,
-                    #44b0ff 22.86%,
-                    #8b44ff 48.36%,
-                    #ff6644 73.33%,
-                    #ebff70 99.34%
-                  );
-                "
-              ></div>
+      <!--Footer-->
+      <footer class="relative bg-orange-500 pt-8 pb-6">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3base text-white font-semibold text-blueGray-700">
+                Let's stay connected!
+              </h4>
+              <h5 class="text-lg mt-0 mb-2 text-white">
+                Find us on any of these platforms. We usually respond within 1-2
+                business days.
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button
+                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button
+                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </button>
+                <button
+                  class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-dribbble"></i>
+                </button>
+                <button
+                  class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
             </div>
-
-            <div
-              class="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3"
-            >
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span
+                    class="block uppercase text-white text-lg font-semibold mb-4"
+                    >Useful Links</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="about.html"
+                        >About Us</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="blog.html"
+                        >Blog</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="appetizer.html"
+                        >Appetizer Foods</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Best Foods</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “You made it so simple. My new site is so much faster
-                        and easier to work with than my old site. I just choose
-                        the page, make the change.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Leslie Alexander
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Freelance React Developer
-                      </p>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                <div class="w-full lg:w-4/12 px-4">
+                  <span
+                    class="block uppercase text-white text-lg font-semibold mb-4"
+                    >Other Resources</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Terms & Conditions</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Privacy Policy</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Contact Us</a
                       >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “Simply the best. Better than all the rest. I’d
-                        recommend this product to beginners and advanced users.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Jacob Jones
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Digital Marketer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “I cannot believe that I have got a brand new landing
-                        page after getting Omega. It was super easy to edit and
-                        publish.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Jenny Wilson
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Graphic Designer
-                      </p>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!--End Testmonial Section-->
-    <!--Footer-->
-    <footer class="relative bg-black pt-8 pb-6">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl text-white font-semibold text-blueGray-700">
-              Let's stay connected!
-            </h4>
-            <h5 class="text-lg mt-0 mb-2 text-white">
-              Find us on any of these platforms. We usually respond within 1-2
-              business days.
-            </h5>
-            <div class="mt-6 lg:mb-0 mb-6">
-              <button
-                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
-                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </button>
-              <button
-                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-dribbble"></i>
-              </button>
-              <button
-                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-github"></i>
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Useful Links</span
+          <hr class="my-6 border-blueGray-300" />
+          <div
+            class="flex flex-wrap items-center md:justify-between justify-center"
+          >
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-white font-semibold py-1">
+                Developed <span id="get-current-year">By</span>
+                <a
+                  href="https://blacktechcorp.com/"
+                  class="text-white hover:text-gray-800"
+                  target="_blank"
+                  >BlackTech</a
                 >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com?ref=njs-profile"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile"
-                      >Github</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
-                      >Free Products</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Other Resources</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                      >MIT License</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile"
-                      >Terms & Conditions</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy?ref=njs-profile"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
+                <a
+                  href="https://blacktechcorp.com/"
+                  class="text-white hover:text-blueGray-800"
+                  >Consultancy</a
+                >.
               </div>
             </div>
           </div>
         </div>
-        <hr class="my-6 border-blueGray-300" />
-        <div
-          class="flex flex-wrap items-center md:justify-between justify-center"
-        >
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-white font-semibold py-1">
-              Copyright © <span id="get-current-year">2021</span>
-              <a
-                href="https://www.creative-tim.com/product/notus-js"
-                class="text-white hover:text-gray-800"
-                target="_blank"
-                >BlackTech</a
-              >
-              <a
-                href="https://www.creative-tim.com?ref=njs-profile"
-                class="text-white hover:text-blueGray-800"
-                >Consultancy</a
-              >.
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--End Footer-->
+      </footer>
+      <!--End Footer-->
 
-    <script src="js/index.js"></script>
+      <script src="js/index.js"></script>
     </div>
   </body>
 </html>
