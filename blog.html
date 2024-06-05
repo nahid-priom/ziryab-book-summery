@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phone Repair Stop</title>
+    <title>MLK Soul Food</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -14,12 +14,6 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      .selected {
-        background-color: #f37016 !important;
-        color: white;
-        border-color: #f37016;
-      }
-
       .dropdown {
         display: inline-block;
         position: relative;
@@ -29,7 +23,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 200px;
+        min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -65,29 +59,33 @@
       }
     </style>
     <style>
+      @keyframes phoneBeep {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+
+    <style>
       .hero-section {
-        background-image: url("./images/background.jpeg");
+        background-image: url("./images/background.png");
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-      }
-
-      @keyframes growShrink {
-        0% {
-          background-size: 100%;
-        }
-        100% {
-          background-size: 122%;
-        }
+        height: 800px;
       }
 
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.jpeg");
+          background-image: url("./images/background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
+          height: 480px;
         }
 
         @keyframes growShrinkMobile {
@@ -102,81 +100,114 @@
     </style>
   </head>
   <body>
-    <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
+    <!-- <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
       <a href="tel:+1230392029">
-        <img src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png" alt="Phone Icon" class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png"
+          alt="Phone Icon"
+          class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none"
+        />
       </a>
-    </div>
-     <!-- Preloader -->
-  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
-    <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
-      <img src="images/logo-preloader.png" alt="Loading Icon" class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto">
-    </div>
-  </div>
+    </div> -->
 
-  
-  <div class="content hidden">
-    <!--Navbar-->
-    <section>
-        <div class="shadow-md">
+    <!-- Preloader -->
+    <div
+      class="preloader bg-orange-100 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+    >
+      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-ping">
+        <img
+          src="images/logo.png"
+          alt="Loading Icon"
+          class="loading-icon mx-auto"
+        />
+      </div>
+    </div>
+
+    <div class="content hidden">
+      <!--Navbar-->
+      <section>
+        <div class="shadow-md bg-white">
           <nav
-            class="relative max-w-7xl mx-auto px-4 py-2 flex justify-between items-center bg-white"
+            id="navbar"
+            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
           >
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-36 lg:w-52" />
+              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
             </a>
             <div class="lg:hidden">
               <button
-                class="navbar-burger flex items-center text-[#3A3A3C] text-white rounded-md bg-[#F37016] p-3"
+                id="navbar-burger"
+                class="navbar-burger flex items-center text-white rounded-md bg-gradient-to-r from-orange-500 to-red-500 rounded-md p-3"
               >
                 <svg
                   class="block h-4 w-4 fill-current"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Mobile menu</title>
+                  <title>Services</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </button>
             </div>
             <ul
-              class="hidden absolute z-50 top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
             >
-              <div class="dropdown">
+              <div class="dropdown inline-block">
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
+                  id="menu-button"
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold dropbtn"
                   href="#"
                 >
-                  Services <i class="fas fa-chevron-down ml-2"></i>
+                  Menu <i class="fas fa-chevron-down ml-2"></i>
                 </a>
-                <div class="dropdown-content">
-                  <a href="iphone.html">
+                
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="appetizer.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                      alt="iPhone"
+                      src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                      alt="Appetizers"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">iPhone</p>
+                    <p class="font-bold ml-4">Appetizers</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                      alt="Samsung"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                      alt="Entrees"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Samsung</p>
+                    <p class="font-bold ml-4">Burger and Sub</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                      alt="Laptop"
+                      src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                      alt="Curries (Sea-Food)"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Laptop</p>
+                    <p class="font-bold ml-4">Breakfast Plater</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                      alt="iPad"
+                      src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                      alt="Curries (Vegetarian)"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">iPad</p>
+                    <p class="font-bold ml-4">Dinner</p>
                   </a>
                 </div>
               </div>
@@ -198,7 +229,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -221,9 +252,9 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                  href="blog.html"
-                  >Blog</a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  href="contact.html"
+                  >Contact</a
                 >
               </li>
               <li class="text-gray-300">
@@ -244,37 +275,243 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                  href="contact.html"
-                  >Contact</a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  href="blog.html"
+                  >Blog</a
                 >
               </li>
             </ul>
-  
             <a
-              class="hidden lg:block py-3 border-8 border-orange-400 px-6 bg-[#F37016] text-base text-white font-bold rounded-full transition duration-200"
-              href="book-now.html"
-              >REPAIR NOW</a
+              class="hidden lg:inline-block py-4 px-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:bg-[#100d20] border text-lg text-white font-bold transition duration-200"
+              href="#"
+              >Order Now</a
             >
           </nav>
-          <div class="navbar-menu relative z-50 hidden">
-            <div
-              class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
-            ></div>
-            <nav
-              class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
-            >
-              <div class="flex items-center mb-8">
-                <a
-                  class="mr-auto text-3xl font-bold leading-none"
-                  href="index.html"
+        </div>
+        <div class="navbar-menu relative z-50 hidden">
+          <a href="cart.html">
+            <span class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                class="cursor-pointer fill-[#333] inline"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
+                  data-original="#000000"
+                ></path>
+              </svg>
+              <span
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-1 py-0 text-xs text-white font-bold"
+                >2</span
+              >
+            </span>
+          </a>
+          
+          <div
+            class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
+          ></div>
+          <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+          >
+            <div class="flex items-center mb-8">
+              <a
+                class="mr-auto text-3xl font-bold leading-none"
+                href="index.html"
+              >
+                <img src="images/logo.png" class="w-32" />
+              </a>
+              
+
+              <button class="navbar-close">
+                <svg
+                  class="h-6 w-6 text-white cursor-pointer hover:text-[#F37016]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <img src="images/logo.png" alt="logo" class="w-36 lg:w-60" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                  >
+                    Menu <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+                  <div id="dropdown-content" class="dropdown-content hidden">
+                    <a
+                      href="appetizer.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                        alt="Appetizers"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Appetizers</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                        alt="Entrees"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Burger and Sub</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                        alt="Curries (Sea-Food)"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Breakfast Plater</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                        alt="Curries (Vegetarian)"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Dinner</p>
+                    </a>
+                  </div>
+                </div>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mt-auto">
+              <div class="pt-6">
+                <a
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-white rounded-xl"
+                  href="#"
+                  >Online Orders</a
+                >
+              </div>
+              <p class="my-4 text-xs text-center text-white">
+                <span>Copyright © [#100d20]tech Consultancy</span>
+              </p>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <!-- End Navbar -->
+      <!--Blogs Section-->
+      <section>
+        <div class="max-w-7xl mx-auto py-8">
+          
+            <h2
+            class="text-3xl lg:text-4xl font-bold text-center text-white bg-orange-500 py-3 mb-8 rounded-md"
+          >
+          Blogs
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- CARD 1 -->
+            <div
+              class="bg-white rounded mx-4 overflow-hidden shadow-lg flex flex-col"
+            >
+              <a href="#"></a>
+              <div class="relative">
+                <a href="#">
+                  <img
+                    class="w-full h-60"
+                    src="https://maunikagowardhan.co.uk/wp-content/uploads/2012/08/Tandoori-Chicken1-1024x683.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
+                  ></div>
                 </a>
-                <button class="navbar-close">
+              </div>
+              <div class="px-6 py-4 mb-auto">
+                <a
+                  href="blog-details.html"
+                  class="font-medium text-2xl inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
+                  >Tandoori Chicken</a
+                >
+                <p class="text-gray-500 text-sm">
+                    Memorial Day is right around the corner. It’s often considered the first grilling weekend of the season across the United States, although it might feel a bit different this year without friends coming over. Either way, this recipe is tasty enough that it will hopefully compensate for the lack of Memorial Day parties we’ll all be attending in 2020.
+                </p>
+              </div>
+              <div
+                class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
+              >
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
                   <svg
-                    class="h-6 w-6 text-white bg-[#F37016] font-bold cursor-pointer hover:text-gray-500"
+                    height="13px"
+                    width="13px"
+                    version="1.1"
+                    id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="ml-1">6 mins ago</span>
+                </span>
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
+                  <svg
+                    class="h-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -283,534 +520,308 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
+                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
                     ></path>
                   </svg>
-                </button>
+                  <span class="ml-1">39 Comments</span>
+                </span>
               </div>
-              <div>
-                <ul class="z-50">
-                  <div class="dropdown">
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
-                      href="#"
-                    >
-                      Services <i class="fas fa-chevron-down ml-2"></i>
-                    </a>
-                    <div class="dropdown-content">
-                      <a href="iphone.html">
-                        <img
-                          src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                          alt="iPhone"
-                        />
-                        <p class="font-bold ml-4">iPhone</p>
-                      </a>
-                      <a href="iphone.html">
-                        <img
-                          src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                          alt="Samsung"
-                        />
-                        <p class="font-bold ml-4">Samsung</p>
-                      </a>
-                      <a href="#">
-                        <img
-                          src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                          alt="Laptop"
-                        />
-                        <p class="font-bold ml-4">Laptop</p>
-                      </a>
-                      <a href="#">
-                        <img
-                          src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                          alt="iPad"
-                        />
-                        <p class="font-bold ml-4">iPad</p>
-                      </a>
-                    </div>
-                  </div>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
-                      href="about.html"
-                      >About</a
-                    >
-                  </li>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                      href="blog.html"
-                      >Blog</a
-                    >
-                  </li>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                      href="contact.html"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
+            </div>
+            <!-- CARD 2 -->
+            <div
+              class="rounded bg-white mx-4 overflow-hidden shadow-lg flex flex-col"
+            >
+              <a href="blog-details.html"></a>
+              <div class="relative">
+                <a href="#">
+                  <img
+                    class="w-full h-60"
+                    src="https://www.foodandwine.com/thmb/3aG6hnSQRrXY8ZM1RkUFhYRhNU0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/escovitch-fish-FT-RECIPE0920-8a733638c2ba4b72b48737782fa616c2.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
+                  ></div>
+                </a>
               </div>
-  
-              <a
-                class="block mt-10 py-2 text-center px-4 bg-[#F37016] text-base text-white font-bold rounded-xl transition duration-200"
-                href="book-now.html"
-                >REPAIR NOW</a
+              <div class="px-6 py-4 mb-auto">
+                <a
+                  href="#"
+                  class="font-medium text-lg inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
+                  >50 Seafood Recipes to Keep Your Rotation Fresh</a
+                >
+                <p class="text-gray-500 text-sm">
+                    Whether it's the season for a warm bowl of cioppino or a platter of crispy, honey-drizzled tuna croquettes, we have seafood recipes for every occasion and whatever your fishmonger has fresh
+                </p>
+              </div>
+              <div
+                class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
               >
-            </nav>
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
+                  <svg
+                    height="13px"
+                    width="13px"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="ml-1">6 mins ago</span>
+                </span>
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
+                  <svg
+                    class="h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                    ></path>
+                  </svg>
+                  <span class="ml-1">39 Comments</span>
+                </span>
+              </div>
+            </div>
+            <!-- CARD 3 -->
+            <div
+              class="rounded mx-4 bg-white overflow-hidden shadow-lg flex flex-col"
+            >
+              <a href="blog-details.html"></a>
+              <div class="relative">
+                <a href="blog-details.html">
+                  <img
+                    class="w-full h-60"
+                    src="https://www.foodandwine.com/thmb/mJ-53-GIEKBtULF-nmvo13J9OPE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/malfadine-with-pea-shoot-meyer-lemon-pesto-FT-RECIPE0422-2-40c55da060204586a28064bb73718d9b.jpg"
+                    alt="Sunset in the mountains"
+                  />
+                  <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
+                  ></div>
+                </a>
+              </div>
+              <div class="px-6 py-4 mb-auto">
+                <a
+                  href="blog-details.html"
+                  class="font-medium text-lg inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
+                  >23 Fresh Spring Pasta Recipes</a
+                >
+                <p class="text-gray-500 text-sm">
+                    Pasta dishes are an excellent way to showcase seasonal produce; in the springtime, this means asparagus, ramps, peas, artichokes, and more bright, fresh flavors. 
+                </p>
+              </div>
+              <div
+                class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
+              >
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
+                  <svg
+                    height="13px"
+                    width="13px"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="ml-1">16 hours ago</span>
+                </span>
+                <span
+                  href="#"
+                  class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                >
+                  <svg
+                    class="h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                    ></path>
+                  </svg>
+                  <span class="ml-1">9 Comments</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!--End Navbar-->
-    <!--Blogs Section-->
-    <section class="bg-orange-100">
-      <div class="max-w-7xl mx-auto py-8 lg:py-20">
-        <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
-          <h2
-            class="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]"
-          >
-            Blogs
-          </h2>
+      <!--End Blogs Section-->
+  <!--Footer-->
+  <footer class="relative bg-gradient-to-r from-orange-500 to-red-500 pt-8 pb-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap text-left lg:text-left">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3base text-white font-semibold text-blueGray-700">
+            Let's stay connected!
+          </h4>
+          <h5 class="text-lg mt-0 mb-2 text-white">
+            Find us on any of these platforms. We usually respond within 1-2
+            business days.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            <button
+              class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button
+              class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </button>
+            <button
+              class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-dribbble"></i>
+            </button>
+            <button
+              class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- CARD 1 -->
-          <div
-            class="bg-white rounded mx-4 overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="#"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2022/08/Promos-7-792x534.png"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="blog-details.html"
-                class="font-medium text-lg inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
-                >TOP 4 REASONS TO BUY REFURBISHED PHONES</a
-              >
-              <p class="text-gray-500 text-sm">
-                According to the US Environmental Protection Agency (EPA),
-                approximately 11 million smartphones are discarded each month,
-                attributing the largest fraction of electronic waste (e-waste).
-                Studies show our e-waste increases by 4% every year.
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
               <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                class="block uppercase text-white text-lg font-semibold mb-4"
+                >Useful Links</span
               >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">6 mins ago</span>
-              </span>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="appetizer.html"
+                    >Appetizer Foods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >Best Foods</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
               <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                class="block uppercase text-white text-lg font-semibold mb-4"
+                >Other Resources</span
               >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">39 Comments</span>
-              </span>
-            </div>
-          </div>
-          <!-- CARD 2 -->
-          <div
-            class="rounded bg-white mx-4 overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="blog-details.html"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2023/10/pexels-dan-cristian-paduret-1476321-792x649.jpg"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="#"
-                class="font-medium text-lg inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
-                >DIY DANGERS: WHEN TO CALL STOP PHONE REPAIRS FOR PROFESSIONAL
-                HELP</a
-              >
-              <p class="text-gray-500 text-sm">
-                In a world that often lauds the do-it-yourself ethos, the idea
-                of fixing your own phone may seem tempting. The plethora of
-                online tutorials and repair kits available make it seem like a
-                simple weekend project. However...
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">6 mins ago</span>
-              </span>
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">39 Comments</span>
-              </span>
-            </div>
-          </div>
-          <!-- CARD 3 -->
-          <div
-            class="rounded mx-4 bg-white overflow-hidden shadow-lg flex flex-col"
-          >
-            <a href="blog-details.html"></a>
-            <div class="relative">
-              <a href="#">
-                <img
-                  class="w-full h-60"
-                  src="https://sosphonerepairs.com.au/wp-content/uploads/2023/10/pexels-skitterphoto-1388947-792x649.jpg"
-                  alt="Sunset in the mountains"
-                />
-                <div
-                  class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-300 opacity-25"
-                ></div>
-              </a>
-            </div>
-            <div class="px-6 py-4 mb-auto">
-              <a
-                href="#"
-                class="font-medium text-lg inline-block hover:text-[#F37016] transition duration-500 ease-in-out inline-block mb-2"
-                >THE ART OF MOBILE PHONE CPR: STOP PHONE REPAIRS UNVEILS REPAIR
-                SECRETS</a
-              >
-              <p class="text-gray-500 text-sm">
-                In the hustle and bustle of modern life, our mobile phones have
-                become indispensable companions, keeping us connected to the
-                world at the touch of a screen.
-              </p>
-            </div>
-            <div
-              class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100"
-            >
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  height="13px"
-                  width="13px"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 512 512"
-                  style="enable-background: new 0 0 512 512"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"
-                      ></path>
-                    </g>
-                  </g>
-                </svg>
-                <span class="ml-1">16 hours ago</span>
-              </span>
-              <span
-                href="#"
-                class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
-              >
-                <svg
-                  class="h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  ></path>
-                </svg>
-                <span class="ml-1">9 Comments</span>
-              </span>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >Terms & Conditions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    href="#"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!--End Blogs Section-->
-    <!--Footer-->
-    <footer class="relative bg-black pt-8 pb-6">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl text-white font-semibold text-blueGray-700">
-              Let's stay connected!
-            </h4>
-            <h5 class="text-lg mt-0 mb-2 text-white">
-              Find us on any of these platforms. We usually respond within 1-2
-              business days.
-            </h5>
-            <div class="mt-6 lg:mb-0 mb-6">
-              <button
-                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
-                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </button>
-              <button
-                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-dribbble"></i>
-              </button>
-              <button
-                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-github"></i>
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Useful Links</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com?ref=njs-profile"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile"
-                      >Github</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
-                      >Free Products</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Other Resources</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                      >MIT License</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile"
-                      >Terms & Conditions</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy?ref=njs-profile"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-6 border-blueGray-300" />
-        <div
-          class="flex flex-wrap items-center md:justify-between justify-center"
-        >
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-white font-semibold py-1">
-              Copyright © <span id="get-current-year">2021</span>
-              <a
-                href="https://www.creative-tim.com/product/notus-js"
-                class="text-white hover:text-gray-800"
-                target="_blank"
-                >BlackTech</a
-              >
-              <a
-                href="https://www.creative-tim.com?ref=njs-profile"
-                class="text-white hover:text-blueGray-800"
-                >Consultancy</a
-              >.
-            </div>
+      <hr class="my-6 border-blueGray-300" />
+      <div
+        class="flex flex-wrap items-center md:justify-between justify-center"
+      >
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-white font-semibold py-1">
+            Developed <span id="get-current-year">By</span>
+            <a
+              href="https://blacktechcorp.com/"
+              class="text-white hover:text-gray-800"
+              target="_blank"
+              >BlackTech</a
+            >
+            <a
+              href="https://blacktechcorp.com/"
+              class="text-white hover:text-blueGray-800"
+              >Consultancy</a
+            >.
           </div>
         </div>
       </div>
-    </footer>
-    <!--End Footer-->
+    </div>
+  </footer>
+  <!--End Footer-->
 
-    <script src="js/index.js"></script>
-  </div>
-  </body>
+  <script src="js/index.js"></script>
+</div>
+</body>
 </html>

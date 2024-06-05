@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phone Repair Stop</title>
+    <title>MLK Soul Food</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -14,12 +14,6 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      .selected {
-        background-color: #f37016 !important;
-        color: white;
-        border-color: #f37016;
-      }
-
       .dropdown {
         display: inline-block;
         position: relative;
@@ -29,7 +23,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 200px;
+        min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -65,29 +59,33 @@
       }
     </style>
     <style>
+      @keyframes phoneBeep {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+
+    <style>
       .hero-section {
-        background-image: url("./images/background.jpeg");
+        background-image: url("./images/background.png");
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-      }
-
-      @keyframes growShrink {
-        0% {
-          background-size: 100%;
-        }
-        100% {
-          background-size: 122%;
-        }
+        height: 800px;
       }
 
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.jpeg");
+          background-image: url("./images/background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
+          height: 480px;
         }
 
         @keyframes growShrinkMobile {
@@ -102,82 +100,114 @@
     </style>
   </head>
   <body>
-    <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
+    <!-- <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
       <a href="tel:+1230392029">
-        <img src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png" alt="Phone Icon" class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none" />
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png"
+          alt="Phone Icon"
+          class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none"
+        />
       </a>
-    </div>
-    
-     <!-- Preloader -->
-  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
-    <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
-      <img src="images/logo-preloader.png" alt="Loading Icon" class="loading-icon lg:w-24 w-15 h-20 lg:h-36 mx-auto">
-    </div>
-  </div>
+    </div> -->
 
-  
-  <div class="content hidden">
-    <!--Navbar-->
-    <section>
-        <div class="shadow-md">
+    <!-- Preloader -->
+    <div
+      class="preloader bg-orange-100 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+    >
+      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-ping">
+        <img
+          src="images/logo.png"
+          alt="Loading Icon"
+          class="loading-icon mx-auto"
+        />
+      </div>
+    </div>
+
+    <div class="content hidden">
+      <!--Navbar-->
+      <section>
+        <div class="shadow-md bg-white">
           <nav
-            class="relative max-w-7xl mx-auto px-4 py-2 flex justify-between items-center bg-white"
+            id="navbar"
+            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
           >
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-36 lg:w-52" />
+              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
             </a>
             <div class="lg:hidden">
               <button
-                class="navbar-burger flex items-center text-[#3A3A3C] text-white rounded-md bg-[#F37016] p-3"
+                id="navbar-burger"
+                class="navbar-burger flex items-center text-white rounded-md bg-gradient-to-r from-orange-500 to-red-500 rounded-md p-3"
               >
                 <svg
                   class="block h-4 w-4 fill-current"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>Mobile menu</title>
+                  <title>Services</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </button>
             </div>
             <ul
-              class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
             >
-              <div class="dropdown">
+              <div class="dropdown inline-block">
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
+                  id="menu-button"
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold dropbtn"
                   href="#"
                 >
-                  Services <i class="fas fa-chevron-down ml-2"></i>
+                  Menu <i class="fas fa-chevron-down ml-2"></i>
                 </a>
-                <div class="dropdown-content">
-                  <a href="iphone.html">
+                
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="appetizer.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                      alt="iPhone"
+                      src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                      alt="Appetizers"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">iPhone</p>
+                    <p class="font-bold ml-4">Appetizers</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                      alt="Samsung"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                      alt="Entrees"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Samsung</p>
+                    <p class="font-bold ml-4">Burger and Sub</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                      alt="Laptop"
+                      src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                      alt="Curries (Sea-Food)"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Laptop</p>
+                    <p class="font-bold ml-4">Breakfast Plater</p>
                   </a>
-                  <a href="#">
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                  >
                     <img
-                      src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                      alt="iPad"
+                      src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                      alt="Curries (Vegetarian)"
+                      class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">iPad</p>
+                    <p class="font-bold ml-4">Dinner</p>
                   </a>
                 </div>
               </div>
@@ -199,7 +229,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -222,9 +252,9 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                  href="blog.html"
-                  >Blog</a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  href="contact.html"
+                  >Contact</a
                 >
               </li>
               <li class="text-gray-300">
@@ -245,483 +275,327 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                  href="contact.html"
-                  >Contact</a
+                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  href="blog.html"
+                  >Blog</a
                 >
               </li>
             </ul>
-  
             <a
-              class="hidden lg:block py-3 border-8 border-orange-400 px-6 bg-[#F37016] text-base text-white font-bold rounded-full transition duration-200"
-              href="book-now.html"
-              >REPAIR NOW</a
+              class="hidden lg:inline-block py-4 px-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:bg-[#100d20] border text-lg text-white font-bold transition duration-200"
+              href="#"
+              >Order Now</a
             >
           </nav>
-          <div class="navbar-menu relative z-50 hidden">
-            <div
-              class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
-            ></div>
-            <nav
-              class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
-            >
-              <div class="flex items-center mb-8">
-                <a
-                  class="mr-auto text-3xl font-bold leading-none"
-                  href="index.html"
-                >
-                  <img src="images/logo.png" alt="logo" class="w-36 lg:w-60" />
-                </a>
-                <button class="navbar-close">
-                  <svg
-                    class="h-6 w-6 text-white bg-[#F37016] font-bold cursor-pointer hover:text-gray-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div>
-                <ul class="z-50">
-                  <div class="dropdown">
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500 dropbtn"
-                      href="#"
-                    >
-                      Services <i class="fas fa-chevron-down ml-2"></i>
-                    </a>
-                    <div class="dropdown-content">
-                      <a href="iphone.html">
-                        <img
-                          src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"
-                          alt="iPhone"
-                        />
-                        <p class="font-bold ml-4">iPhone</p>
-                      </a>
-                      <a href="iphone.html">
-                        <img
-                          src="https://i.gadgets360cdn.com/products/large/Samsung-Galaxy-S23-658x800-1675282421.jpg?downsize=*:360"
-                          alt="Samsung"
-                        />
-                        <p class="font-bold ml-4">Samsung</p>
-                      </a>
-                      <a href="#">
-                        <img
-                          src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20200824120814.jpg"
-                          alt="Laptop"
-                        />
-                        <p class="font-bold ml-4">Laptop</p>
-                      </a>
-                      <a href="#">
-                        <img
-                          src="https://vi.ie/wp-content/uploads/2020/11/Tec00014.jpg"
-                          alt="iPad"
-                        />
-                        <p class="font-bold ml-4">iPad</p>
-                      </a>
-                    </div>
-                  </div>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold"
-                      href="about.html"
-                      >About</a
-                    >
-                  </li>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                      href="blog.html"
-                      >Blog</a
-                    >
-                  </li>
-                  <li class="text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      stroke="currentColor"
-                      class="w-4 h-4 current-fill"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                      />
-                    </svg>
-                  </li>
-                  <li>
-                    <a
-                      class="text-lg px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#F37016] font-bold hover:text-gray-500"
-                      href="contact.html"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-  
-              <a
-                class="block mt-10 py-2 text-center px-4 bg-[#F37016] text-base text-white font-bold rounded-xl transition duration-200"
-                href="book-now.html"
-                >REPAIR NOW</a
+        </div>
+        <div class="navbar-menu relative z-50 hidden">
+          <a href="cart.html">
+            <span class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30px"
+                height="30px"
+                class="cursor-pointer fill-[#333] inline"
+                viewBox="0 0 512 512"
               >
-            </nav>
-          </div>
+                <path
+                  d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
+                  data-original="#000000"
+                ></path>
+              </svg>
+              <span
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-1 py-0 text-xs text-white font-bold"
+                >2</span
+              >
+            </span>
+          </a>
+          
+          <div
+            class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
+          ></div>
+          <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+          >
+            <div class="flex items-center mb-8">
+              <a
+                class="mr-auto text-3xl font-bold leading-none"
+                href="index.html"
+              >
+                <img src="images/logo.png" class="w-32" />
+              </a>
+              
+
+              <button class="navbar-close">
+                <svg
+                  class="h-6 w-6 text-white cursor-pointer hover:text-[#F37016]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                  >
+                    Menu <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+                  <div id="dropdown-content" class="dropdown-content hidden">
+                    <a
+                      href="appetizer.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
+                        alt="Appetizers"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Appetizers</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                        alt="Entrees"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Burger and Sub</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                        alt="Curries (Sea-Food)"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Breakfast Plater</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    >
+                      <img
+                        src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                        alt="Curries (Vegetarian)"
+                        class="w-10 h-10 rounded-full"
+                      />
+                      <p class="font-bold ml-4">Dinner</p>
+                    </a>
+                  </div>
+                </div>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mb-1">
+                  <a
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    href="#"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mt-auto">
+              <div class="pt-6">
+                <a
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-white rounded-xl"
+                  href="#"
+                  >Online Orders</a
+                >
+              </div>
+              <p class="my-4 text-xs text-center text-white">
+                <span>Copyright © [#100d20]tech Consultancy</span>
+              </p>
+            </div>
+          </nav>
         </div>
       </section>
-      <!--End Navbar-->
-<section class="bg-orange-100">
+      <!-- End Navbar -->
+      <section class="bg-white">
 
-    <div class="2xl:max-w-7xl 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
-        <div class="flex flex-col lg:flex-row justify-between gap-8">
-            <div class="w-full lg:w-5/12 flex flex-col justify-center">
-                <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">About Us</h1>
-                <p class="font-normal text-base leading-6 text-gray-600">When you choose Phone Stop Cell Phone Repair Surrey for your electronic device needs, you can trust our skilled technicians to swiftly diagnose and resolve any issues. From smartphones to computers, laptops, game consoles, cameras, MP3 players, and more, we specialize in a wide range of digital device repairs. Our goal is to offer effective solutions that are both friendly to your device and your budget. Phone Stop remains at the forefront of the wireless repair industry, known for our prompt and efficient service.
+        <div class="2xl:max-w-7xl 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
+            <div class="flex flex-col lg:flex-row justify-between gap-8">
+                <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                    <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">About Us</h1>
+                    <p class="font-normal text-base leading-6 text-gray-600">Step into the soulful world of MLK Soulfood, where we celebrate the rich tapestry of African-American culinary heritage. At MLK Soulfood, we honor our roots with every dish we serve, infusing each bite with history, culture, and love.
 
-                    </p>
+                      Indulge in the comforting embrace of traditional soul food classics, from golden-fried chicken to velvety macaroni and cheese. Savor the soul-warming flavors of slow-cooked collard greens, tender barbecue ribs, and buttery cornbread straight from the oven.
+                      
+                      Our menu is a celebration of community and connection, offering a soulful feast for every occasion. Whether you're sharing a meal with loved ones or savoring a solo dining experience, every bite at MLK Soulfood is a tribute to the resilience and spirit of the African-American culinary tradition.
+                      
+                      Join us as we journey through the heart and soul of soul food, where every dish tells a story and every meal is a celebration of heritage. Experience the warmth, flavor, and soul of MLK Soulfood – where every bite is a taste of history.
+    
+                        </p>
+                </div>
+                <div class="w-full  lg:w-1/2">
+                    <img class="w-full h-full rounded-lg" src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg" alt="A group of People" />
+                </div>
             </div>
-            <div class="w-full  lg:w-8/12">
-                <img class="w-full h-full rounded-lg" src="https://t3.ftcdn.net/jpg/02/44/67/96/360_F_244679651_1ZFNvsYDKuTOlgSBFasEF2CguYFVAvQ1.jpg" alt="A group of People" />
-            </div>
+    
         </div>
-
-    </div>
-</section>
-<!-- ====== Why Choose US -->
-<section class="py-12 bg-gray-900 text-gray-100 sm:py-12 lg:py-16">
-    <div class="px-4 mx-auto max-w-7xl">
-      <div class="max-w-xl mx-auto text-center xl:max-w-2xl">
-        <h2
-          class="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6"
-        >
-          Why Choose Us
-        </h2>
-      </div>
-      <div
-        class="grid max-w-4xl lg:max-w-7xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-3 sm:mt-12 lg:mt-20 sm:text-left"
-      >
-        <div class="relative">
-          <div class="absolute -inset-1">
-            <div
-              class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-            ></div>
-          </div>
-          <div
-            class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-          >
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/9759/9759793.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                Quality Repair
-              </h3>
-              <p class="mt-6 text-base text-center text-gray-600">
-                Discover excellence in repairs at Phone Repair Stop. Our
-                certified technicians, genuine parts, and transparent pricing
-                ensure superior service. Choose quality, choose us for
-                unparalleled device solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <div class="p-9 flex flex-col items-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/7263/7263655.png"
-              alt="quality service"
-              class="w-20"
-            />
-            <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-              Quality Parts
-            </h3>
-            <p class="mt-6 text-base text-center text-gray-600">
-              Ensure customers that you use high-quality, genuine parts for
-              replacements. This can instill confidence in the durability and
-              longevity of the repairs.
-            </p>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="absolute -inset-1">
-            <div
-              class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-            ></div>
-          </div>
-          <div
-            class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-          >
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/4388/4388230.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-                Fast Services
-              </h3>
-              <p class="mt-6 text-base text-center text-gray-600">
-                Assure customers of quick turnaround times for repairs.
-                Mention same-day or express services for common issues like
-                screen replacements or battery changes
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <div class="p-9 flex flex-col items-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5396/5396915.png"
-              alt="quality service"
-              class="w-20"
-            />
-            <h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-              Affordable Pricing
-            </h3>
-            <p class="mt-6 text-base text-center text-gray-600">
-              Highlight competitive and transparent pricing. Consider offering
-              package deals for common repairs or discounts for returning
-              customers.
-            </p>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="absolute -inset-1">
-            <div
-              class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"
-            ></div>
-          </div>
-          <div
-            class="relative overflow-hidden bg-white shadow-md rounded-xl h-full"
-          >
-            <div class="p-9 flex flex-col items-center">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3301/3301556.png"
-                alt="quality service"
-                class="w-20"
-              />
-              <h3
-                class="mt-6 text-2xl text-center font-bold text-gray-900 sm:mt-10"
-              >
-                Easy Appointment Scheduling
-              </h3>
-              <p class="mt-6 text-base text-gray-600">
-                Provide an easy and efficient process for customers to
-                schedule appointments or drop off their devices. Online
-                booking systems or walk-in options can be highlighted.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="overflow-hidden bg-white shadow-md rounded-xl">
-          <div class="p-9 flex flex-col items-center">
-            <img
-              src="https://icons.veryicon.com/png/o/miscellaneous/color-icon-circle/customer-service-72.png"
-              alt="quality service"
-              class="w-20"
-            />
-            <h3
-              class="mt-6 text-2xl text-center font-bold text-gray-900 sm:mt-10"
-            >
-              Responsive Customer Support
-            </h3>
-            <p class="mt-6 text-base text-gray-600">
-              Highlight responsive and helpful customer support. Make it clear
-              that you are available to address inquiries, provide updates on
-              repairs, and assist with any concerns.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--End WHy Choose Us-->
-
-    <!--Footer-->
-    <footer class="relative bg-black pt-8 pb-6">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl text-white font-semibold text-blueGray-700">
-              Let's stay connected!
-            </h4>
-            <h5 class="text-lg mt-0 mb-2 text-white">
-              Find us on any of these platforms. We usually respond within 1-2
-              business days.
-            </h5>
-            <div class="mt-6 lg:mb-0 mb-6">
-              <button
-                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
-                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </button>
-              <button
-                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-dribbble"></i>
-              </button>
-              <button
-                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-github"></i>
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Useful Links</span
+    </section>
+       <!--Footer-->
+       <footer class="relative bg-gradient-to-r from-orange-500 to-red-500 pt-8 pb-6">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3base text-white font-semibold text-blueGray-700">
+                Let's stay connected!
+              </h4>
+              <h5 class="text-lg mt-0 mb-2 text-white">
+                Find us on any of these platforms. We usually respond within 1-2
+                business days.
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button
+                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
                 >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com?ref=njs-profile"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile"
-                      >Github</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
-                      >Free Products</a
-                    >
-                  </li>
-                </ul>
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button
+                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </button>
+                <button
+                  class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-dribbble"></i>
+                </button>
+                <button
+                  class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-github"></i>
+                </button>
               </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Other Resources</span
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span
+                    class="block uppercase text-white text-lg font-semibold mb-4"
+                    >Useful Links</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Blog</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="appetizer.html"
+                        >Appetizer Foods</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Best Foods</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <span
+                    class="block uppercase text-white text-lg font-semibold mb-4"
+                    >Other Resources</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Terms & Conditions</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="#"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-blueGray-300" />
+          <div
+            class="flex flex-wrap items-center md:justify-between justify-center"
+          >
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-white font-semibold py-1">
+                Developed <span id="get-current-year">By</span>
+                <a
+                  href="https://blacktechcorp.com/"
+                  class="text-white hover:text-gray-800"
+                  target="_blank"
+                  >BlackTech</a
                 >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                      >MIT License</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile"
-                      >Terms & Conditions</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy?ref=njs-profile"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
+                <a
+                  href="https://blacktechcorp.com/"
+                  class="text-white hover:text-blueGray-800"
+                  >Consultancy</a
+                >.
               </div>
             </div>
           </div>
         </div>
-        <hr class="my-6 border-blueGray-300" />
-        <div
-          class="flex flex-wrap items-center md:justify-between justify-center"
-        >
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-white font-semibold py-1">
-              Copyright © <span id="get-current-year">2021</span>
-              <a
-                href="https://www.creative-tim.com/product/notus-js"
-                class="text-white hover:text-gray-800"
-                target="_blank"
-                >BlackTech</a
-              >
-              <a
-                href="https://www.creative-tim.com?ref=njs-profile"
-                class="text-white hover:text-blueGray-800"
-                >Consultancy</a
-              >.
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--End Footer-->
+      </footer>
+      <!--End Footer-->
 
-    <script src="js/index.js"></script>
+      <script src="js/index.js"></script>
     </div>
   </body>
 </html>
