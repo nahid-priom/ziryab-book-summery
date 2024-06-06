@@ -75,7 +75,7 @@
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-        height: 800px;
+        height: 900px;
       }
 
       @media (max-width: 840px) {
@@ -85,7 +85,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
-          height: 480px;
+          height: 560px;
         }
 
         @keyframes growShrinkMobile {
@@ -125,14 +125,11 @@
 
     <div class="content hidden">
       <!--Navbar-->
-      <section>
-        <div class="shadow-md bg-white">
-          <nav
-            id="navbar"
-            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-          >
+      <section class="relative mx-2">
+        <div class="shadow-md  rounded-2xl absolute top-4  left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full  px-4 lg:max-w-7xl">
+            <nav id="navbar" class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
+              <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
             </a>
             <div class="lg:hidden">
               <button
@@ -440,7 +437,7 @@
       <!-- End Navbar -->
 
  <!--Single Food Section-->
- <section class="py-10 lg:py-24">
+ <section class="py-10 pt-32 lg:pt-48 lg:py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
       <div

@@ -75,7 +75,7 @@
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-        height: 800px;
+        height: 900px;
       }
 
       @media (max-width: 840px) {
@@ -85,7 +85,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
-          height: 480px;
+          height: 560px;
         }
 
         @keyframes growShrinkMobile {
@@ -125,14 +125,11 @@
 
     <div class="content hidden">
       <!--Navbar-->
-      <section>
-        <div class="shadow-md bg-white">
-          <nav
-            id="navbar"
-            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-          >
+      <section class="relative mx-2">
+        <div class="shadow-md  rounded-2xl absolute top-4  left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full  px-4 lg:max-w-7xl">
+            <nav id="navbar" class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
+              <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
             </a>
             <div class="lg:hidden">
               <button
@@ -440,7 +437,7 @@
       <!-- End Navbar -->
 
       <!--Hero Section-->
-      <section class="hero-section bg-orange-100">
+      <section class="hero-section pt-16 lg:pt-48 relative bg-orange-100">
         <div
           class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
         >
@@ -470,7 +467,7 @@
                 <a href="#">
                   <button
                     type="button"
-                    class="px-6 py-3 m-1 font-bold border-4 border-gray-100 transition-colors duration-300 transform bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:bg-gray-100 hover:text-black focus:text-white focus:outline-none text-white hover:bg-white focus:bg-black"
+                    class="px-6 py-3 m-1 font-bold border-4 border-orange-300 transition-colors duration-300 transform bg-white rounded-full hover:bg-gray-100 hover:text-black focus:text-white focus:outline-none hover:bg-white focus:bg-black"
                   >
                     ORDER NOW
                   </button>
@@ -484,7 +481,7 @@
       <!--End Hero Section-->
       <!-- Content -->
       <section>
-        <div class="bg-white py-10">
+        <div class="bg-white lg:py-10 pb-10">
           <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
               <h2

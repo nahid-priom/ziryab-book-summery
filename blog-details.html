@@ -75,7 +75,7 @@
         background-size: cover;
         background-position: center;
         animation: growShrink 10s infinite alternate;
-        height: 800px;
+        height: 900px;
       }
 
       @media (max-width: 840px) {
@@ -85,7 +85,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
-          height: 480px;
+          height: 560px;
         }
 
         @keyframes growShrinkMobile {
@@ -125,14 +125,11 @@
 
     <div class="content hidden">
       <!--Navbar-->
-      <section>
-        <div class="shadow-md bg-white">
-          <nav
-            id="navbar"
-            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-          >
+      <section class="relative mx-2">
+        <div class="shadow-md  rounded-2xl absolute top-4  left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full  px-4 lg:max-w-7xl">
+            <nav id="navbar" class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-20 lg:w-32" />
+              <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
             </a>
             <div class="lg:hidden">
               <button
@@ -441,11 +438,11 @@
       <!--Single Blog Section-->
      <section>
  <!--Title-->
- <div class="text-center pt-4">
+ <div class="text-center pt-32 lg:pt-48 pt-4">
   <p class="text-sm md:text-base text-orange-500 font-bold">
     04 AUGUST 2023 <span class="text-gray-900">/</span> GETTING STARTED
   </p>
-  <h1 class="font-bold text-white break-normal text-3xl md:text-5xl">
+  <h1 class="font-bold break-normal text-3xl md:text-5xl">
     Tandoori Chicken
   </h1>
 </div>
