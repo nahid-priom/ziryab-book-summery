@@ -26,7 +26,7 @@
       }
       .menu-header {
         position: fixed;
-        z-index: 10;
+        z-index: 100;
         width: 100%;
         background-color: white;
         transition: background-color 0.3s ease;
@@ -136,7 +136,7 @@
       <!--Navbar-->
       <header id="navbar">
         <div
-          class="shadow-md rounded-2xl absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full px-4 lg:max-w-7xl"
+          class="shadow-md rounded-2xl mx-auto z-50 bg-orange-100 w-full px-4 lg:max-w-7xl"
         >
           <nav
             id="navbar"
@@ -449,388 +449,607 @@
       </header>
       <!-- End Navbar -->
 
-      <main class="pt-28 lg:pt-40">
+      <main class="pt-24 lg:pt-32">
         <!-- Navigation Menu Bar -->
-        <div class="menu-header">
-            <div class="px-6 -z-10 max-w-7xl mx-auto bg-orange-500 rounded-full shadow-md py-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-2xl font-bold text-white">Our Menu</div>
-                    <div class="hidden md:flex gap-4 space-x-4">
-                        <a href="#appetizer" class="text-white font-semibold hover:text-black text-lg">Appetizer</a>
-                        <a href="#entrees" class="text-white font-semibold text-lg hover:text-black">Entrees</a>
-                        <a href="#breakfast" class="text-white font-semibold text-lg hover:text-black">Breakfast Plater</a>
-                        <a href="#kids" class="text-white font-semibold text-lg hover:text-black">Kids Menu</a>
-                        <a href="#burgers" class="text-white font-semibold text-lg hover:text-black">Burger & Sub</a>
-                        <a href="#drinks" class="text-white font-semibold text-lg hover:text-black">Drinks And Dessert</a>
-                    </div>
-                    <div class="md:hidden">
-                        <button id="menu-toggle" class="text-white focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+        <div class="menu-header fixed w-full z-50">
+          <div
+            class="px-6 max-w-7xl mx-auto bg-orange-500 rounded-lg shadow-md py-4"
+          >
+            <div class="flex justify-between items-center">
+              <div class="text-2xl font-bold text-white">Menu</div>
+              <div class="hidden md:flex gap-4 space-x-4">
+                <a
+                  href="#appetizer"
+                  class="menu-link text-white font-semibold hover:text-black text-lg"
+                  >Appetizer</a
+                >
+                <a
+                  href="#entrees"
+                  class="menu-link text-white font-semibold text-lg hover:text-black"
+                  >Entrees</a
+                >
+                <a
+                  href="#breakfast"
+                  class="menu-link text-white font-semibold text-lg hover:text-black"
+                  >Breakfast Plater</a
+                >
+                <a
+                  href="#kids"
+                  class="menu-link text-white font-semibold text-lg hover:text-black"
+                  >Kids Menu</a
+                >
+                <a
+                  href="#burgers"
+                  class="menu-link text-white font-semibold text-lg hover:text-black"
+                  >Burger & Sub</a
+                >
+                <a
+                  href="#drinks"
+                  class="menu-link text-white font-semibold text-lg hover:text-black"
+                  >Drinks And Dessert</a
+                >
+              </div>
+              <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div id="mobile-menu" class="hidden bg-orange-500 rounded-lg md:hidden">
-                <a href="#appetizer" class="block text-white text-center py-1 font-semibold hover:text-black text-lg py-2">Appetizer</a>
-                <a href="#entrees" class="block text-white  text-center py-1 font-semibold hover:text-black text-lg py-2">Entrees</a>
-                <a href="#breakfast" class="block text-white  text-center py-1 font-semibold hover:text-black text-lg py-2">Breakfast Plater</a>
-                <a href="#kids" class="block text-white  text-center py-1 font-semibold hover:text-black text-lg py-2">Kids Menu</a>
-                <a href="#burgers" class="block text-white  text-center py-1 font-semibold hover:text-black text-lg py-2">Burger & Sub</a>
-                <a href="#drinks" class="block text-white  text-center py-1 font-semibold hover:text-black text-lg py-2">Drinks And Dessert</a>
-            </div>
+          </div>
+          <div
+            id="mobile-menu"
+            class="hidden bg-orange-500 rounded-lg md:hidden"
+          >
+            <a
+              href="#appetizer"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Appetizer</a
+            >
+            <a
+              href="#entrees"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Entrees</a
+            >
+            <a
+              href="#breakfast"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Breakfast Plater</a
+            >
+            <a
+              href="#kids"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Kids Menu</a
+            >
+            <a
+              href="#burgers"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Burger & Sub</a
+            >
+            <a
+              href="#drinks"
+              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              >Drinks And Dessert</a
+            >
+          </div>
         </div>
-        
-        <script>
-            document.getElementById('menu-toggle').addEventListener('click', function () {
-                var menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
-        </script>
-        
 
-        <section class="pt-12">
-            <!-- Menu Section -->
-            <div id="appetizer" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Appetizer</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://yohakka.com/wp-content/uploads/2023/06/Shrimp-Hakka-Noodles-.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://myfoodstory.com/wp-content/uploads/2021/02/Vegetable-Hakka-Noodles-Restaurant-Style-3.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.hwcmagazine.com/wp-content/uploads/2022/07/Mediterranean-Veggie-Wraps-7364.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.cherryonmysundae.com/wp-content/uploads/2021/08/chicken-tikka-masala-wraps-feature-500x500.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Main Content -->
+        <section id="appetizer" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Appetizer</h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                    alt="Hakka Chicken Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Chicken Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$12.99</p>
+                  </div>
                 </div>
-            </div>
-
-            <div id="entrees" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Entrees</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Hakka Shrimp Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Shrimp Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$14.99</p>
+                  </div>
                 </div>
-            </div>
-
-            <div id="breakfast" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Breakfast Plater</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/10/Veg-Hakka-Noodles-2-3-500x500.jpg"
+                    alt="Hakka Vegetable Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Vegetable Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$10.99</p>
+                  </div>
                 </div>
-            </div>
-
-            <div id="kids" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Kids Menu</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.acouplecooks.com/wp-content/uploads/2023/02/Veggie-Wrap-002.jpg"
+                    alt="Vegetable Wrap"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Vegetable Wrap
+                    </h3>
+                    <p class="text-gray-600 mt-2">$8.99</p>
+                  </div>
                 </div>
-            </div>
-
-            <div id="burgers" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Burger & Sub</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://recipes.net/wp-content/uploads/2023/07/chicken-tikka-wraps_7de9ba4adf187af4f2b2ddc96af9e992.jpeg"
+                    alt="Chicken Tikka Wrap"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Chicken Tikka Wrap
+                    </h3>
+                    <p class="text-gray-600 mt-2">$9.99</p>
+                  </div>
                 </div>
+              </div>
             </div>
-
-            <div id="drinks" class="max-w-7xl mx-auto px-6 py-8">
-                <h2 class="text-3xl font-semibold text-gray-800">Drinks And Dessert</h2>
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Chicken Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Chicken Noodles</h3>
-                                <p class="text-gray-600 mt-2">$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Shrimp Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Shrimp Noodles</h3>
-                                <p class="text-gray-600 mt-2">$14.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Hakka Vegetable Noodles" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Hakka Vegetable Noodles</h3>
-                                <p class="text-gray-600 mt-2">$10.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Vegetable Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Vegetable Wrap</h3>
-                                <p class="text-gray-600 mt-2">$8.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Menu Item Card -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div class="p-4 flex items-center">
-                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg" alt="Chicken Tikka Wrap" class="w-20 h-20 object-cover rounded-full mr-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800">Chicken Tikka Wrap</h3>
-                                <p class="text-gray-600 mt-2">$9.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </section>
-    </main>
 
+        <section id="entrees" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Entrees</h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Hakka Chicken Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Chicken Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$12.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Hakka Shrimp Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Shrimp Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$14.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Hakka Vegetable Noodles"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Hakka Vegetable Noodles
+                    </h3>
+                    <p class="text-gray-600 mt-2">$10.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Vegetable Wrap"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Vegetable Wrap
+                    </h3>
+                    <p class="text-gray-600 mt-2">$8.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Chicken Tikka Wrap"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Chicken Tikka Wrap
+                    </h3>
+                    <p class="text-gray-600 mt-2">$9.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="breakfast" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 pb-8">
+            <h2 class="text-3xl font-semibold text-gray-800">
+              Breakfast Plater
+            </h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Pancakes"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Pancakes
+                    </h3>
+                    <p class="text-gray-600 mt-2">$5.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Omelette"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Omelette
+                    </h3>
+                    <p class="text-gray-600 mt-2">$6.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="French Toast"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      French Toast
+                    </h3>
+                    <p class="text-gray-600 mt-2">$7.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="kids" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 pb-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Kids Menu</h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Chicken Nuggets"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Chicken Nuggets
+                    </h3>
+                    <p class="text-gray-600 mt-2">$4.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Mac and Cheese"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Mac and Cheese
+                    </h3>
+                    <p class="text-gray-600 mt-2">$5.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Mini Burger"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Mini Burger
+                    </h3>
+                    <p class="text-gray-600 mt-2">$6.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="burgers" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 pb-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Burger & Sub</h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Classic Beef Burger"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Classic Beef Burger
+                    </h3>
+                    <p class="text-gray-600 mt-2">$9.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Chicken Sub"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Chicken Sub
+                    </h3>
+                    <p class="text-gray-600 mt-2">$8.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Veggie Burger"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Veggie Burger
+                    </h3>
+                    <p class="text-gray-600 mt-2">$7.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="BBQ Pulled Pork Sub"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      BBQ Pulled Pork Sub
+                    </h3>
+                    <p class="text-gray-600 mt-2">$10.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Fish Burger"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Fish Burger
+                    </h3>
+                    <p class="text-gray-600 mt-2">$9.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="drinks" class="pt-12">
+          <div class="max-w-7xl mx-auto px-6 pb-8">
+            <h2 class="text-3xl font-semibold text-gray-800">
+              Drinks And Dessert
+            </h2>
+            <div
+              class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Coke"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Coke</h3>
+                    <p class="text-gray-600 mt-2">$1.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Orange Juice"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Orange Juice
+                    </h3>
+                    <p class="text-gray-600 mt-2">$2.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Chocolate Cake"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Chocolate Cake
+                    </h3>
+                    <p class="text-gray-600 mt-2">$4.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Ice Cream Sundae"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Ice Cream Sundae
+                    </h3>
+                    <p class="text-gray-600 mt-2">$3.99</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Item Card -->
+              <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <div class="p-4 flex items-center">
+                  <img
+                    src="https://www.whiskaffair.com/wp-content/uploads/2020/07/Shrimp-Chow-Mein-2-3-500x375.jpg"
+                    alt="Fruit Smoothie"
+                    class="w-20 h-20 object-cover rounded-full mr-4"
+                  />
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-800">
+                      Fruit Smoothie
+                    </h3>
+                    <p class="text-gray-600 mt-2">$3.99</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <script>
+        document
+          .getElementById("menu-toggle")
+          .addEventListener("click", function () {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+          });
+
+        document.querySelectorAll(".menu-link").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            const offset = 150;
+
+            // Check if mobile menu is already hidden before scrolling
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+
+            window.scrollTo({
+              top: targetElement.offsetTop - offset,
+              behavior: "smooth",
+            });
+          });
+        });
+      </script>
       <!--Footer-->
       <footer
         class="relative bg-gradient-to-r from-orange-500 to-red-500 pt-8 pb-6"
@@ -947,7 +1166,7 @@
             class="flex flex-wrap items-center md:justify-between justify-center"
           >
             <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div class="text-sm text-white font-semibold py-1">
+              <div class="text-sm text-white font-semibold">
                 Developed <span id="get-current-year">By</span>
                 <a
                   href="https://blacktechcorp.com/"
@@ -968,16 +1187,6 @@
       <!--End Footer-->
 
       <script src="js/index.js"></script>
-      <script>
-        document.querySelectorAll('header a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
     </div>
   </body>
 </html>
