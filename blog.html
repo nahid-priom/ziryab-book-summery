@@ -14,6 +14,17 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      header {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        background-color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      header.scroll {
+        background-color: rgb(255, 243, 243);
+      }
       .dropdown {
         display: inline-block;
         position: relative;
@@ -57,19 +68,6 @@
         background-color: #f37016;
         color: white;
       }
-    </style>
-    <style>
-      @keyframes phoneBeep {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-10px);
-        }
-      }
-    </style>
-
-    <style>
       .hero-section {
         background-image: url("./images/background.png");
         background-size: cover;
@@ -125,9 +123,14 @@
 
     <div class="content hidden">
       <!--Navbar-->
-      <section class="relative mx-2">
-        <div class="shadow-md  rounded-2xl absolute top-4  left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full px-4 lg:max-w-7xl">
-            <nav id="navbar" class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <header id="navbar">
+        <div
+          class="shadow-md rounded-2xl absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full lg:max-w-7xl"
+        >
+          <nav
+            id="navbar"
+            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+          >
             <a class="text-3xl font-bold leading-none" href="index.html">
               <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
             </a>
@@ -157,7 +160,7 @@
                 >
                   Menu <i class="fas fa-chevron-down ml-2"></i>
                 </a>
-                
+
                 <div
                   id="dropdown-content"
                   class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
@@ -280,9 +283,19 @@
             </ul>
             <a
               class="hidden lg:inline-block py-4 px-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:bg-[#100d20] border text-lg text-white font-bold transition duration-200"
-              href="#"
+              href="order-now.html"
               >Order Now</a
             >
+            <!-- Cart Icon with Badge -->
+            <a href="cart.html" class="relative lg:inline-block  border text-lg text-white font-bold transition duration-200 ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 px-2 py-2 w-12 text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7" />
+              </svg>
+              <!-- Cart Count Badge -->
+              <span class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2">
+                  3
+              </span>
+          </a>
           </nav>
         </div>
         <div class="navbar-menu relative z-50 hidden">
@@ -306,7 +319,7 @@
               >
             </span>
           </a>
-          
+
           <div
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
@@ -320,7 +333,6 @@
               >
                 <img src="images/logo.png" class="w-32" />
               </a>
-              
 
               <button class="navbar-close">
                 <svg
@@ -433,7 +445,7 @@
             </div>
           </nav>
         </div>
-      </section>
+      </header>
       <!-- End Navbar -->
       <!--Blogs Section-->
       <section>
