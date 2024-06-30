@@ -83,7 +83,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
-          height: 560px;
+          height: 500px;
         }
 
         @keyframes growShrinkMobile {
@@ -95,6 +95,70 @@
           }
         }
       }
+      @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes spin-scale {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  .animate-fade-in-down {
+    animation: fade-in-down 2s ease-out forwards;
+  }
+  .animate-fade-in-left {
+    animation: fade-in-left 2s ease-out forwards;
+  }
+  .animate-fade-in-right {
+    animation: fade-in-right 2s ease-out forwards;
+  }
+  .animate-spin-scale {
+    animation: spin-scale 10s linear infinite;
+  }
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
     </style>
   </head>
   <body>
@@ -125,14 +189,14 @@
       <!--Navbar-->
       <header id="navbar">
         <div
-          class="shadow-md rounded-2xl absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full lg:max-w-7xl"
+          class="shadow-md rounded-2xl absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white w-full lg:max-w-7xl"
         >
           <nav
             id="navbar"
-            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+            class="mx-auto px-4 py-2 flex justify-center gap-5 lg:justify-between items-center"
           >
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
+              <img src="images/logo.png" alt="logo" class="w-16" />
             </a>
             <div class="lg:hidden">
               <button
@@ -287,15 +351,77 @@
               >Order Now</a
             >
             <!-- Cart Icon with Badge -->
-            <a href="cart.html" class="relative lg:inline-block  border text-lg text-white font-bold transition duration-200 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 px-2 py-2 w-12 text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7" />
+            <a
+              href="cart.html"
+              class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 px-2 py-2 w-12 text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full inline"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7"
+                />
               </svg>
               <!-- Cart Count Badge -->
-              <span class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2">
-                  3
+              <span
+                class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2"
+              >
+                3
               </span>
-          </a>
+            </a>
+
+            <!-- User Icon with Dropdown -->
+            <div class="relative inline-block">
+              <a
+                href="#"
+                class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-12 px-2 py-1 w-12 text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full inline"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M12 7a4 4 0 100-8 4 4 0 000 8zm0 2a9 9 0 00-9 9h18a9 9 0 00-9-9z"
+                  />
+                </svg>
+              </a>
+              <!-- Dropdown Menu -->
+              <div
+                class="absolute right-0 hidden w-48 bg-white border border-orange-300 rounded-md shadow-lg py-2 z-20 group-hover:block"
+              >
+                <a
+                  href="login.html"
+                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-orange-500 hover:text-white"
+                >
+                  Log In
+                </a>
+                <a
+                  href="create-account.html"
+                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-orange-500 hover:text-white"
+                >
+                  Create Account
+                </a>
+              </div>
+            </div>
+
+            <style>
+              .relative.inline-block:hover .absolute.right-0.hidden {
+                display: block;
+              }
+            </style>
           </nav>
         </div>
         <div class="navbar-menu relative z-50 hidden">
@@ -449,11 +575,12 @@
       <!-- End Navbar -->
 
       <main>
-        <!--Hero Section-->
-        <section class="hero-section pt-16 lg:pt-48 relative bg-orange-100">
+        <!-- Hero Section -->
+        <section class="hero-section pt-20 lg:pt-48 relative bg-orange-100">
           <div
             class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
           >
+            <!-- Left Content -->
             <div
               class="w-full lg:w-1/2 lg:h-[400px] flex items-center justify-center md:justify-start"
             >
@@ -461,26 +588,26 @@
                 class="flex max-w-xl flex-col justify-center items-center md:items-start text-center md:text-start"
               >
                 <p
-                  class="font-bold my-4 mb-8 text-xl w-80 text-center bg-white rounded-md"
+                  class="font-bold my-4 mb-8 text-xl w-80 text-center bg-white rounded-md animate-fade-in-down"
                 >
-                  WELCOME TO OUR RESTAURENT
+                  WELCOME TO OUR RESTAURANT
                 </p>
                 <h1
-                  class="text-4xl max-w-sm lg:max-w-xl lg:text-5xl font-extrabold tracking-wide text-[#373A40]"
+                  class="text-5xl max-w-sm lg:max-w-xl lg:text-7xl font-extrabold tracking-wide text-orange-300 animate-fade-in-left delay-200"
                 >
-                  Delicious Foods for Every Occasion and Festival
+                  Enjoy Our Delicious Meal
                 </h1>
-                <p class="font-bold text-base max-w-sm text-[#EEEEEE] pr-4 py-4">
-                  Get delivery or takeaway from MLK soul food at 7109 Martin
-                  Luther King Junior Highway in Greater Landover. Order online
-                  and track your order live.
+                <p
+                  class="font-bold text-base max-w-sm text-[#EEEEEE] pr-4 py-4 animate-fade-in-right delay-400"
+                >
+                  Discover authentic Italian flavors at Pizza House: fresh
+                  ingredients, hand-tossed dough, and gourmet toppings. Enjoy!
                 </p>
-
                 <div class="mt-4">
                   <a href="order-now.html">
                     <button
                       type="button"
-                      class="px-6 py-3 m-1 font-bold border-4 border-orange-300 transition-colors duration-300 transform bg-[#EEEEEE] rounded-full hover:bg-gray-100 hover:text-black focus:text-white focus:outline-none hover:bg-white focus:bg-black"
+                      class="px-6 py-3 m-1 font-bold border-4 border-orange-300 transition-transform duration-300 transform bg-[#EEEEEE] rounded-full hover:scale-110 hover:bg-gray-100 hover:text-black focus:text-white focus:outline-none hover:bg-white focus:bg-black animate-bounce delay-600"
                     >
                       Order Now
                     </button>
@@ -493,7 +620,7 @@
 
         <!--End Hero Section-->
         <!-- Our Popular Menu -->
-        <section>
+        <section class="pt-12">
           <div class="bg-white lg:py-10 pb-10">
             <div class="max-w-7xl mx-auto px-4">
               <div class="text-center mb-16">
