@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MLK Soul Food</title>
+    <title>District Pizza & Kabab</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -65,17 +65,26 @@
       }
 
       .dropdown-content a:hover {
-        background-color: #f37016;
+        background-color: #ffc55a;
         color: white;
       }
       .hero-section {
         background-image: url("./images/background.png");
-        background-size: cover;
         background-position: center;
-        animation: growShrink 10s infinite alternate;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: grow-shrink 10s infinite;
         height: 900px;
       }
-
+      @keyframes grow-shrink {
+        0%,
+        100% {
+          background-size: 100%;
+        }
+        50% {
+          background-size: 110%;
+        }
+      }
       @media (max-width: 840px) {
         .hero-section {
           background-image: url("./images/background.png");
@@ -83,7 +92,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           animation: none;
-          height: 560px;
+          height: 620px;
         }
 
         @keyframes growShrinkMobile {
@@ -93,6 +102,71 @@
           100% {
             background-size: 120%;
           }
+        }
+      }
+      @keyframes fade-in-down {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fade-in-left {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fade-in-right {
+        0% {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes spin-scale {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(180deg);
+        }
+        100% {
+          transform: scale(1) rotate(360deg);
+        }
+      }
+      .animate-fade-in-down {
+        animation: fade-in-down 2s ease-out forwards;
+      }
+      .animate-fade-in-left {
+        animation: fade-in-left 2s ease-out forwards;
+      }
+      .animate-fade-in-right {
+        animation: fade-in-right 2s ease-out forwards;
+      }
+      .animate-spin-scale {
+        animation: spin-scale 10s linear infinite;
+      }
+      .animate-pulse {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
         }
       }
     </style>
@@ -110,9 +184,9 @@
 
     <!-- Preloader -->
     <div
-      class="preloader bg-orange-100 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+      class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
-      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-ping">
+      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
         <img
           src="images/logo.png"
           alt="Loading Icon"
@@ -124,20 +198,18 @@
     <div class="content hidden">
       <!--Navbar-->
       <header id="navbar">
-        <div
-          class="shadow-md rounded-2xl absolute top-4 left-1/2 transform -translate-x-1/2 z-50 bg-orange-100 w-full lg:max-w-7xl"
-        >
+        <div class="shadow-md z-50 bg-[#00215E] w-full">
           <nav
             id="navbar"
-            class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+            class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
           >
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-12 lg:w-20" />
+              <img src="images/logo.png" alt="logo" class="w-32" />
             </a>
             <div class="lg:hidden">
               <button
                 id="navbar-burger"
-                class="navbar-burger flex items-center text-white rounded-md bg-gradient-to-r from-orange-500 to-red-500 rounded-md p-3"
+                class="navbar-burger flex items-center text-white rounded-md bg-[#FFC55A] rounded-md p-3"
               >
                 <svg
                   class="block h-4 w-4 fill-current"
@@ -155,7 +227,7 @@
               <div class="dropdown inline-block">
                 <a
                   id="menu-button"
-                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold dropbtn"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:text-black hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
                   href="#"
                 >
                   Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -167,7 +239,7 @@
                 >
                   <a
                     href="appetizer.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                   >
                     <img
                       src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
@@ -178,7 +250,7 @@
                   </a>
                   <a
                     href="entrees.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                   >
                     <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
@@ -189,7 +261,7 @@
                   </a>
                   <a
                     href="#"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                   >
                     <img
                       src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
@@ -200,7 +272,7 @@
                   </a>
                   <a
                     href="#"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                   >
                     <img
                       src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
@@ -229,7 +301,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -252,7 +324,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
                   href="contact.html"
                   >Contact</a
                 >
@@ -275,27 +347,89 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 hover:text-white hover:bg-gradient-to-r from-orange-500 to-red-500 rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
                   href="blog.html"
                   >Blog</a
                 >
               </li>
             </ul>
             <a
-              class="hidden lg:inline-block py-4 px-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:bg-[#100d20] border text-lg text-white font-bold transition duration-200"
+              class="hidden lg:inline-block py-4 px-8 bg-[#FFC55A] rounded-full hover:bg-white border text-lg text-black font-bold transition duration-200"
               href="order-now.html"
               >Order Now</a
             >
             <!-- Cart Icon with Badge -->
-            <a href="cart.html" class="relative lg:inline-block  border text-lg text-white font-bold transition duration-200 ml-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 px-2 py-2 w-12 text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7" />
+            <a
+              href="cart.html"
+              class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 px-2 py-2 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7"
+                />
               </svg>
               <!-- Cart Count Badge -->
-              <span class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2">
-                  3
+              <span
+                class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2"
+              >
+                3
               </span>
-          </a>
+            </a>
+
+            <!-- User Icon with Dropdown -->
+            <div class="relative inline-block">
+              <a
+                href="#"
+                class="relative lg:inline-block text-lg text-white font-bold transition duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-12 px-2 py-1 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M12 7a4 4 0 100-8 4 4 0 000 8zm0 2a9 9 0 00-9 9h18a9 9 0 00-9-9z"
+                  />
+                </svg>
+              </a>
+              <!-- Dropdown Menu -->
+              <div
+                class="absolute right-0 hidden w-48 bg-white border border-orange-300 rounded-md shadow-lg py-2 z-20 group-hover:block"
+              >
+                <a
+                  href="login.html"
+                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                >
+                  Log In
+                </a>
+                <a
+                  href="create-account.html"
+                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                >
+                  Create Account
+                </a>
+              </div>
+            </div>
+
+            <style>
+              .relative.inline-block:hover .absolute.right-0.hidden {
+                display: block;
+              }
+            </style>
           </nav>
         </div>
         <div class="navbar-menu relative z-50 hidden">
@@ -314,7 +448,7 @@
                 ></path>
               </svg>
               <span
-                class="absolute left-auto ml-0 -top-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-1 py-0 text-xs text-white font-bold"
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-white font-bold"
                 >2</span
               >
             </span>
@@ -324,7 +458,7 @@
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
           <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
           >
             <div class="flex items-center mb-8">
               <a
@@ -336,7 +470,7 @@
 
               <button class="navbar-close">
                 <svg
-                  class="h-6 w-6 text-white cursor-pointer hover:text-[#F37016]"
+                  class="h-6 w-6 text-white cursor-pointer hover:text-[#FFC55A] text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -356,7 +490,7 @@
                 <div class="dropdown">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
                     href="#"
                   >
                     Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -364,7 +498,7 @@
                   <div id="dropdown-content" class="dropdown-content hidden">
                     <a
                       href="appetizer.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                     >
                       <img
                         src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
@@ -375,7 +509,7 @@
                     </a>
                     <a
                       href="entrees.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                     >
                       <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
@@ -386,7 +520,7 @@
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                     >
                       <img
                         src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
@@ -397,7 +531,7 @@
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#F37016]"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
                     >
                       <img
                         src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
@@ -410,21 +544,21 @@
                 </div>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
                     href="#"
                     >About</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
                     href="#"
                     >Contact</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-white rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
                     href="#"
                     >Blog</a
                   >
@@ -434,19 +568,20 @@
             <div class="mt-auto">
               <div class="pt-6">
                 <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-white rounded-xl"
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-black rounded-xl"
                   href="#"
                   >Online Orders</a
                 >
               </div>
               <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © [#100d20]tech Consultancy</span>
+                <span>Copyright © Blacktech Consultancy</span>
               </p>
             </div>
           </nav>
         </div>
       </header>
       <!-- End Navbar -->
+       <!--About Section Start-->
       <section class="bg-white pt-32 lg:pt-40">
 
         <div class="2xl:max-w-7xl 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
@@ -470,12 +605,14 @@
     
         </div>
     </section>
-       <!--Footer-->
-       <footer class="relative bg-gradient-to-r from-orange-500 to-red-500 pt-8 pb-6">
+        <!--Footer-->
+        <footer
+        class="relative bg-[#00215E] pt-8 pb-6"
+      >
         <div class="max-w-7xl mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
-              <h4 class="text-3base text-white font-semibold text-blueGray-700">
+              <h4 class="text-2xl mb-4 text-white font-semibold text-blueGray-700">
                 Let's stay connected!
               </h4>
               <h5 class="text-lg mt-0 mb-2 text-white">
