@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MLK Soul Food</title>
+    <title>District Pizza & Kabab</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -96,69 +96,70 @@
         }
       }
       @keyframes fade-in-down {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes fade-in-left {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  @keyframes fade-in-right {
-    0% {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  @keyframes spin-scale {
-    0% {
-      transform: scale(1) rotate(0deg);
-    }
-    50% {
-      transform: scale(1.1) rotate(180deg);
-    }
-    100% {
-      transform: scale(1) rotate(360deg);
-    }
-  }
-  .animate-fade-in-down {
-    animation: fade-in-down 2s ease-out forwards;
-  }
-  .animate-fade-in-left {
-    animation: fade-in-left 2s ease-out forwards;
-  }
-  .animate-fade-in-right {
-    animation: fade-in-right 2s ease-out forwards;
-  }
-  .animate-spin-scale {
-    animation: spin-scale 10s linear infinite;
-  }
-  .animate-pulse {
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fade-in-left {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fade-in-right {
+        0% {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes spin-scale {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(180deg);
+        }
+        100% {
+          transform: scale(1) rotate(360deg);
+        }
+      }
+      .animate-fade-in-down {
+        animation: fade-in-down 2s ease-out forwards;
+      }
+      .animate-fade-in-left {
+        animation: fade-in-left 2s ease-out forwards;
+      }
+      .animate-fade-in-right {
+        animation: fade-in-right 2s ease-out forwards;
+      }
+      .animate-spin-scale {
+        animation: spin-scale 10s linear infinite;
+      }
+      .animate-pulse {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
     </style>
   </head>
   <body>
@@ -196,7 +197,7 @@
             class="mx-auto px-4 py-2 flex justify-center gap-5 lg:justify-between items-center"
           >
             <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-16" />
+              <img src="images/logo.png" alt="logo" class="w-32" />
             </a>
             <div class="lg:hidden">
               <button
@@ -620,119 +621,134 @@
 
         <!--End Hero Section-->
         <!-- Our Popular Menu -->
-        <section class="pt-12">
-          <div class="bg-white lg:py-10 pb-10">
-            <div class="max-w-7xl mx-auto px-4">
-              <div class="text-center mb-16">
-                <h2
-                  class="text-3xl lg:text-4xl font-bold text-center text-white bg-gradient-to-r from-orange-500 to-red-500 py-4 mb-8 rounded-md"
-                >
-                  Our Popular Menu
-                </h2>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a
-                  href="appetizer.html"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://www.thespicehouse.com/cdn/shop/articles/Insane_Hot_Wings_720x.jpg?v=1588270427"
-                      alt="Appetizers"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">
+        <section class="py-12 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-extrabold mb-4 text-gray-900">
+                Our Popular Menu
+              </h2>
+              <p class="text-lg text-gray-600">
+                Discover the best dishes from our menu, curated for your
+                delight.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Item 1 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="appetizer.html">
+                  <img
+                    src="https://www.thespicehouse.com/cdn/shop/articles/Insane_Hot_Wings_720x.jpg?v=1588270427"
+                    alt="Appetizers"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
                       Appetizers
                     </h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                       Start your meal with our delicious appetizers.
                     </p>
                   </div>
                 </a>
-
-                <a
-                  href="entrees.html"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://whatshouldimakefor.com/wp-content/uploads/2019/07/IMG_7743.jpg"
-                      alt="entrees"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">
+              </div>
+              <!-- Item 2 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="entrees.html">
+                  <img
+                    src="https://whatshouldimakefor.com/wp-content/uploads/2019/07/IMG_7743.jpg"
+                    alt="Burger & Sub"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
                       Burger & Sub
                     </h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                       Enjoy our range of delicious noodle dishes.
                     </p>
                   </div>
                 </a>
-                <a
-                  href="#"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://images.squarespace-cdn.com/content/v1/5b9952adc258b451bdc43cc2/1598829041232-9E721WS3N0SKJUPAH3PC/Breakfast+Platter+Ideas.JPG"
-                      alt="Curries (Sea-Food)"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">
+              </div>
+              <!-- Item 3 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="#">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/5b9952adc258b451bdc43cc2/1598829041232-9E721WS3N0SKJUPAH3PC/Breakfast+Platter+Ideas.JPG"
+                    alt="Breakfast Plater"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
                       Breakfast Plater
                     </h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                       Savor our rich and flavorful seafood curries.
                     </p>
                   </div>
                 </a>
-                <a
-                  href="#"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://www.allrecipes.com/thmb/c_AVpo9-1HBML0P0bRwbHkBllpo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/86353-SimplePastaSalad-ddmfs-4x3-05131-1-4c7b5049d9464d339cc59f59edf62626.jpg"
-                      alt="Curries (Vegetarian)"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">Salad</h3>
-                    <p class="text-gray-600">
+              </div>
+              <!-- Item 4 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="#">
+                  <img
+                    src="https://www.allrecipes.com/thmb/c_AVpo9-1HBML0P0bRwbHkBllpo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/86353-SimplePastaSalad-ddmfs-4x3-05131-1-4c7b5049d9464d339cc59f59edf62626.jpg"
+                    alt="Salad"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                      Salad
+                    </h3>
+                    <p class="text-gray-700">
                       Delight in our hearty and delicious vegetarian curries.
                     </p>
                   </div>
                 </a>
-                <a
-                  href="#"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://hips.hearstapps.com/hmg-prod/images/western-omelette-recipe-2-1676061474.jpg?crop=0.503xw:1.00xh;0.252xw,0&resize=1200:*"
-                      alt="Rice and Biriyani"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">Omlets</h3>
-                    <p class="text-gray-600">
+              </div>
+              <!-- Item 5 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="#">
+                  <img
+                    src="https://hips.hearstapps.com/hmg-prod/images/western-omelette-recipe-2-1676061474.jpg?crop=0.503xw:1.00xh;0.252xw,0&resize=1200:*"
+                    alt="Omlets"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                      Omlets
+                    </h3>
+                    <p class="text-gray-700">
                       Aromatic basmati rice, cooked with richly flavored
                       saffron, nuts, and raisins.
                     </p>
                   </div>
                 </a>
-                <a
-                  href="#"
-                  class="transform transition-transform duration-300 ease-in-out hover:scale-105"
-                >
-                  <div class="bg-white shadow-lg rounded-lg p-6">
-                    <img
-                      src="https://res.cloudinary.com/the-infatuation/image/upload/f_auto/q_auto/v1664814507/images/Gage_and_Tollner_Dessert_and_Drinks-87_nx0gsa.jpg"
-                      alt="Drinks & Desserts"
-                      class="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h3 class="text-xl font-bold text-black mb-2">
+              </div>
+              <!-- Item 6 -->
+              <div
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
+              >
+                <a href="#">
+                  <img
+                    src="https://res.cloudinary.com/the-infatuation/image/upload/f_auto/q_auto/v1664814507/images/Gage_and_Tollner_Dessert_and_Drinks-87_nx0gsa.jpg"
+                    alt="Drinks & Desserts"
+                    class="w-full h-52 object-cover"
+                  />
+                  <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
                       Drinks & Desserts
                     </h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                       Delight in our hearty and delicious drinks and desserts
                       like Gulab Jamun Kheer.
                     </p>
@@ -742,199 +758,113 @@
             </div>
           </div>
         </section>
+<!-- Popular Foods Section -->
+<section class="popular-foods py-8 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold mb-4 text-gray-900">
+        Our Popular Items
+      </h2>
+      <p class="text-lg text-gray-600">
+        Discover the best dishes from our menu, curated for your
+        delight.
+      </p>
+    </div>
 
-        <!-- Popular Foods Section -->
-        <section class="popular-foods py-8 py-4 bg-white">
-          <div class="max-w-7xl mx-auto px-4">
-            <h2
-              class="text-3xl lg:text-4xl font-bold text-center text-white bg-gradient-to-r from-orange-500 to-red-500 py-3 mb-8 rounded-md"
-            >
-              Our Popular Items
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <a
-                href="chicken.html"
-                class="duration-300 ease-in-out hover:scale-105"
-              >
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351654_FFAS60r2iHUkOY69RPRwEOVS76EU4SdA.jpg"
-                    alt="Appetizers"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Whole Turkey Wing (1)
-                  </h3>
-                  <p class="text-gray-600">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $5.00
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chili-chicken.html"
-                class="duration-300 ease-in-out hover:scale-105"
-              >
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzO9r5kWylYvGywI_qWZpgeSCyncU0EebpKiax54dX2FXlS8ERNCdiWbMyJ4pX2uqOUbU&usqp=CAU"
-                    alt="Main Course"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Whole Chicken Wing (1)
-                  </h3>
-                  <p class="text-gray-600">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $3.00
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="duration-300 ease-in-out hover:scale-105">
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://www.shutterstock.com/image-photo/air-fryer-chicken-wings-glazed-600nw-2286706431.jpg"
-                    alt="Desserts"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Whole Chicken Wing (4)
-                  </h3>
-                  <p class="text-gray-600">
-                    Juicy whole chicken, expertly roasted to golden perfection,
-                    served with aromatic herbs and savory seasonings
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $12.99
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="duration-300 ease-in-out hover:scale-105">
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://facts.net/wp-content/uploads/2023/11/10-chicken-wing-facts-1700733178.jpg"
-                    alt="Appetizers"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Whole Chicken Wings (6)
-                  </h3>
-                  <p class="text-gray-600">
-                    Juicy whole chicken, expertly roasted to golden perfection,
-                    served with aromatic herbs and savory seasonings
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $16.99
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="duration-300 ease-in-out hover:scale-105">
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://facts.net/wp-content/uploads/2023/11/10-chicken-wing-facts-1700733178.jpg"
-                    alt="Main Course"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Whole Chicken Wings (8)
-                  </h3>
-                  <p class="text-gray-600">
-                    Juicy whole chicken, expertly roasted to golden perfection,
-                    served with aromatic herbs and savory seasonings
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $22.99
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="duration-300 ease-in-out hover:scale-105">
-                <div class="bg-white shadow-lg h-88 rounded-lg p-6">
-                  <img
-                    src="https://omnivorescookbook.com/wp-content/uploads/2023/09/230718_Braised-Pork-Trotters_550.jpg"
-                    alt="Desserts"
-                    class="w-full h-48 object-cover mb-4 rounded-lg"
-                  />
-                  <h3 class="text-xl font-bold text-black mb-2">
-                    Pig Feet (1)
-                  </h3>
-                  <p class="text-gray-600">
-                    Tender pig feet, slow-cooked to perfection, offering a rich,
-                    flavorful experience with every bite.
-                  </p>
-                  <div class="flex mt-4">
-                    <h6
-                      class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5"
-                    >
-                      $5.00
-                    </h6>
-                    <button
-                      class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <a href="chicken.html" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351654_FFAS60r2iHUkOY69RPRwEOVS76EU4SdA.jpg" alt="Appetizers" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Whole Turkey Wing (1)</h3>
+          <p class="text-gray-600">Succulent chicken wings, perfectly seasoned and crispy on the outside, tender and juicy on the inside</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$5.00</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
           </div>
-        </section>
+        </div>
+      </a>
+      <a href="chili-chicken.html" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzO9r5kWylYvGywI_qWZpgeSCyncU0EebpKiax54dX2FXlS8ERNCdiWbMyJ4pX2uqOUbU&usqp=CAU" alt="Main Course" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Whole Chicken Wing (1)</h3>
+          <p class="text-gray-600">Succulent chicken wings, perfectly seasoned and crispy on the outside, tender and juicy on the inside</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$3.00</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://www.shutterstock.com/image-photo/air-fryer-chicken-wings-glazed-600nw-2286706431.jpg" alt="Desserts" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Whole Chicken Wing (4)</h3>
+          <p class="text-gray-600">Juicy whole chicken, expertly roasted to golden perfection, served with aromatic herbs and savory seasonings</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$12.99</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://facts.net/wp-content/uploads/2023/11/10-chicken-wing-facts-1700733178.jpg" alt="Appetizers" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Whole Chicken Wings (6)</h3>
+          <p class="text-gray-600">Juicy whole chicken, expertly roasted to golden perfection, served with aromatic herbs and savory seasonings</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$16.99</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://facts.net/wp-content/uploads/2023/11/10-chicken-wing-facts-1700733178.jpg" alt="Main Course" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Whole Chicken Wings (8)</h3>
+          <p class="text-gray-600">Juicy whole chicken, expertly roasted to golden perfection, served with aromatic herbs and savory seasonings</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$22.99</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="duration-300 ease-in-out hover:scale-105">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://omnivorescookbook.com/wp-content/uploads/2023/09/230718_Braised-Pork-Trotters_550.jpg" alt="Desserts" class="w-full h-48 object-cover mb-4 rounded-lg" />
+          <h3 class="text-xl font-bold text-black mb-2">Pig Feet (1)</h3>
+          <p class="text-gray-600">Tender pig feet, slow-cooked to perfection, offering a rich, flavorful experience with every bite.</p>
+          <div class="flex mt-4">
+            <h6 class="font-manrope font-semibold text-2xl leading-9 text-black pr-5 sm:border-r border-gray-200 mr-5">$5.00</h6>
+            <button class="bg-gradient-to-r from-orange-500 to-red-500 px-3 py-2 text-white font-bold rounded-full flex items-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"></path></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
       </main>
 
       <!--Footer-->
       <footer
-        class="relative bg-gradient-to-r from-orange-500 to-red-500 pt-8 pb-6"
+        class="relative bg-gradient-to-r from-gray-900 to-gray-700 pt-8 pb-6"
       >
         <div class="max-w-7xl mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
