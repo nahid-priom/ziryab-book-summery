@@ -107,7 +107,7 @@
       @keyframes fade-in-down {
         0% {
           opacity: 0;
-          transform: translateY(-50px);
+          transform: translateY(-20px);
         }
         100% {
           opacity: 1;
@@ -117,7 +117,7 @@
       @keyframes fade-in-left {
         0% {
           opacity: 0;
-          transform: translateX(-50px);
+          transform: translateX(-20px);
         }
         100% {
           opacity: 1;
@@ -127,7 +127,7 @@
       @keyframes fade-in-right {
         0% {
           opacity: 0;
-          transform: translateX(50px);
+          transform: translateX(20px);
         }
         100% {
           opacity: 1;
@@ -186,7 +186,7 @@
     <div
       class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
-      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
+      <div class="loader rounded-full w-32 h-32 lg:w-40 lg:h-40 animate-bounce">
         <img
           src="images/logo.png"
           alt="Loading Icon"
@@ -203,31 +203,17 @@
             id="navbar"
             class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
           >
-            <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-32" />
+            <a class="text-3xl py-1 font-bold leading-none" href="index.html">
+              <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
             </a>
-            <div class="lg:hidden">
-              <button
-                id="navbar-burger"
-                class="navbar-burger flex items-center text-white rounded-md bg-[#FFC55A] rounded-md p-3"
-              >
-                <svg
-                  class="block h-4 w-4 fill-current"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Services</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-              </button>
-            </div>
+            
             <ul
               class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
                   id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:text-black hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
                   href="#"
                 >
                   Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -301,7 +287,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -324,7 +310,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="contact.html"
                   >Contact</a
                 >
@@ -347,7 +333,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="blog.html"
                   >Blog</a
                 >
@@ -365,7 +351,7 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-12 px-2 py-2 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                class="h-10 px-2 py-2 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -393,7 +379,7 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 px-2 py-1 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                  class="h-10 px-2 py-1 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -408,21 +394,37 @@
               </a>
               <!-- Dropdown Menu -->
               <div
-                class="absolute right-0 hidden w-48 bg-white border border-orange-300 rounded-md shadow-lg py-2 z-20 group-hover:block"
+                class="absolute right-0 hidden w-48 bg-white  rounded-md shadow-lg z-20 group-hover:block"
               >
                 <a
                   href="login.html"
-                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A]"
                 >
                   Log In
                 </a>
                 <a
                   href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A]"
                 >
                   Create Account
                 </a>
               </div>
+              
+            </div>
+            <div class="lg:hidden">
+              <button
+                id="navbar-burger"
+                class="navbar-burger flex items-center text-black rounded-md bg-[#FFC55A] rounded-md p-3"
+              >
+                <svg
+                  class="block h-4 w-4 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Services</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
             </div>
 
             <style>
@@ -465,7 +467,7 @@
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" class="w-32" />
+                <img src="images/logo.png" class="w-24" />
               </a>
 
               <button class="navbar-close">
@@ -490,7 +492,7 @@
                 <div class="dropdown">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                   >
                     Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -544,21 +546,21 @@
                 </div>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >About</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >Contact</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >Blog</a
                   >
@@ -568,7 +570,7 @@
             <div class="mt-auto">
               <div class="pt-6">
                 <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-black rounded-xl"
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md rounded-xl"
                   href="#"
                   >Online Orders</a
                 >
@@ -584,7 +586,7 @@
 
       <main class="pt-24 lg:pt-36">
         <!-- Navigation Menu Bar -->
-        <div class="menu-header fixed w-full z-50">
+        <div class="menu-header  fixed w-full z-50">
           <div
             class="px-6 max-w-7xl mx-auto bg-[#FFC55A] rounded-lg shadow-md py-4"
           >
@@ -648,32 +650,32 @@
           >
             <a
               href="#appetizer"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Appetizer</a
             >
             <a
               href="#entrees"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Entrees</a
             >
             <a
               href="#breakfast"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Breakfast Plater</a
             >
             <a
               href="#kids"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Kids Menu</a
             >
             <a
               href="#burgers"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Burger & Sub</a
             >
             <a
               href="#drinks"
-              class="menu-link block text-white text-center font-semibold hover:text-black text-lg py-2"
+              class="menu-link block text-black text-center font-semibold hover:text-black text-lg py-4"
               >Drinks And Dessert</a
             >
           </div>
@@ -691,9 +693,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -714,9 +716,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -737,9 +739,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -760,9 +762,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -783,9 +785,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -806,9 +808,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -839,9 +841,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -862,9 +864,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -885,9 +887,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -908,9 +910,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -931,9 +933,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -954,9 +956,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -977,9 +979,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -1011,9 +1013,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -1034,9 +1036,9 @@
                 <div class="p-4 flex justify-between items-center">
                   <div class="flex justify-center items-center">
                     <img
-                      src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Spicy-Chicken-Hakka-Noodles-Recipe.jpg"
+                      src="https://www.cicis.com/content/images/cicis/Jalapeno%20pizza.png"
                       alt="Hakka Noodles"
-                      class="w-20 h-20 object-cover rounded-full mr-4"
+                      class="w-32 h-32 object-cover rounded-full mr-4"
                     />
                     <div>
                       <h3 class="text-xl font-semibold text-gray-800">
@@ -1057,34 +1059,7 @@
         </section>
       </main>
 
-      <script>
-        document
-          .getElementById("menu-toggle")
-          .addEventListener("click", function () {
-            var menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
-          });
-
-        document.querySelectorAll(".menu-link").forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            const offset = 150;
-
-            // Check if mobile menu is already hidden before scrolling
-            const mobileMenu = document.getElementById("mobile-menu");
-            if (!mobileMenu.classList.contains("hidden")) {
-              mobileMenu.classList.add("hidden");
-            }
-
-            window.scrollTo({
-              top: targetElement.offsetTop - offset,
-              behavior: "smooth",
-            });
-          });
-        });
-      </script>
+     
    <!--Footer-->
    <footer
    class="relative bg-[#00215E] pt-8 pb-6"
@@ -1222,6 +1197,34 @@
  <!--End Footer-->
 
  <script src="js/index.js"></script>
+ <script>
+  document
+    .getElementById("menu-toggle")
+    .addEventListener("click", function () {
+      var menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+
+  document.querySelectorAll(".menu-link").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      const offset = 130;
+
+      // Check if mobile menu is already hidden before scrolling
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+
+      window.scrollTo({
+        top: targetElement.offsetTop - offset,
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
 </div>
 </body>
 </html>

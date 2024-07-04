@@ -107,7 +107,7 @@
       @keyframes fade-in-down {
         0% {
           opacity: 0;
-          transform: translateY(-50px);
+          transform: translateY(-20px);
         }
         100% {
           opacity: 1;
@@ -117,7 +117,7 @@
       @keyframes fade-in-left {
         0% {
           opacity: 0;
-          transform: translateX(-50px);
+          transform: translateX(-20px);
         }
         100% {
           opacity: 1;
@@ -127,7 +127,7 @@
       @keyframes fade-in-right {
         0% {
           opacity: 0;
-          transform: translateX(50px);
+          transform: translateX(20px);
         }
         100% {
           opacity: 1;
@@ -203,31 +203,17 @@
             id="navbar"
             class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
           >
-            <a class="text-3xl font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-32" />
+            <a class="text-3xl py-1 font-bold leading-none" href="index.html">
+              <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
             </a>
-            <div class="lg:hidden">
-              <button
-                id="navbar-burger"
-                class="navbar-burger flex items-center text-white rounded-md bg-[#FFC55A] rounded-md p-3"
-              >
-                <svg
-                  class="block h-4 w-4 fill-current"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Services</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-              </button>
-            </div>
+            
             <ul
               class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
                   id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:text-black hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
                   href="#"
                 >
                   Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -301,7 +287,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -324,7 +310,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="contact.html"
                   >Contact</a
                 >
@@ -347,7 +333,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:text-black hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
                   href="blog.html"
                   >Blog</a
                 >
@@ -365,7 +351,7 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-12 px-2 py-2 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                class="h-10 px-2 py-2 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -393,7 +379,7 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 px-2 py-1 w-12 bg-[#FFC55A] text-black rounded-full inline"
+                  class="h-10 px-2 py-1 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -408,21 +394,37 @@
               </a>
               <!-- Dropdown Menu -->
               <div
-                class="absolute right-0 hidden w-48 bg-white border border-orange-300 rounded-md shadow-lg py-2 z-20 group-hover:block"
+                class="absolute right-0 hidden w-48 bg-white  rounded-md shadow-lg z-20 group-hover:block"
               >
                 <a
                   href="login.html"
-                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A]"
                 >
                   Log In
                 </a>
                 <a
                   href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold hover:bg-[#FFC55A] hover:text-black"
+                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A]"
                 >
                   Create Account
                 </a>
               </div>
+              
+            </div>
+            <div class="lg:hidden">
+              <button
+                id="navbar-burger"
+                class="navbar-burger flex items-center text-black rounded-md bg-[#FFC55A] rounded-md p-3"
+              >
+                <svg
+                  class="block h-4 w-4 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Services</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
             </div>
 
             <style>
@@ -465,7 +467,7 @@
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" class="w-32" />
+                <img src="images/logo.png" class="w-24" />
               </a>
 
               <button class="navbar-close">
@@ -490,7 +492,7 @@
                 <div class="dropdown">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                   >
                     Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -544,21 +546,21 @@
                 </div>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >About</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >Contact</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md hover:text-black rounded"
+                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
                     href="#"
                     >Blog</a
                   >
@@ -568,13 +570,13 @@
             <div class="mt-auto">
               <div class="pt-6">
                 <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md hover:text-black rounded-xl"
+                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md rounded-xl"
                   href="#"
                   >Online Orders</a
                 >
               </div>
               <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © Blacktech Consultancy</span>
+                <span>Copyright © [#100d20]tech Consultancy</span>
               </p>
             </div>
           </nav>
@@ -582,7 +584,7 @@
       </header>
       <!-- End Navbar -->
        <!--About Section Start-->
-      <section class="bg-white pt-32 lg:pt-40">
+      <section class="bg-white pt-16 lg:pt-40">
 
         <div class="2xl:max-w-7xl 2xl:mx-auto lg:py-16  md:py-12 md:px-6 py-9 px-4">
             <div class="flex flex-col lg:flex-row justify-between gap-8">
