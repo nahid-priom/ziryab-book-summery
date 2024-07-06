@@ -14,6 +14,9 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      #orderConfirmedModal {
+        display: none;
+      }
       header {
         position: fixed;
         z-index: 1000;
@@ -71,9 +74,9 @@
       .hero-section {
         background-image: url("./images/background.png");
         background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: grow-shrink 10s infinite;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: grow-shrink 10s infinite;
         height: 900px;
       }
       @keyframes grow-shrink {
@@ -186,7 +189,7 @@
     <div
       class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
-      <div class="loader rounded-full w-32 h-32 lg:w-40 lg:h-40 animate-bounce">
+      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
         <img
           src="images/logo.png"
           alt="Loading Icon"
@@ -206,14 +209,14 @@
             <a class="text-3xl py-1 font-bold leading-none" href="index.html">
               <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
             </a>
-            
+
             <ul
               class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
                   id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] rounded-md font-bold dropbtn"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                   href="#"
                 >
                   Menu <i class="fas fa-chevron-down ml-2"></i>
@@ -225,47 +228,47 @@
                 >
                   <a
                     href="appetizer.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <img
-                      src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
-                      alt="Appetizers"
+                      src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
+                      alt="Special Pizza"
                       class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Appetizers</p>
+                    <p class="font-bold ml-4">Special Pizza</p>
                   </a>
                   <a
                     href="entrees.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                      src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
                       alt="Entrees"
                       class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Burger and Sub</p>
+                    <p class="font-bold ml-4">Sub Sandwich</p>
                   </a>
                   <a
                     href="#"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <img
-                      src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                      src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
                       alt="Curries (Sea-Food)"
                       class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Breakfast Plater</p>
+                    <p class="font-bold ml-4">Fresh Salad</p>
                   </a>
                   <a
                     href="#"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <img
-                      src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                      src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
                       alt="Curries (Vegetarian)"
                       class="w-10 h-10 rounded-full"
                     />
-                    <p class="font-bold ml-4">Dinner</p>
+                    <p class="font-bold ml-4">Desserts</p>
                   </a>
                 </div>
               </div>
@@ -287,7 +290,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
                   href="about.html"
                   >About</a
                 >
@@ -310,7 +313,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
                   href="contact.html"
                   >Contact</a
                 >
@@ -333,7 +336,7 @@
               </li>
               <li>
                 <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] rounded-md font-bold"
+                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
                   href="blog.html"
                   >Blog</a
                 >
@@ -394,22 +397,21 @@
               </a>
               <!-- Dropdown Menu -->
               <div
-                class="absolute right-0 hidden w-48 bg-white  rounded-md shadow-lg z-20 group-hover:block"
+                class="absolute right-0 hidden w-48 bg-white rounded-md shadow-lg z-20 group-hover:block"
               >
                 <a
                   href="login.html"
-                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A]"
+                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A] hover:text-black"
                 >
                   Log In
                 </a>
                 <a
                   href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A]"
+                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A] hover:text-black"
                 >
                   Create Account
                 </a>
               </div>
-              
             </div>
             <div class="lg:hidden">
               <button
@@ -500,43 +502,43 @@
                   <div id="dropdown-content" class="dropdown-content hidden">
                     <a
                       href="appetizer.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <img
-                        src="https://www.restaurantware.com/cdn/shop/files/RWC0011-2-LR.jpg?v=1709408385&width=750"
-                        alt="Appetizers"
+                        src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
+                        alt="Special Pizza"
                         class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">Appetizers</p>
+                      <p class="font-bold ml-4">Special Pizza</p>
                     </a>
                     <a
                       href="entrees.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cCv1uVAFpzY60zOadqTZtkKCKJsD68Vuxw&s"
+                        src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
                         alt="Entrees"
                         class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">Burger and Sub</p>
+                      <p class="font-bold ml-4">Sub Sandwich</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <img
-                        src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg"
+                        src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
                         alt="Curries (Sea-Food)"
                         class="w-10 h-10 rounded-full"
                       />
-                      <p class="font-bold ml-4">Breakfast Plater</p>
+                      <p class="font-bold ml-4">Fresh Salad</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] text-black"
+                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <img
-                        src="https://assets.epicurious.com/photos/59ee61e51aeedb38921770f8/16:9/w_2560%2Cc_limit/Last-Minute-Thanksgiving-Hero-6x4-10102017.jpg"
+                        src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
                         alt="Curries (Vegetarian)"
                         class="w-10 h-10 rounded-full"
                       />
@@ -547,36 +549,36 @@
                 <li class="mb-1">
                   <a
                     class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="#"
+                    href="about.html"
                     >About</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
                     class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="#"
+                    href="contact.html"
                     >Contact</a
                   >
                 </li>
                 <li class="mb-1">
                   <a
                     class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="#"
+                    href="blog.html"
                     >Blog</a
                   >
                 </li>
               </ul>
             </div>
-            <div class="mt-auto">
+            <div class="mt-4">
               <div class="pt-6">
                 <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold text-white bg-[#100d20] rounded-md hover:bg-[#100d20] rounded-md rounded-xl"
+                  class="block px-4 py-3 mb-3 leading-loose text-xs bg-[#FFC55A] text-center font-semibold text-black rounded-md rounded-md rounded-xl"
                   href="#"
                   >Online Orders</a
                 >
               </div>
               <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © [#100d20]tech Consultancy</span>
+                <span>Copyright © Blacktech Consultancy</span>
               </p>
             </div>
           </nav>
