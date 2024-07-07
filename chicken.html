@@ -625,7 +625,7 @@
 
         <!-- Accordion Dropdown -->
         <div x-data="{ open: false }" class="mb-4">
-          <button @click="open = !open" class="w-full my-4 text-left px-6 py-3 bg-gray-100 shadow-lg  font-bold rounded-md flex justify-between items-center">
+          <button @click="open = !open" class="w-full my-4 text-left px-6 py-4 bg-gray-100 shadow-lg  font-bold rounded-md flex justify-between items-center">
            Size
             <svg :class="{ 'transform rotate-180': open }" class="w-5 h-5 transition-transform" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 3a1 1 0 01.832.445l6 8a1 1 0 01-1.664 1.11L10 5.882 4.832 12.556A1 1 0 013.168 11.445l6-8A1 1 0 0110 3z" clip-rule="evenodd" />
@@ -635,7 +635,7 @@
             <ul class="p-4 grid grid-cols-2 gap-4">
               <li class="flex items-center">
                 <input type="checkbox" id="mango-habanero" name="flavour" value="Mango Habanero" class="mr-2">
-                <label for="mango-habanero" class="font-semibold">S</label>
+                <label for="mango-habanero" class="font-semibold text-lg">S</label>
               </li>
               <li class="flex items-center">
                 <input type="checkbox" id="hot-bbq" name="flavour" value="Hot BBQ" class="mr-2">
