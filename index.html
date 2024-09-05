@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>District Pizza & Kabab</title>
+    <title>Moshjid</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -37,7 +37,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 300px;
+        min-width: 200px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -72,7 +72,7 @@
         color: white;
       }
       .hero-section {
-        background-image: url("./images/background.jpg");
+        background-image: url("./images/Background.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,7 +90,7 @@
       }
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.jpg");
+          background-image: url("./images/Background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
@@ -187,11 +187,11 @@
 
     <!-- Preloader -->
     <div
-      class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+      class="preloader bg-black fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
       <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
         <img
-          src="images/logo.png"
+          src="images/logo.jpeg"
           alt="Loading Icon"
           class="loading-icon mx-auto"
         />
@@ -201,17 +201,65 @@
     <div class="content hidden">
       <!--Navbar-->
       <header id="navbar">
-        <div class="shadow-md z-50 bg-[#00215E] w-full">
+        <div class="shadow-md z-50 bg-black w-full">
+          <div class="bg-[#FFC55A] py-2">
+            <div
+              class="max-w-7xl mx-auto px-4 lg:px-0 flex justify-between items-center"
+            >
+              <div class="flex space-x-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-facebook text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram text-black text-lg"></i>
+                </a>
+              </div>
+              <div class="flex space-x-2 justify-center items-center text-sm">
+                <button
+                  class="bg-yellow-100 border hover:bg-white border-black text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                >
+                  <i class="fas fa-donate"></i>
+                  <span>Donate</span>
+                </button>
+                <button
+                  class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                >
+                  <i class="fas fa-clock"></i>
+                  <span>Prayer Time</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <nav
             id="navbar"
-            class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
+            class="mx-auto max-w-7xl py-1 lg:py-2 flex justify-between gap-5 px-3 lg:px-0 items-center"
           >
-            <a class="text-3xl py-1 font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
+            <a class="text-3xl font-bold leading-none" href="index.html">
+              <img
+                src="images/logo.jpeg"
+                alt="logo"
+                class="w-24 mr-6 lg:w-36"
+              />
             </a>
 
             <ul
-              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
+              class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
@@ -219,7 +267,7 @@
                   class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                   href="#"
                 >
-                  Menu <i class="fas fa-chevron-down ml-2"></i>
+                  News <i class="fas fa-chevron-down ml-2"></i>
                 </a>
 
                 <div
@@ -227,192 +275,173 @@
                   class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
                 >
                   <a
-                    href="appetizer.html"
+                    href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                      alt="Special Pizza"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Special Pizza</p>
+                    <p class="font-bold ml-4">Events</p>
                   </a>
                   <a
                     href="entrees.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                      alt="Entrees"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Sub Sandwich</p>
+                    <p class="font-bold ml-4">Services</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                      alt="Curries (Sea-Food)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Fresh Salad</p>
+                    <p class="font-bold ml-4">Announcements</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                      alt="Curries (Vegetarian)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Desserts</p>
+                    <p class="font-bold ml-4">Others</p>
                   </a>
                 </div>
               </div>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+                  Services <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Religous Services</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Educational Services</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Gift Shop</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Special Needs</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Events <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Kid</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Youth</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Women</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Men</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Rentals <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Residential Houses</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Restaurant</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Cultural Center</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Multipurpose Center</p>
+                  </a>
+                </div>
+              </div>
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="about.html"
-                  >About</a
+                  href="#"
+                  >School</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="contact.html"
+                  href="#"
                   >Contact</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="blog.html"
-                  >Blog</a
+                  href="#"
+                  >About</a
                 >
               </li>
             </ul>
-            <a
-              class="hidden lg:inline-block py-4 px-8 bg-[#FFC55A] rounded-full hover:bg-white border text-lg text-black font-bold transition duration-200"
-              href="order-now.html"
-              >Order Now</a
-            >
-            <!-- Cart Icon with Badge -->
-            <a
-              href="cart.html"
-              class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-10 px-2 py-2 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7"
-                />
-              </svg>
-              <!-- Cart Count Badge -->
-              <span
-                class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2"
-              >
-                3
-              </span>
-            </a>
 
-            <!-- User Icon with Dropdown -->
-            <div class="relative inline-block">
-              <a
-                href="#"
-                class="relative lg:inline-block text-lg text-white font-bold transition duration-200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-10 px-2 py-1 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M12 7a4 4 0 100-8 4 4 0 000 8zm0 2a9 9 0 00-9 9h18a9 9 0 00-9-9z"
-                  />
-                </svg>
-              </a>
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute right-0 hidden w-48 bg-white rounded-md shadow-lg z-20 group-hover:block"
-              >
-                <a
-                  href="login.html"
-                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Log In
-                </a>
-                <a
-                  href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Create Account
-                </a>
-              </div>
-            </div>
             <div class="lg:hidden">
               <button
                 id="navbar-burger"
@@ -452,7 +481,7 @@
                 ></path>
               </svg>
               <span
-                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-white font-bold"
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-yellow-100 font-bold"
                 >2</span
               >
             </span>
@@ -462,19 +491,19 @@
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
           <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-4/6 py-6 px-6 bg-black border-r overflow-y-auto"
           >
             <div class="flex items-center mb-8">
               <a
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" class="w-24" />
+                <img src="images/logo.jpeg" class="w-36" />
               </a>
 
               <button class="navbar-close">
                 <svg
-                  class="h-6 w-6 text-white cursor-pointer hover:text-[#FFC55A] text-black"
+                  class="h-6 w-6 text-yellow-100 cursor-pointer hover:text-[#FFC55A] text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -490,95 +519,192 @@
               </button>
             </div>
             <div>
-              <ul>
-                <div class="dropdown">
+              <ul class="flex flex-col gap-5 items-start">
+                <div class="dropdown ">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                     href="#"
                   >
-                    Menu <i class="fas fa-chevron-down ml-2"></i>
+                    News <i class="fas fa-chevron-down ml-2"></i>
                   </a>
-                  <div id="dropdown-content" class="dropdown-content hidden">
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
                     <a
-                      href="appetizer.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                        alt="Special Pizza"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Special Pizza</p>
+                      <p class="font-bold ml-4">Events</p>
                     </a>
                     <a
                       href="entrees.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                        alt="Entrees"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Sub Sandwich</p>
+                      <p class="font-bold ml-4">Services</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                        alt="Curries (Sea-Food)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Fresh Salad</p>
+                      <p class="font-bold ml-4">Announcements</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                        alt="Curries (Vegetarian)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Dinner</p>
+                      <p class="font-bold ml-4">Others</p>
                     </a>
                   </div>
                 </div>
-                <li class="mb-1">
+                <div class="dropdown ">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="about.html"
-                    >About</a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Services <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Religous Services</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Educational Services</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Gift Shop</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Special Needs</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Events <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Kid</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Youth</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Women</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Men</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Rentals <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Residential Houses</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Restaurant</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Cultural Center</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Multipurpose Center</p>
+                    </a>
+                  </div>
+                </div>
+                <li>
+                  <a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
+                    >School</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="contact.html"
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
                     >Contact</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="blog.html"
-                    >Blog</a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
+                    >About</a
                   >
                 </li>
               </ul>
             </div>
             <div class="mt-4">
-              <div class="pt-6">
-                <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs bg-[#FFC55A] text-center font-semibold text-black rounded-md rounded-md rounded-xl"
-                  href="#"
-                  >Online Orders</a
-                >
-              </div>
-              <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © Blacktech Consultancy</span>
+              
+              <p class="my-4 text-xs text-start text-yellow-100">
+                <span>Developed © Blacktech Consultancy</span>
               </p>
             </div>
           </nav>
@@ -593,33 +719,29 @@
             class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
           >
             <!-- Left Content -->
-            <div class="w-full lg:h-[400px] flex items-center justify-center">
+            <div class="w-full mt-16 flex items-center justify-center">
               <div
                 class="flex max-w-2xl flex-col justify-center items-center gap-5 text-center"
               >
-                <p
-                  class="font-bold my-4 text-xl lg:text-3xl text-center text-white rounded-md animate-fade-in-down"
-                >
-                  WELCOME TO OUR RESTAURANT
-                </p>
                 <h1
-                  class="text-5xl lg:max-w-5xl lg:text-7xl font-extrabold tracking-wide text-white animate-fade-in-left delay-200"
+                  class="text-3xl lg:text-6xl font-extrabold tracking-wide text-yellow-100 animate-fade-in-left delay-200"
                 >
-                  Family Recipe, Local Ingredients
+                  In the Name of Allah, The Most Beneficent, The Most Merciful
                 </h1>
                 <p
                   class="font-bold text-base text-[#EEEEEE] px-4 py-4 animate-fade-in-right delay-400"
                 >
-                  Discover authentic Italian flavors at Pizza House: fresh
-                  ingredients, hand-tossed dough, and gourmet toppings. Enjoy!
+                  Join us for prayer, spiritual guidance, and uplifting events.
+                  Strengthen your connection with faith and find solace in our
+                  sacred space. Everyone is welcome.
                 </p>
                 <div class="mt-4">
                   <a href="order-now.html">
                     <button
                       type="button"
-                      class="px-6 py-4 m-1 text-xl font-bold transition-transform duration-300 transform bg-[#FFC55A] rounded-full hover:scale-110 hover:bg-gray-100 focus:outline-none hover:bg-white animate-bounce delay-600"
+                      class="px-4 py-2 m-1 text-xl font-bold transition-transform duration-300 transform bg-[#FFC55A] rounded-full hover:scale-110 hover:bg-gray-100 focus:outline-none hover:bg-white delay-600"
                     >
-                      See Our Menu
+                      Go For Know Us
                     </button>
                   </a>
                 </div>
@@ -629,1099 +751,102 @@
         </section>
 
         <!--End Hero Section-->
-        <!-- Our Popular Menu -->
-        <section class="py-12 bg-gray-50">
-          <div class="max-w-7xl mx-auto px-4 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-4xl font-extrabold mb-4 text-gray-900">
-                Our Popular Menu
-              </h2>
-              <p class="text-lg text-gray-600">
-                Discover the best dishes from our menu, curated for your
-                delight.
-              </p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- Item 1 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="appetizer.html">
-                  <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                    alt="Special Pizza"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Special Pizza
-                    </h3>
-                    <p class="text-gray-700">
-                      Start your meal with our delicious Special Pizza.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- Item 2 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="entrees.html">
-                  <img
-                    src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                    alt="Burger & Sub"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Sub Sandwich
-                    </h3>
-                    <p class="text-gray-700">
-                      Enjoy our range of delicious noodle dishes.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- Item 3 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="#">
-                  <img
-                    src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                    alt="Fresh Salad"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Fresh Salad
-                    </h3>
-                    <p class="text-gray-700">
-                      Savor our rich and flavorful seafood curries.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- Item 4 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="#">
-                  <img
-                    src="https://www.sidechef.com/recipe/e4403d19-878c-4f8f-aa5f-a7a0ec054fb7.jpg?d=1408x1120"
-                    alt="Salad"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Party Wings
-                    </h3>
-                    <p class="text-gray-700">
-                      Delight in our hearty and delicious vegetarian curries.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- Item 5 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="#">
-                  <img
-                    src="https://hips.hearstapps.com/hmg-prod/images/western-omelette-recipe-2-1676061474.jpg?crop=0.503xw:1.00xh;0.252xw,0&resize=1200:*"
-                    alt="Omlets"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Omlets
-                    </h3>
-                    <p class="text-gray-700">
-                      Aromatic basmati rice, cooked with richly flavored
-                      saffron, nuts, and raisins.
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- Item 6 -->
-              <div
-                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transform transition duration-300 hover:scale-105"
-              >
-                <a href="#">
-                  <img
-                    src="https://res.cloudinary.com/the-infatuation/image/upload/f_auto/q_auto/v1664814507/images/Gage_and_Tollner_Dessert_and_Drinks-87_nx0gsa.jpg"
-                    alt="Drinks & Desserts"
-                    class="w-full h-52 object-cover"
-                  />
-                  <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                      Drinks & Desserts
-                    </h3>
-                    <p class="text-gray-700">
-                      Delight in our hearty and delicious drinks and desserts
-                      like Gulab Jamun Kheer.
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Popular Foods Section -->
-        <section class="popular-foods py-8 bg-yellow-100">
-          <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-              <h2 class="text-4xl font-extrabold mb-4 text-gray-900">
-                Our Popular Items
-              </h2>
-              <p class="text-lg text-gray-600">
-                Discover the best dishes from our menu, curated for your
-                delight.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col mb-4 lg:mb-12 items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Meat Lover Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $13.99
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/a174196b-58bd-4e18-b214-4799ac60b06c.jpg"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Greek Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $13.99
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://brobible.com/wp-content/uploads/2022/01/pizza-hut-spicy-lovers-pizza-review-1.jpeg?w=650"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Supreme Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://i.ytimg.com/vi/ziQJvKeETuo/maxresdefault.jpg"
-                  alt="Hawain Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Hawaiin Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/24/34/38/ZrQOkGYRga0wHkZtWNpg_pizza%204%20(1%20of%201).jpg"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    BBQ Chicken Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://lodough.co/cdn/shop/articles/Pizza_-_Spicy_Veg_Pizza_1.jpg?v=1576597664"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Buffalo Chicken Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://veenaazmanov.com/wp-content/uploads/2020/05/White-Pizza-Recipe-Cheese-Pizza-with-White-Sauce4.jpg"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    White Pizza
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="chicken.html"
-                class="duration-300 flex flex-col items-center ease-in-out hover:scale-105"
-              >
-                <img
-                  src="https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351654_FFAS60r2iHUkOY69RPRwEOVS76EU4SdA.jpg"
-                  alt="Special Pizza"
-                  class="w-60 h-60 object-cover z-50 rounded-full"
-                />
-                <div
-                  class="bg-white -mt-16 pt-20 relative shadow-lg rounded-3xl p-6"
-                >
-                  <h3 class="text-xl font-bold text-center text-black mb-2">
-                    Chicken Wings
-                  </h3>
-                  <p class="text-gray-600 text-center">
-                    Succulent chicken wings, perfectly seasoned and crispy on
-                    the outside, tender and juicy on the inside
-                  </p>
-                  <div class="flex justify-center mt-4">
-                    <!-- Star Rating -->
-                    <div class="flex">
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-6 h-6 text-yellow-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9.049.927c.3-.921 1.603-.921 1.902 0l2.26 6.958H19c.97 0 1.371 1.243.588 1.81l-5.19 3.754 2.26 6.957c.3.922-.755 1.688-1.54 1.11L10 15.698l-5.118 3.818c-.785.578-1.84-.188-1.54-1.11l2.26-6.957-5.19-3.755c-.783-.566-.382-1.809.588-1.809h5.788L9.049.927z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex justify-center mt-4 py-2">
-                    <h6
-                      class="font-manrope font-bold text-2xl leading-9 text-black pr-5 border-r border-gray-200 mr-5"
-                    >
-                      $15.00
-                    </h6>
-                    <button
-                      class="bg-[#FFC55A] text-sm text-black px-3 py-2 font-bold rounded-full flex items-center"
-                    >
-                      <svg
-                        class="w-5 h-5 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5H4m3 8v10m4-10v10m4-10v10m4-10v10"
-                        ></path>
-                      </svg>
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
-      <!--Footer-->
-      <footer class="relative bg-[#00215E] pt-8 pb-6">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="flex flex-wrap text-left lg:text-left">
-            <div class="w-full lg:w-6/12 px-4">
-              <h4
-                class="text-2xl mb-4 text-white font-semibold text-blueGray-700"
-              >
-                Let's stay connected!
-              </h4>
-              <h5 class="text-lg mt-0 mb-2 text-white">
-                Find us on any of these platforms. We usually respond within 1-2
-                business days.
-              </h5>
-              <div class="mt-6 lg:mb-0 mb-6">
-                <button
-                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-twitter"></i>
-                </button>
-                <button
-                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-facebook-square"></i>
-                </button>
-                <button
-                  class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-dribbble"></i>
-                </button>
-                <button
-                  class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </div>
-            <div class="w-full lg:w-6/12 px-4">
-              <div class="flex flex-wrap items-top mb-6">
-                <div class="w-full lg:w-4/12 px-4 ml-auto">
-                  <span
-                    class="block uppercase text-white text-lg font-semibold mb-4"
-                    >Useful Links</span
-                  >
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >About Us</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >Blog</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="appetizer.html"
-                        >Special Pizza</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >Best Offer</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="w-full lg:w-4/12 px-4">
-                  <span
-                    class="block uppercase text-white text-lg font-semibold mb-4"
-                    >Other Resources</span
-                  >
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >Terms & Conditions</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >Privacy Policy</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="#"
-                        >Contact Us</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="my-6 border-blueGray-300" />
-          <div
-            class="flex flex-wrap items-center md:justify-between justify-center"
+     <!-- Footer -->
+<footer class="relative bg-black pt-8 pb-6">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap text-left lg:text-left">
+      <div class="w-full lg:w-6/12 px-4">
+        <h4 class="text-2xl mb-4 text-yellow-100 font-semibold">
+          Stay Connected with Us
+        </h4>
+        <h5 class="text-lg mt-0 mb-2 text-yellow-100">
+          Follow us on social media for updates on prayer times, events, and community news.
+        </h5>
+        <div class="mt-6 lg:mb-0 mb-6">
+          <button
+            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
           >
-            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div class="text-sm text-white font-semibold py-1">
-                Developed <span id="get-current-year">By</span>
-                <a
-                  href="https://blacktechcorp.com/"
-                  class="text-white hover:text-gray-800"
-                  target="_blank"
-                  >BlackTech</a
-                >
-                <a
-                  href="https://blacktechcorp.com/"
-                  class="text-white hover:text-blueGray-800"
-                  >Consultancy</a
-                >.
-              </div>
-            </div>
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button
+            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fab fa-facebook-square"></i>
+          </button>
+          <button
+            class="bg-white text-green-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </button>
+        </div>
+      </div>
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="flex flex-wrap items-top mb-6">
+          <div class="w-full lg:w-4/12 px-4 ml-auto">
+            <span class="block uppercase text-yellow-100 text-lg font-semibold mb-4">Important Links</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#about-us">
+                  About the Mosque
+                </a>
+              </li>
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#services">
+                  Prayer Services
+                </a>
+              </li>
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#events">
+                  Events & Programs
+                </a>
+              </li>
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#donate">
+                  Donate
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <span class="block uppercase text-yellow-100 text-lg font-semibold mb-4">Additional Resources</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#terms">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#privacy">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm" href="#contact">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-      <!--End Footer-->
+      </div>
+    </div>
+    <hr class="my-6 border-gray-400" />
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="text-sm text-yellow-100 font-semibold py-1">
+          &copy; <span id="get-current-year"></span> Masjid E Bilal. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
       <!--Menu Scrolling JS in the Menu Page-->
       <script>
         document
