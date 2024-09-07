@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>District Pizza & Kabab</title>
+    <title>Moshjid</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -37,7 +37,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 300px;
+        min-width: 200px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -72,7 +72,7 @@
         color: white;
       }
       .hero-section {
-        background-image: url("./images/background.png");
+        background-image: url("./images/Background.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,7 +90,7 @@
       }
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.png");
+          background-image: url("./images/Background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
@@ -187,11 +187,11 @@
 
     <!-- Preloader -->
     <div
-      class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+      class="preloader bg-black fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
       <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
         <img
-          src="images/logo.png"
+          src="images/logo.jpeg"
           alt="Loading Icon"
           class="loading-icon mx-auto"
         />
@@ -201,17 +201,68 @@
     <div class="content hidden">
       <!--Navbar-->
       <header id="navbar">
-        <div class="shadow-md z-50 bg-[#00215E] w-full">
+        <div class="shadow-md z-50 bg-black w-full">
+          <div class="bg-[#FFC55A] py-2">
+            <div
+              class="max-w-7xl mx-auto px-4 lg:px-0 flex justify-between items-center"
+            >
+              <div class="flex space-x-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-facebook text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram text-black text-lg"></i>
+                </a>
+              </div>
+              <div class="flex space-x-2 justify-center items-center text-sm">
+                <a href="donate.html">
+                  <button
+                    class="bg-yellow-100 border hover:bg-white border-black text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                  >
+                    <i class="fas fa-donate"></i>
+                    <span>Donate</span>
+                  </button>
+                </a>
+
+                <button
+                  class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                >
+                  <i class="fas fa-clock"></i>
+                  <span>Prayer Time</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <nav
             id="navbar"
-            class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
+            class="mx-auto max-w-7xl py-1 lg:py-2 flex justify-between gap-5 px-3 lg:px-0 items-center"
           >
-            <a class="text-3xl py-1 font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
+            <a class="text-3xl font-bold leading-none" href="index.html">
+              <img
+                src="images/logo.jpeg"
+                alt="logo"
+                class="w-24 mr-6 lg:w-36"
+              />
             </a>
 
             <ul
-              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
+              class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
@@ -219,7 +270,7 @@
                   class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                   href="#"
                 >
-                  Menu <i class="fas fa-chevron-down ml-2"></i>
+                  News <i class="fas fa-chevron-down ml-2"></i>
                 </a>
 
                 <div
@@ -227,192 +278,173 @@
                   class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
                 >
                   <a
-                    href="appetizer.html"
+                    href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                      alt="Special Pizza"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Special Pizza</p>
+                    <p class="font-bold ml-4">Events</p>
                   </a>
                   <a
                     href="entrees.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                      alt="Entrees"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Sub Sandwich</p>
+                    <p class="font-bold ml-4">Services</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                      alt="Curries (Sea-Food)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Fresh Salad</p>
+                    <p class="font-bold ml-4">Announcements</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                      alt="Curries (Vegetarian)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Desserts</p>
+                    <p class="font-bold ml-4">Others</p>
                   </a>
                 </div>
               </div>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+                  Services <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Religous Services</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Educational Services</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Gift Shop</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Special Needs</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Events <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Kid</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Youth</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Women</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Men</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Rentals <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Residential Houses</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Restaurant</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Cultural Center</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Multipurpose Center</p>
+                  </a>
+                </div>
+              </div>
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="about.html"
-                  >About</a
+                  href="#"
+                  >School</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="contact.html"
+                  href="#"
                   >Contact</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="blog.html"
-                  >Blog</a
+                  href="#"
+                  >About</a
                 >
               </li>
             </ul>
-            <a
-              class="hidden lg:inline-block py-4 px-8 bg-[#FFC55A] rounded-full hover:bg-white border text-lg text-black font-bold transition duration-200"
-              href="order-now.html"
-              >Order Now</a
-            >
-            <!-- Cart Icon with Badge -->
-            <a
-              href="cart.html"
-              class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-10 px-2 py-2 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7"
-                />
-              </svg>
-              <!-- Cart Count Badge -->
-              <span
-                class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2"
-              >
-                3
-              </span>
-            </a>
 
-            <!-- User Icon with Dropdown -->
-            <div class="relative inline-block">
-              <a
-                href="#"
-                class="relative lg:inline-block text-lg text-white font-bold transition duration-200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-10 px-2 py-1 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M12 7a4 4 0 100-8 4 4 0 000 8zm0 2a9 9 0 00-9 9h18a9 9 0 00-9-9z"
-                  />
-                </svg>
-              </a>
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute right-0 hidden w-48 bg-white rounded-md shadow-lg z-20 group-hover:block"
-              >
-                <a
-                  href="login.html"
-                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Log In
-                </a>
-                <a
-                  href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Create Account
-                </a>
-              </div>
-            </div>
             <div class="lg:hidden">
               <button
                 id="navbar-burger"
@@ -452,7 +484,7 @@
                 ></path>
               </svg>
               <span
-                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-white font-bold"
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-yellow-100 font-bold"
                 >2</span
               >
             </span>
@@ -462,19 +494,19 @@
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
           <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-4/6 py-6 px-6 bg-black border-r overflow-y-auto"
           >
             <div class="flex items-center mb-8">
               <a
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" class="w-24" />
+                <img src="images/logo.jpeg" class="w-36" />
               </a>
 
               <button class="navbar-close">
                 <svg
-                  class="h-6 w-6 text-white cursor-pointer hover:text-[#FFC55A] text-black"
+                  class="h-6 w-6 text-yellow-100 cursor-pointer hover:text-[#FFC55A] text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -490,95 +522,191 @@
               </button>
             </div>
             <div>
-              <ul>
+              <ul class="flex flex-col gap-5 items-start">
                 <div class="dropdown">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                     href="#"
                   >
-                    Menu <i class="fas fa-chevron-down ml-2"></i>
+                    News <i class="fas fa-chevron-down ml-2"></i>
                   </a>
-                  <div id="dropdown-content" class="dropdown-content hidden">
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
                     <a
-                      href="appetizer.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                        alt="Special Pizza"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Special Pizza</p>
+                      <p class="font-bold ml-4">Events</p>
                     </a>
                     <a
                       href="entrees.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                        alt="Entrees"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Sub Sandwich</p>
+                      <p class="font-bold ml-4">Services</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                        alt="Curries (Sea-Food)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Fresh Salad</p>
+                      <p class="font-bold ml-4">Announcements</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                        alt="Curries (Vegetarian)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Dinner</p>
+                      <p class="font-bold ml-4">Others</p>
                     </a>
                   </div>
                 </div>
-                <li class="mb-1">
+                <div class="dropdown">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="about.html"
-                    >About</a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Services <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Religous Services</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Educational Services</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Gift Shop</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Special Needs</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Events <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Kid</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Youth</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Women</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Men</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Rentals <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Residential Houses</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Restaurant</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Cultural Center</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Multipurpose Center</p>
+                    </a>
+                  </div>
+                </div>
+                <li>
+                  <a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
+                    >School</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="contact.html"
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
                     >Contact</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="blog.html"
-                    >Blog</a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
+                    >About</a
                   >
                 </li>
               </ul>
             </div>
             <div class="mt-4">
-              <div class="pt-6">
-                <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs bg-[#FFC55A] text-center font-semibold text-black rounded-md rounded-md rounded-xl"
-                  href="#"
-                  >Online Orders</a
-                >
-              </div>
-              <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © Blacktech Consultancy</span>
+              <p class="my-4 text-xs text-start text-yellow-100">
+                <span>Developed © Blacktech Consultancy</span>
               </p>
             </div>
           </nav>
@@ -586,221 +714,253 @@
       </header>
       <!-- End Navbar -->
 
-      <section class="text-whitebody-font pt-32 lg:pt-48 py-12 px-4">
-        <div class="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto max-w-4xl bg-white font-[sans-serif]">
-          <div>
-              <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
-              <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
-
-              <div class="mt-12">
-                  <h2 class="text-gray-800 text-base font-bold">Email</h2>
-                  <ul class="mt-4">
-                      <li class="flex items-center">
-                          <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                  viewBox="0 0 479.058 479.058">
-                                  <path
-                                      d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                      data-original="#000000" />
-                              </svg>
-                          </div>
-                          <a href="javascript:void(0)" class="text-[#007bff] text-sm ml-4">
-                              <small class="block">Mail</small>
-                              <strong>info@example.com</strong>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="mt-12">
-                  <h2 class="text-gray-800 text-base font-bold">Socials</h2>
-
-                  <ul class="flex mt-4 space-x-4">
-                      <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                          <a href="javascript:void(0)">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                  viewBox="0 0 24 24">
-                                  <path
-                                      d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                                      data-original="#000000" />
-                              </svg>
-                          </a>
-                      </li>
-                      <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                          <a href="javascript:void(0)">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                  viewBox="0 0 511 512">
-                                  <path
-                                      d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                      data-original="#000000" />
-                              </svg>
-                          </a>
-                      </li>
-                      <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                          <a href="javascript:void(0)">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
-                                  viewBox="0 0 24 24">
-                                  <path
-                                      d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z">
-                                  </path>
-                              </svg>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-
-          <form class="ml-auto space-y-4">
-              <input type='text' placeholder='Name'
-                  class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 focus:bg-transparent" />
-              <input type='email' placeholder='Email'
-                  class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 focus:bg-transparent" />
-              <input type='text' placeholder='Subject'
-                  class="w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-blue-500 focus:bg-transparent" />
-              <textarea placeholder='Message' rows="6"
-                  class="w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-blue-500 focus:bg-transparent"></textarea>
-              <button type='button'
-                  class="text-white bg-blue-500 hover:bg-blue-600 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6">Send</button>
-          </form>
-      </div>
-    </section>
-            <!--Footer-->
-      <footer
-      class="relative bg-[#00215E] pt-8 pb-6"
-    >
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-2xl mb-4 text-white font-semibold text-blueGray-700">
-              Let's stay connected!
-            </h4>
-            <h5 class="text-lg mt-0 mb-2 text-white">
-              Find us on any of these platforms. We usually respond within 1-2
-              business days.
-            </h5>
-            <div class="mt-6 lg:mb-0 mb-6">
-              <button
-                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
-                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-facebook-square"></i>
-              </button>
-              <button
-                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-dribbble"></i>
-              </button>
-              <button
-                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button"
-              >
-                <i class="fab fa-github"></i>
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Useful Links</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="appetizer.html"
-                      >Appetizer Foods</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >Best Foods</a
-                    >
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span
-                  class="block uppercase text-white text-lg font-semibold mb-4"
-                  >Other Resources</span
-                >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >Terms & Conditions</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >Privacy Policy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="#"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-6 border-blueGray-300" />
-        <div
-          class="flex flex-wrap items-center md:justify-between justify-center"
-        >
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-white font-semibold py-1">
-              Developed <span id="get-current-year">By</span>
-              <a
-                href="https://blacktechcorp.com/"
-                class="text-white hover:text-gray-800"
-                target="_blank"
-                >BlackTech</a
-              >
-              <a
-                href="https://blacktechcorp.com/"
-                class="text-white hover:text-blueGray-800"
-                >Consultancy</a
-              >.
-            </div>
+      <main>
+<!-- Main Section -->
+<section class="py-24 pt-32 lg:pt-48">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-10 flex flex-col">
+      
+      <!-- Image Section -->
+      <div class="relative h-3/4 ">
+        <img src="https://images.unsplash.com/photo-1554110838-816383ce7956?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z3JhbmQlMjBtb3NxdWV8ZW58MHx8MHx8fDA%3D" 
+        alt="Contact Us" 
+        class="w-full h-full lg:rounded-l-2xl rounded-2xl object-cover shadow-lg bg-indigo-700"/>
+        <h1 class="absolute top-11 left-11 text-4xl font-bold">Contact Us</h1>
+        <div class="absolute bottom-0 w-full p-5 lg:p-11">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <!-- Contact Info -->
+            <a href="tel:4706011911" class="flex items-center mb-6">
+              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="text-indigo-600">
+                <path d="M22.31 18.31c-.29-.11-.44-.17-.6-.18-.15 0-.31.03-.61.07l-3.29.64c-.37.07-.56.1-.75.07-.2-.03-.36-.12-.72-.31-2.54-1.38-4.22-2.98-5.29-5.3-.12-.26-.19-.39-.22-.58-.03-.19.01-.39.07-.64l.64-3.32c.06-.3.09-.45.08-.6-.02-.15-.08-.3-.19-.55L10.63 5.19C10.37 4.49 10.24 4.14 9.95 3.95 9.67 3.75 9.3 3.75 8.56 3.75H5.86c-1.27 0-2.27 1.05-2.02 2.31.47 3.14 1.87 8.83 5.96 12.92 4.29 4.29 10.47 6.15 13.88 6.89 1.32.28 2.49-.7 2.49-2.06v-2.52c0-.74 0-1.1-.2-1.39-.2-.29-.55-.42-1.24-.68l-2.36-.9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="ml-4 text-base font-medium text-gray-700">470-601-1911</span>
+            </a>
+            <a href="mailto:email@example.com" class="flex items-center mb-6">
+              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="text-indigo-600">
+                <path d="M2.82 8.75l7.38 4.87c2.64 1.58 3.95 2.37 5.4 2.34 1.45-.03 2.73-.86 5.29-2.61l6.29-4.61M12.5 25h5c4.71 0 7.07 0 8.54-1.46C27.5 22.07 27.5 19.71 27.5 15c0-4.71 0-7.07-1.46-8.54C24.57 5 22.21 5 17.5 5h-5c-4.71 0-7.07 0-8.54 1.46C2.5 7.93 2.5 10.29 2.5 15c0 4.71 0 7.07 1.46 8.54C5.43 25 7.79 25 12.5 25Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span class="ml-4 text-base font-medium text-gray-700">email@example.com</span>
+            </a>
+            <a href="https://maps.example.com" class="flex items-center">
+              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="text-indigo-600">
+                <path d="M25 12.92C25 17.72 21.19 21.58 18.28 24.98c-1.44 1.68-2.16 2.52-3.28 2.52-1.12 0-1.84-.84-3.28-2.52C8.81 21.58 5 17.72 5 12.92 5 10.15 6.05 7.5 7.93 5.55 9.8 3.6 12.35 2.5 15 2.5s5.2 1.1 7.07 3.05C23.95 7.5 25 10.15 25 12.92Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M17.5 11.61c0 1.44-1.12 2.6-2.5 2.6s-2.5-1.16-2.5-2.6c0-1.44 1.12-2.6 2.5-2.6s2.5 1.16 2.5 2.6Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <span class="ml-4 text-base font-medium text-gray-700">654 Sycamore Avenue, Meadowville, WA 76543</span>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <!--End Footer-->
+      
+      <!-- Form Section -->
+      <div class="bg-gray-50 p-6 lg:p-11 lg:rounded-r-2xl h-3/4 rounded-2xl shadow-md">
+        <h2 class="text-gray-600 text-4xl font-bold mb-8">Send Us A Message</h2>
+        <form>
+          <input type="text" placeholder="Name" class="w-full h-12 px-4 mb-6 bg-transparent border border-gray-300 rounded-full text-gray-600 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"/>
+          <input type="email" placeholder="Email" class="w-full h-12 px-4 mb-6 bg-transparent border border-gray-300 rounded-full text-gray-600 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"/>
+          <input type="text" placeholder="Phone" class="w-full h-12 px-4 mb-6 bg-transparent border border-gray-300 rounded-full text-gray-600 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"/>
 
-    <script src="js/index.js"></script>
+          <!-- Communication Preference -->
+          <div class="mb-6">
+            <h4 class="text-gray-500 text-lg font-normal mb-4">Preferred method of communication</h4>
+            <div class="flex space-x-10">
+              <label class="flex items-center cursor-pointer text-gray-600">
+                <input type="radio" name="communication" class="hidden" checked>
+                <span class="mr-2 w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center">
+                  <span class="w-2 h-2 bg-indigo-600 rounded-full"></span>
+                </span> Email
+              </label>
+              <label class="flex items-center cursor-pointer text-gray-600">
+                <input type="radio" name="communication" class="hidden">
+                <span class="mr-2 w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center"></span> Phone
+              </label>
+            </div>
+          </div>
+
+          <textarea rows="4" placeholder="Message" class="w-full px-4 py-2 mb-6 bg-transparent border border-gray-300 rounded-lg text-gray-600 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+          <button type="submit" class="w-full h-12 bg-[#FFC55A] rounded-full font-semibold shadow-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2">Send</button>
+        </form>
+      </div>
+    </div>
   </div>
-</body>
+</section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="relative bg-black pt-8 pb-6">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-2xl mb-4 text-yellow-100 font-semibold">
+                Stay Connected with Us
+              </h4>
+              <h5 class="text-lg mt-0 mb-2 text-yellow-100">
+                Follow us on social media for updates on prayer times, events,
+                and community news.
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button
+                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button
+                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </button>
+                <button
+                  class="bg-white text-green-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span
+                    class="block uppercase text-yellow-100 text-lg font-semibold mb-4"
+                    >Important Links</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#about-us"
+                      >
+                        About the Mosque
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#services"
+                      >
+                        Prayer Services
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#events"
+                      >
+                        Events & Programs
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#donate"
+                      >
+                        Donate
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                  <span
+                    class="block uppercase text-yellow-100 text-lg font-semibold mb-4"
+                    >Additional Resources</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#terms"
+                      >
+                        Terms & Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#privacy"
+                      >
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        href="#contact"
+                      >
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-400" />
+          <div
+            class="flex flex-wrap items-center md:justify-between justify-center"
+          >
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-yellow-100 font-semibold py-1">
+                &copy; <span id="get-current-year"></span> Masjid E Bilal. All
+                rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+
+      <!--Menu Scrolling JS in the Menu Page-->
+      <script>
+        document
+          .getElementById("menu-toggle")
+          .addEventListener("click", function () {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+          });
+
+        document.querySelectorAll(".menu-link").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            const offset = 130;
+
+            // Check if mobile menu is already hidden before scrolling
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+
+            window.scrollTo({
+              top: targetElement.offsetTop - offset,
+              behavior: "smooth",
+            });
+          });
+        });
+      </script>
+      <script src="js/index.js"></script>
+
+      <!-- Alpine.js CDN -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+        defer
+      ></script>
+      <!--Order Confirm Modal JS-->
+      <script>
+        document
+          .getElementById("confirmOrderButton")
+          .addEventListener("click", function () {
+            var modal = document.getElementById("orderConfirmedModal");
+            modal.style.display = "flex";
+
+            setTimeout(function () {
+              modal.style.display = "none";
+            }, 3000); // 3000 milliseconds = 3 seconds
+          });
+      </script>
+    </div>
+  </body>
 </html>
