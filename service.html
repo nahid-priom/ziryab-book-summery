@@ -238,13 +238,15 @@
                     <span>Donate</span>
                   </button>
                 </a>
+                <a href="prayer-time.html">
 
-                <button
-                  class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
-                >
-                  <i class="fas fa-clock"></i>
-                  <span>Prayer Time</span>
-                </button>
+                  <button
+                    class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock"></i>
+                    <span>Prayer Time</span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -278,13 +280,13 @@
                   class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
                 >
                   <a
-                    href="#"
+                    href="event.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <p class="font-bold ml-4">Events</p>
                   </a>
                   <a
-                    href="entrees.html"
+                    href="service.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
                     <p class="font-bold ml-4">Services</p>
@@ -431,7 +433,7 @@
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="#"
+                  href="contact.html"
                   >Contact</a
                 >
               </li>
@@ -439,7 +441,7 @@
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="#"
+                  href="about.html"
                   >About</a
                 >
               </li>
@@ -537,13 +539,13 @@
                     class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
                   >
                     <a
-                      href="#"
+                      href="event.html"
                       class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <p class="font-bold ml-4">Events</p>
                     </a>
                     <a
-                      href="entrees.html"
+                      href="service.html"
                       class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
                       <p class="font-bold ml-4">Services</p>
@@ -690,7 +692,7 @@
                 <li>
                   <a
                     class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="#"
+                    href="contact.html"
                     >Contact</a
                   >
                 </li>
@@ -698,7 +700,7 @@
                 <li>
                   <a
                     class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="#"
+                    href="about.html"
                     >About</a
                   >
                 </li>
@@ -715,146 +717,123 @@
       <!-- End Navbar -->
 
       <main>
-<!-- Main Section -->
-<section class="py-12 pt-36 bg-yellow-100 lg:pt-48">
-    <div class="max-w-7xl mx-auto px-4">
+
+        <section class="bg-yellow-100 pt-36 lg:pt-48 py-12">
+            <div class="max-w-7xl mx-auto px-4">
+              <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+                Religious Services
+              </h2>
   
-      <div class="flex flex-col items-center">
-        <!-- Image Section -->
-        <div class="w-full lg:w-1/2 bg-white ">
-          <img
-            src="images/mastercard.jpeg"
-            alt="Mastercard"
-            class="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2  gap-8">
+                <!-- Card 1: Donate with Mastercard -->
+                <a href="prayer-time.html">
+                  <div
+                    class="bg-white flex flex-col h-96 justify-center shadow-lg rounded-lg overflow-hidden"
+                  >
+                    <img
+                      src="images/mastercard.jpeg"
+                      alt="Mastercard"
+                      class="w-full h-80 object-cover"
+                    />
+                    <div class="p-6 text-center">
+                      <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Prayer Times
+                      </h3>
+                    </div>
+                  </div>
+                </a>
   
-        <!-- Form Section -->
-        <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Enter Your Payment Information</h3>
+                <!-- Card 2: Donate with Paypal -->
+                <a href="donate-mastercard.html">
+                  <div
+                    class="bg-white flex flex-col h-96 justify-center shadow-lg rounded-lg overflow-hidden"
+                  >
+                    <img
+                      src="images/paypal.jpeg"
+                      alt="Paypal"
+                      class="w-full h-80 object-cover"
+                    />
+                    <div class="p-6 text-center">
+                      <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        2024 Hajj Program – Interest Form – CLOSED
+                      </h3>
+                    </div>
+                  </div>
+                </a>
   
-          <form action="#" method="POST" class="space-y-4">
-            <!-- First Name -->
-            <div>
-              <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                placeholder="Enter your first name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+                <!-- Card 3: Ramadan Iftar Donations & Sponsorships -->
+                <a href="donate-mastercard.html">
+                  <div
+                    class="bg-white flex flex-col h-96 justify-center shadow-lg rounded-lg overflow-hidden"
+                  >
+                    <img
+                      src="images/ramadan.jpeg"
+                      alt="Ramadan Iftar"
+                      class="w-full h-80 object-cover"
+                    />
+                    <div class="p-6 text-center">
+                      <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Nikah / Marriage / Wedding
+                      </h3>
+                    </div>
+                  </div>
+                </a>
   
-            <!-- Last Name -->
-            <div>
-              <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                placeholder="Enter your last name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Donation Amount -->
-            <div>
-              <label for="donation-amount" class="block text-sm font-medium text-gray-700 mb-1">How much would you like to donate?</label>
-              <input
-                type="number"
-                id="donation-amount"
-                name="donation-amount"
-                placeholder="Enter amount (USD)"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Cardholder Name -->
-            <div>
-              <label for="cardholder-name" class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
-              <input
-                type="text"
-                id="cardholder-name"
-                name="cardholder-name"
-                placeholder="Enter your name as it appears on the card"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Card Number -->
-            <div>
-              <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-              <input
-                type="text"
-                id="card-number"
-                name="card-number"
-                placeholder="Enter your card number"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Expiration Date -->
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label for="expiry-date" class="block text-sm font-medium text-gray-700 mb-1">Expiration Date</label>
-                <input
-                  type="text"
-                  id="expiry-date"
-                  name="expiry-date"
-                  placeholder="MM/YY"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-  
-              <!-- CVV -->
-              <div>
-                <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-                <input
-                  type="text"
-                  id="cvv"
-                  name="cvv"
-                  placeholder="CVV"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
+                <!-- Card 4: Zakat -->
+                <a href="donate-mastercard.html">
+                  <div
+                    class="bg-white flex flex-col h-96 justify-center shadow-lg rounded-lg overflow-hidden"
+                  >
+                    <img
+                      src="images/zakat.jpeg"
+                      alt="Zakat"
+                      class="w-full h-80 object-cover"
+                    />
+                    <div class="p-6 text-center">
+                      <h3 class="text-2xl font-bold text-gray-800 mb-2">Ramadan 2024</h3>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
+          </section>
   
-            <!-- Submit Button -->
-            <div class="mt-6">
-              <button
-                type="submit"
-                class="w-full bg-black text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-              >
-                Donate Now
-              </button>
+          <!--Subscribe now-->
+          <section class="bg-yellow-100 py-8">
+            <div class="max-w-7xl mx-auto px-4">
+              <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                  Subscribe Now
+                </h2>
+                <p class="text-lg text-gray-700">
+                  We let you receive the latest information on Islam, as well as
+                  offers, tips, and updates.
+                </p>
+              </div>
+  
+              <div class="flex justify-center">
+                <form action="#" method="POST" class="w-full max-w-md">
+                  <div class="flex flex-col sm:flex-row items-center">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      class="w-full sm:w-2/3 px-4 py-2 mb-4 sm:mb-0 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="w-full sm:w-1/3 bg-[#FFC55A] font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-white transition duration-300"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+          </section>
+
+      
       </main>
 
       <!-- Footer -->
@@ -957,7 +936,7 @@
                     <li>
                       <a
                         class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#contact"
+                        href="contact.html"
                       >
                         Contact Us
                       </a>

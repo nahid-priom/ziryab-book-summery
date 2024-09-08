@@ -238,13 +238,15 @@
                     <span>Donate</span>
                   </button>
                 </a>
+                <a href="prayer-time.html">
 
-                <button
-                  class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
-                >
-                  <i class="fas fa-clock"></i>
-                  <span>Prayer Time</span>
-                </button>
+                  <button
+                    class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock"></i>
+                    <span>Prayer Time</span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -431,7 +433,7 @@
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="#"
+                  href="contact.html"
                   >Contact</a
                 >
               </li>
@@ -439,7 +441,7 @@
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="#"
+                  href="about.html"
                   >About</a
                 >
               </li>
@@ -690,7 +692,7 @@
                 <li>
                   <a
                     class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="#"
+                    href="contact.html"
                     >Contact</a
                   >
                 </li>
@@ -698,7 +700,7 @@
                 <li>
                   <a
                     class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="#"
+                    href="about.html"
                     >About</a
                   >
                 </li>
@@ -715,146 +717,274 @@
       <!-- End Navbar -->
 
       <main>
-<!-- Main Section -->
-<section class="py-12 pt-36 bg-yellow-100 lg:pt-48">
-    <div class="max-w-7xl mx-auto px-4">
-  
-      <div class="flex flex-col items-center">
-        <!-- Image Section -->
-        <div class="w-full lg:w-1/2 bg-white ">
-          <img
-            src="images/mastercard.jpeg"
-            alt="Mastercard"
-            class="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
-  
-        <!-- Form Section -->
-        <div class="w-full lg:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Enter Your Payment Information</h3>
-  
-          <form action="#" method="POST" class="space-y-4">
-            <!-- First Name -->
-            <div>
-              <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                placeholder="Enter your first name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Last Name -->
-            <div>
-              <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                placeholder="Enter your last name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Donation Amount -->
-            <div>
-              <label for="donation-amount" class="block text-sm font-medium text-gray-700 mb-1">How much would you like to donate?</label>
-              <input
-                type="number"
-                id="donation-amount"
-                name="donation-amount"
-                placeholder="Enter amount (USD)"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Cardholder Name -->
-            <div>
-              <label for="cardholder-name" class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
-              <input
-                type="text"
-                id="cardholder-name"
-                name="cardholder-name"
-                placeholder="Enter your name as it appears on the card"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Card Number -->
-            <div>
-              <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-              <input
-                type="text"
-                id="card-number"
-                name="card-number"
-                placeholder="Enter your card number"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-  
-            <!-- Expiration Date -->
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label for="expiry-date" class="block text-sm font-medium text-gray-700 mb-1">Expiration Date</label>
-                <input
-                  type="text"
-                  id="expiry-date"
-                  name="expiry-date"
-                  placeholder="MM/YY"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
+        <section class="bg-yellow-100 pt-32 lg:pt-48 p-6">
+          <div class="max-w-6xl mx-auto">
+              <!-- Title -->
+              <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Prayer Times</h1>
+              
+              <!-- Prayer Times Table -->
+              <div class="overflow-x-auto shadow-lg rounded-lg">
+                  <table class="min-w-full bg-white">
+                      <thead class="bg-black text-[#FFC55A]">
+                          <tr>
+                              <th class="py-3 px-4 text-left">Date</th>
+                              <th class="py-3 px-4 text-left">Fajr</th>
+                              <th class="py-3 px-4 text-left">Dhuhr</th>
+                              <th class="py-3 px-4 text-left">Asr</th>
+                              <th class="py-3 px-4 text-left">Maghrib</th>
+                              <th class="py-3 px-4 text-left">Isha</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">1st September</td>
+                            <td class="py-3 px-4">5:00 AM</td>
+                            <td class="py-3 px-4">1:30 PM</td>
+                            <td class="py-3 px-4">5:00 PM</td>
+                            <td class="py-3 px-4">7:15 PM</td>
+                            <td class="py-3 px-4">8:30 PM</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b">
+                            <td class="py-3 px-4">2nd September</td>
+                            <td class="py-3 px-4">5:01 AM</td>
+                            <td class="py-3 px-4">1:31 PM</td>
+                            <td class="py-3 px-4">5:01 PM</td>
+                            <td class="py-3 px-4">7:16 PM</td>
+                            <td class="py-3 px-4">8:31 PM</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">3rd September</td>
+                            <td class="py-3 px-4">5:02 AM</td>
+                            <td class="py-3 px-4">1:32 PM</td>
+                            <td class="py-3 px-4">5:02 PM</td>
+                            <td class="py-3 px-4">7:17 PM</td>
+                            <td class="py-3 px-4">8:32 PM</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b">
+                            <td class="py-3 px-4">4th September</td>
+                            <td class="py-3 px-4">5:03 AM</td>
+                            <td class="py-3 px-4">1:33 PM</td>
+                            <td class="py-3 px-4">5:03 PM</td>
+                            <td class="py-3 px-4">7:18 PM</td>
+                            <td class="py-3 px-4">8:33 PM</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">5th September</td>
+                            <td class="py-3 px-4">5:04 AM</td>
+                            <td class="py-3 px-4">1:34 PM</td>
+                            <td class="py-3 px-4">5:04 PM</td>
+                            <td class="py-3 px-4">7:19 PM</td>
+                            <td class="py-3 px-4">8:34 PM</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b">
+                            <td class="py-3 px-4">6th September</td>
+                            <td class="py-3 px-4">5:05 AM</td>
+                            <td class="py-3 px-4">1:35 PM</td>
+                            <td class="py-3 px-4">5:05 PM</td>
+                            <td class="py-3 px-4">7:20 PM</td>
+                            <td class="py-3 px-4">8:35 PM</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">7th September</td>
+                            <td class="py-3 px-4">5:06 AM</td>
+                            <td class="py-3 px-4">1:36 PM</td>
+                            <td class="py-3 px-4">5:06 PM</td>
+                            <td class="py-3 px-4">7:21 PM</td>
+                            <td class="py-3 px-4">8:36 PM</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b">
+                            <td class="py-3 px-4">8th September</td>
+                            <td class="py-3 px-4">5:07 AM</td>
+                            <td class="py-3 px-4">1:37 PM</td>
+                            <td class="py-3 px-4">5:07 PM</td>
+                            <td class="py-3 px-4">7:22 PM</td>
+                            <td class="py-3 px-4">8:37 PM</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">9th September</td>
+                            <td class="py-3 px-4">5:08 AM</td>
+                            <td class="py-3 px-4">1:38 PM</td>
+                            <td class="py-3 px-4">5:08 PM</td>
+                            <td class="py-3 px-4">7:23 PM</td>
+                            <td class="py-3 px-4">8:38 PM</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b">
+                            <td class="py-3 px-4">10th September</td>
+                            <td class="py-3 px-4">5:09 AM</td>
+                            <td class="py-3 px-4">1:39 PM</td>
+                            <td class="py-3 px-4">5:09 PM</td>
+                            <td class="py-3 px-4">7:24 PM</td>
+                            <td class="py-3 px-4">8:39 PM</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="py-3 px-4">11th September</td>
+                          <td class="py-3 px-4">5:10 AM</td>
+                          <td class="py-3 px-4">1:40 PM</td>
+                          <td class="py-3 px-4">5:10 PM</td>
+                          <td class="py-3 px-4">7:25 PM</td>
+                          <td class="py-3 px-4">8:40 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">12th September</td>
+                          <td class="py-3 px-4">5:11 AM</td>
+                          <td class="py-3 px-4">1:41 PM</td>
+                          <td class="py-3 px-4">5:11 PM</td>
+                          <td class="py-3 px-4">7:26 PM</td>
+                          <td class="py-3 px-4">8:41 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">13th September</td>
+                          <td class="py-3 px-4">5:12 AM</td>
+                          <td class="py-3 px-4">1:42 PM</td>
+                          <td class="py-3 px-4">5:12 PM</td>
+                          <td class="py-3 px-4">7:27 PM</td>
+                          <td class="py-3 px-4">8:42 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">14th September</td>
+                          <td class="py-3 px-4">5:13 AM</td>
+                          <td class="py-3 px-4">1:43 PM</td>
+                          <td class="py-3 px-4">5:13 PM</td>
+                          <td class="py-3 px-4">7:28 PM</td>
+                          <td class="py-3 px-4">8:43 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">15th September</td>
+                          <td class="py-3 px-4">5:14 AM</td>
+                          <td class="py-3 px-4">1:44 PM</td>
+                          <td class="py-3 px-4">5:14 PM</td>
+                          <td class="py-3 px-4">7:29 PM</td>
+                          <td class="py-3 px-4">8:44 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">16th September</td>
+                          <td class="py-3 px-4">5:15 AM</td>
+                          <td class="py-3 px-4">1:45 PM</td>
+                          <td class="py-3 px-4">5:15 PM</td>
+                          <td class="py-3 px-4">7:30 PM</td>
+                          <td class="py-3 px-4">8:45 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">17th September</td>
+                          <td class="py-3 px-4">5:16 AM</td>
+                          <td class="py-3 px-4">1:46 PM</td>
+                          <td class="py-3 px-4">5:16 PM</td>
+                          <td class="py-3 px-4">7:31 PM</td>
+                          <td class="py-3 px-4">8:46 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">18th September</td>
+                          <td class="py-3 px-4">5:17 AM</td>
+                          <td class="py-3 px-4">1:47 PM</td>
+                          <td class="py-3 px-4">5:17 PM</td>
+                          <td class="py-3 px-4">7:32 PM</td>
+                          <td class="py-3 px-4">8:47 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">19th September</td>
+                          <td class="py-3 px-4">5:18 AM</td>
+                          <td class="py-3 px-4">1:48 PM</td>
+                          <td class="py-3 px-4">5:18 PM</td>
+                          <td class="py-3 px-4">7:33 PM</td>
+                          <td class="py-3 px-4">8:48 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">20th September</td>
+                          <td class="py-3 px-4">5:19 AM</td>
+                          <td class="py-3 px-4">1:49 PM</td>
+                          <td class="py-3 px-4">5:19 PM</td>
+                          <td class="py-3 px-4">7:34 PM</td>
+                          <td class="py-3 px-4">8:49 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">21st September</td>
+                          <td class="py-3 px-4">5:20 AM</td>
+                          <td class="py-3 px-4">1:50 PM</td>
+                          <td class="py-3 px-4">5:20 PM</td>
+                          <td class="py-3 px-4">7:35 PM</td>
+                          <td class="py-3 px-4">8:50 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                          <td class="py-3 px-4">22nd September</td>
+                          <td class="py-3 px-4">5:21 AM</td>
+                          <td class="py-3 px-4">1:51 PM</td>
+                          <td class="py-3 px-4">5:21 PM</td>
+                          <td class="py-3 px-4">7:36 PM</td>
+                          <td class="py-3 px-4">8:51 PM</td>
+                      </tr>
+                      <tr class="border-b">
+                          <td class="py-3 px-4">23rd September</td>
+                          <td class="py-3 px-4">5:22 AM</td>
+                          <td class="py-3 px-4">1:52 PM</td>
+                          <td class="py-3 px-4">5:22 PM</td>
+                          <td class="py-3 px-4">7:37 PM</td>
+                          <td class="py-3 px-4">8:52 PM</td>
+                      </tr>
+                      <tr class="bg-gray-50 border-b">
+                        <td class="py-3 px-4">24th September</td>
+                        <td class="py-3 px-4">5:23 AM</td>
+                        <td class="py-3 px-4">1:53 PM</td>
+                        <td class="py-3 px-4">5:23 PM</td>
+                        <td class="py-3 px-4">7:38 PM</td>
+                        <td class="py-3 px-4">8:53 PM</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 px-4">25th September</td>
+                        <td class="py-3 px-4">5:24 AM</td>
+                        <td class="py-3 px-4">1:54 PM</td>
+                        <td class="py-3 px-4">5:24 PM</td>
+                        <td class="py-3 px-4">7:39 PM</td>
+                        <td class="py-3 px-4">8:54 PM</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="py-3 px-4">26th September</td>
+                        <td class="py-3 px-4">5:25 AM</td>
+                        <td class="py-3 px-4">1:55 PM</td>
+                        <td class="py-3 px-4">5:25 PM</td>
+                        <td class="py-3 px-4">7:40 PM</td>
+                        <td class="py-3 px-4">8:55 PM</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 px-4">27th September</td>
+                        <td class="py-3 px-4">5:26 AM</td>
+                        <td class="py-3 px-4">1:56 PM</td>
+                        <td class="py-3 px-4">5:26 PM</td>
+                        <td class="py-3 px-4">7:41 PM</td>
+                        <td class="py-3 px-4">8:56 PM</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="py-3 px-4">28th September</td>
+                        <td class="py-3 px-4">5:27 AM</td>
+                        <td class="py-3 px-4">1:57 PM</td>
+                        <td class="py-3 px-4">5:27 PM</td>
+                        <td class="py-3 px-4">7:42 PM</td>
+                        <td class="py-3 px-4">8:57 PM</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 px-4">29th September</td>
+                        <td class="py-3 px-4">5:28 AM</td>
+                        <td class="py-3 px-4">1:58 PM</td>
+                        <td class="py-3 px-4">5:28 PM</td>
+                        <td class="py-3 px-4">7:43 PM</td>
+                        <td class="py-3 px-4">8:58 PM</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="py-3 px-4">30th September</td>
+                        <td class="py-3 px-4">5:29 AM</td>
+                        <td class="py-3 px-4">1:59 PM</td>
+                        <td class="py-3 px-4">5:29 PM</td>
+                        <td class="py-3 px-4">7:44 PM</td>
+                        <td class="py-3 px-4">8:59 PM</td>
+                    </tr>
+                    </tbody>
+                    
+                  </table>
               </div>
-  
-              <!-- CVV -->
-              <div>
-                <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-                <input
-                  type="text"
-                  id="cvv"
-                  name="cvv"
-                  placeholder="CVV"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-            </div>
-  
-            <!-- Submit Button -->
-            <div class="mt-6">
-              <button
-                type="submit"
-                class="w-full bg-black text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-              >
-                Donate Now
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+          </div>
+      </section>
+            
+
+      
       </main>
 
       <!-- Footer -->
@@ -957,7 +1087,7 @@
                     <li>
                       <a
                         class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#contact"
+                        href="contact.html"
                       >
                         Contact Us
                       </a>
