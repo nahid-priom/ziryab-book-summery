@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>District Pizza & Kabab</title>
+    <title>Moshjid</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -37,7 +37,7 @@
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        min-width: 300px;
+        min-width: 200px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
@@ -72,7 +72,7 @@
         color: white;
       }
       .hero-section {
-        background-image: url("./images/background.png");
+        background-image: url("./images/Background.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,7 +90,7 @@
       }
       @media (max-width: 840px) {
         .hero-section {
-          background-image: url("./images/background.png");
+          background-image: url("./images/Background.png");
           background-position: left;
           background-size: cover;
           background-repeat: no-repeat;
@@ -187,11 +187,11 @@
 
     <!-- Preloader -->
     <div
-      class="preloader bg-white fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+      class="preloader bg-black fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
     >
       <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
         <img
-          src="images/logo.png"
+          src="images/logo.jpeg"
           alt="Loading Icon"
           class="loading-icon mx-auto"
         />
@@ -201,17 +201,70 @@
     <div class="content hidden">
       <!--Navbar-->
       <header id="navbar">
-        <div class="shadow-md z-50 bg-[#00215E] w-full">
+        <div class="shadow-md z-50 bg-black w-full">
+          <div class="bg-[#FFC55A] py-2">
+            <div
+              class="max-w-7xl mx-auto px-4 lg:px-0 flex justify-between items-center"
+            >
+              <div class="flex space-x-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-facebook text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter text-black text-lg"></i>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram text-black text-lg"></i>
+                </a>
+              </div>
+              <div class="flex space-x-2 justify-center items-center text-sm">
+                <a href="donate.html">
+                  <button
+                    class="bg-yellow-100 border hover:bg-white border-black text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                  >
+                    <i class="fas fa-donate"></i>
+                    <span>Donate</span>
+                  </button>
+                </a>
+                <a href="prayer-time.html">
+
+                  <button
+                    class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock"></i>
+                    <span>Prayer Time</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <nav
             id="navbar"
-            class="mx-auto max-w-7xl px-4 py-2 lg:py-4 flex justify-center gap-5 lg:justify-between items-center"
+            class="mx-auto max-w-7xl py-1 lg:py-2 flex justify-between gap-5 px-3 lg:px-0 items-center"
           >
-            <a class="text-3xl py-1 font-bold leading-none" href="index.html">
-              <img src="images/logo.png" alt="logo" class="w-24 mr-6 lg:w-32" />
+            <a class="text-3xl font-bold leading-none" href="index.html">
+              <img
+                src="images/logo.jpeg"
+                alt="logo"
+                class="w-24 mr-6 lg:w-36"
+              />
             </a>
 
             <ul
-              class="hidden lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 relative"
+              class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 relative"
             >
               <div class="dropdown inline-block">
                 <a
@@ -219,7 +272,7 @@
                   class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                   href="#"
                 >
-                  Menu <i class="fas fa-chevron-down ml-2"></i>
+                  News <i class="fas fa-chevron-down ml-2"></i>
                 </a>
 
                 <div
@@ -227,90 +280,151 @@
                   class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
                 >
                   <a
-                    href="appetizer.html"
+                    href="event.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                      alt="Special Pizza"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Special Pizza</p>
+                    <p class="font-bold ml-4">Events</p>
+                  </a>
+                  <a
+                    href="service.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Services</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Announcements</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Others</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Services <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="service.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Religous Services</p>
                   </a>
                   <a
                     href="entrees.html"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                      alt="Entrees"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Sub Sandwich</p>
+                    <p class="font-bold ml-4">Educational Services</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                      alt="Curries (Sea-Food)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Fresh Salad</p>
+                    <p class="font-bold ml-4">Gift Shop</p>
                   </a>
                   <a
                     href="#"
                     class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                   >
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                      alt="Curries (Vegetarian)"
-                      class="w-10 h-10 rounded-full"
-                    />
-                    <p class="font-bold ml-4">Desserts</p>
+                    <p class="font-bold ml-4">Special Needs</p>
                   </a>
                 </div>
               </div>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+                  Events <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="kid.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Kid</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Youth</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Women</p>
+                  </a>
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Men</p>
+                  </a>
+                </div>
+              </div>
+              <div class="dropdown inline-block">
+                <a
+                  id="menu-button"
+                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                  href="#"
+                >
+                  Rentals <i class="fas fa-chevron-down ml-2"></i>
+                </a>
+
+                <div
+                  id="dropdown-content"
+                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                >
+                  <a
+                    href="rentals.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Cultural Center</p>
+                  </a>
+                  <a
+                    href="entrees.html"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Restaurant</p>
+                  </a>
+                  
+                  <a
+                    href="#"
+                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                  >
+                    <p class="font-bold ml-4">Multipurpose Center</p>
+                  </a>
+                </div>
+              </div>
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="about.html"
-                  >About</a
+                  href="#"
+                  >School</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
@@ -318,101 +432,16 @@
                   >Contact</a
                 >
               </li>
-              <li class="text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  class="w-4 h-4 current-fill"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                  />
-                </svg>
-              </li>
+
               <li>
                 <a
                   class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="blog.html"
-                  >Blog</a
+                  href="about.html"
+                  >About</a
                 >
               </li>
             </ul>
-            <a
-              class="hidden lg:inline-block py-4 px-8 bg-[#FFC55A] rounded-full hover:bg-white border text-lg text-black font-bold transition duration-200"
-              href="order-now.html"
-              >Order Now</a
-            >
-            <!-- Cart Icon with Badge -->
-            <a
-              href="cart.html"
-              class="relative lg:inline-block text-lg text-white font-bold transition duration-200 ml-4"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-10 px-2 py-2 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l1.3-5H6.3L7 13zM7 13L6 21h12l-1-8M3 3l3.6 2H17m-3 8h5l1-5H7L6 13h11-5m0-8H7"
-                />
-              </svg>
-              <!-- Cart Count Badge -->
-              <span
-                class="absolute top-0 right-0 text-red-500 -mt-2 -mr-2 rounded-full bg-white text-sm font-extrabold py-1 px-2"
-              >
-                3
-              </span>
-            </a>
 
-            <!-- User Icon with Dropdown -->
-            <div class="relative inline-block">
-              <a
-                href="#"
-                class="relative lg:inline-block text-lg text-white font-bold transition duration-200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-10 px-2 py-1 w-10 lg:w-12 lg:h-12 bg-[#FFC55A] text-black rounded-full inline"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M12 7a4 4 0 100-8 4 4 0 000 8zm0 2a9 9 0 00-9 9h18a9 9 0 00-9-9z"
-                  />
-                </svg>
-              </a>
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute right-0 hidden w-48 bg-white rounded-md shadow-lg z-20 group-hover:block"
-              >
-                <a
-                  href="login.html"
-                  class="block px-4 py-2 text-gray-800 border-b-2 border-orange-300 font-bold hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Log In
-                </a>
-                <a
-                  href="create-account.html"
-                  class="block px-4 py-2 text-gray-800 font-bold border-b-2 border-orange-300 hover:bg-[#FFC55A] hover:text-black"
-                >
-                  Create Account
-                </a>
-              </div>
-            </div>
             <div class="lg:hidden">
               <button
                 id="navbar-burger"
@@ -452,7 +481,7 @@
                 ></path>
               </svg>
               <span
-                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-white font-bold"
+                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-yellow-100 font-bold"
                 >2</span
               >
             </span>
@@ -462,19 +491,19 @@
             class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
           ></div>
           <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 py-6 px-6 bg-[#100d20] border-r overflow-y-auto"
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-4/6 py-6 px-6 bg-black border-r overflow-y-auto"
           >
             <div class="flex items-center mb-8">
               <a
                 class="mr-auto text-3xl font-bold leading-none"
                 href="index.html"
               >
-                <img src="images/logo.png" class="w-24" />
+                <img src="images/logo.jpeg" class="w-36" />
               </a>
 
               <button class="navbar-close">
                 <svg
-                  class="h-6 w-6 text-white cursor-pointer hover:text-[#FFC55A] text-black"
+                  class="h-6 w-6 text-yellow-100 cursor-pointer hover:text-[#FFC55A] text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -490,101 +519,198 @@
               </button>
             </div>
             <div>
-              <ul>
+              <ul class="flex flex-col gap-5 items-start">
                 <div class="dropdown">
                   <a
                     id="menu-button"
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
                     href="#"
                   >
-                    Menu <i class="fas fa-chevron-down ml-2"></i>
+                    News <i class="fas fa-chevron-down ml-2"></i>
                   </a>
-                  <div id="dropdown-content" class="dropdown-content hidden">
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
                     <a
-                      href="appetizer.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      href="event.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://media-cdn.tripadvisor.com/media/photo-s/0f/15/d3/da/spanky-s-special-pizza.jpg"
-                        alt="Special Pizza"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Special Pizza</p>
+                      <p class="font-bold ml-4">Events</p>
                     </a>
                     <a
-                      href="entrees.html"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      href="service.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://t4.ftcdn.net/jpg/00/61/30/51/360_F_61305108_urbB1CoiKoPlTJPrDTBAevP5CM1gswSd.jpg"
-                        alt="Entrees"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Sub Sandwich</p>
+                      <p class="font-bold ml-4">Services</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://img.taste.com.au/QaDKlckA/taste/2016/11/fresh-summer-vegetable-salad-91664-1.jpeg"
-                        alt="Curries (Sea-Food)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Fresh Salad</p>
+                      <p class="font-bold ml-4">Announcements</p>
                     </a>
                     <a
                       href="#"
-                      class="border-b rounded-md border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
                     >
-                      <img
-                        src="https://static.vecteezy.com/system/resources/previews/028/626/678/non_2x/hd-ai-generative-free-photo.jpg"
-                        alt="Curries (Vegetarian)"
-                        class="w-10 h-10 rounded-full"
-                      />
-                      <p class="font-bold ml-4">Dinner</p>
+                      <p class="font-bold ml-4">Others</p>
                     </a>
                   </div>
                 </div>
-                <li class="mb-1">
+                <div class="dropdown">
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="about.html"
-                    >About</a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Services <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="service.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Religous Services</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Educational Services</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Gift Shop</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Special Needs</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="#"
+                  >
+                    Events <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="kid.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Kid</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Youth</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Women</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Men</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <a
+                    id="menu-button"
+                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
+                    href="rentals.html"
+                  >
+                    Rentals <i class="fas fa-chevron-down ml-2"></i>
+                  </a>
+
+                  <div
+                    id="dropdown-content"
+                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
+                  >
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Residential Houses</p>
+                    </a>
+                    <a
+                      href="entrees.html"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Restaurant</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Cultural Center</p>
+                    </a>
+                    <a
+                      href="#"
+                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
+                    >
+                      <p class="font-bold ml-4">Multipurpose Center</p>
+                    </a>
+                  </div>
+                </div>
+                <li>
+                  <a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="#"
+                    >School</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
                     href="contact.html"
                     >Contact</a
                   >
                 </li>
-                <li class="mb-1">
+
+                <li>
                   <a
-                    class="block p-4 text-lg font-bold text-white hover:bg-[#100d20] rounded-md rounded"
-                    href="blog.html"
-                    >Blog</a
+                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
+                    href="about.html"
+                    >About</a
                   >
                 </li>
               </ul>
             </div>
             <div class="mt-4">
-              <div class="pt-6">
-                <a
-                  class="block px-4 py-3 mb-3 leading-loose text-xs bg-[#FFC55A] text-center font-semibold text-black rounded-md rounded-md rounded-xl"
-                  href="#"
-                  >Online Orders</a
-                >
-              </div>
-              <p class="my-4 text-xs text-center text-white">
-                <span>Copyright © Blacktech Consultancy</span>
+              <p class="my-4 text-xs text-start text-yellow-100">
+                <span>Developed © Blacktech Consultancy</span>
               </p>
             </div>
           </nav>
         </div>
       </header>
       <!-- End Navbar -->
+
       <!--Blogs Section-->
       <section>
         <div class="max-w-7xl pt-28 lg:pt-48 mx-auto py-8">
