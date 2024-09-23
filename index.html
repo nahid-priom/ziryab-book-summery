@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moshjid</title>
+    <title>Cartoonist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -13,1332 +12,343 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      #orderConfirmedModal {
-        display: none;
-      }
-      header {
-        position: fixed;
-        z-index: 1000;
-        width: 100%;
-        background-color: white;
-        transition: background-color 0.3s ease;
-      }
-
-      header.scroll {
-        background-color: rgb(255, 243, 243);
-      }
-      .dropdown {
-        display: inline-block;
-        position: relative;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .dropdown:hover .dropdown-content {
-        margin-top: 5px;
-        display: flex;
-
-        flex-direction: column;
-        border-radius: 10px;
-      }
-
-      .dropdown-content a {
-        color: black;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        padding: 12px 16px;
-      }
-
-      .dropdown-content img {
-        width: 40px;
-        margin-right: 10px;
-      }
-
-      .dropdown-content p {
-        margin: 0;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #ffc55a;
-        color: white;
-      }
-      .hero-section {
-        background-image: url("./images/Background.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        animation: grow-shrink 10s infinite;
-        height: 900px;
-      }
-      @keyframes grow-shrink {
-        0%,
-        100% {
-          background-size: 100%;
-        }
-        50% {
-          background-size: 110%;
-        }
-      }
-      @media (max-width: 840px) {
-        .hero-section {
-          background-image: url("./images/Background.png");
-          background-position: left;
-          background-size: cover;
-          background-repeat: no-repeat;
-          animation: none;
-          height: 620px;
-        }
-
-        @keyframes growShrinkMobile {
-          0% {
-            background-size: 100%;
-          }
-          100% {
-            background-size: 120%;
-          }
-        }
-      }
-      @keyframes fade-in-down {
-        0% {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fade-in-left {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      @keyframes fade-in-right {
-        0% {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      @keyframes spin-scale {
-        0% {
-          transform: scale(1) rotate(0deg);
-        }
-        50% {
-          transform: scale(1.1) rotate(180deg);
-        }
-        100% {
-          transform: scale(1) rotate(360deg);
-        }
-      }
-      .animate-fade-in-down {
-        animation: fade-in-down 2s ease-out forwards;
-      }
-      .animate-fade-in-left {
-        animation: fade-in-left 2s ease-out forwards;
-      }
-      .animate-fade-in-right {
-        animation: fade-in-right 2s ease-out forwards;
-      }
-      .animate-spin-scale {
-        animation: spin-scale 10s linear infinite;
-      }
-      .animate-pulse {
-        animation: pulse 2s infinite;
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-    </style>
   </head>
-  <body>
-    <!-- <div class="fixed bottom-10 right-10 lg:right-12 lg:bottom-12 z-50">
-      <a href="tel:+1230392029">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/13707/13707457.png"
-          alt="Phone Icon"
-          class="w-16 lg:w-24 h-auto animate-bounce hover:animate-none"
-        />
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="index.html">
+
+          <h1 class="text-2xl font-bold text-red-500">Cartoonist</h1>
       </a>
-    </div> -->
-
-    <!-- Preloader -->
-    <div
-      class="preloader bg-black fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
-    >
-      <div class="loader rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-bounce">
-        <img
-          src="images/logo.jpeg"
-          alt="Loading Icon"
-          class="loading-icon mx-auto"
-        />
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+          <button id="nav-toggle" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+        <!-- Navigation Links -->
+        <ul id="nav-links" class="hidden md:flex space-x-6">
+          <li><a href="#" class="text-gray-700 hover:text-red-500">Home</a></li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Trending</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Music</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-red-500">Gaming</a>
+          </li>
+          <li><a href="#" class="text-gray-700 hover:text-red-500">News</a></li>
+        </ul>
       </div>
-    </div>
+      <!-- Mobile Navigation Links -->
+      <ul
+        id="mobile-nav"
+        class="md:hidden mt-8 flex flex-col space-y-4 px-4 hidden"
+      >
+        <li><a href="#" class="text-gray-700 hover:text-red-500">Home</a></li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-red-500">Trending</a>
+        </li>
+        <li><a href="#" class="text-gray-700 hover:text-red-500">Music</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-red-500">Gaming</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-red-500">News</a></li>
+      </ul>
+    </nav>
 
-    <div class="content hidden">
-      <!--Navbar-->
-      <header id="navbar">
-        <div class="shadow-md z-50 bg-black w-full">
-          <div class="bg-[#FFC55A] py-2">
-            <div
-              class="max-w-7xl mx-auto px-4 lg:px-0 flex justify-between items-center"
-            >
-              <div class="flex space-x-4">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-facebook text-black text-lg"></i>
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-twitter text-black text-lg"></i>
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-instagram text-black text-lg"></i>
-                </a>
-              </div>
-              <div class="flex space-x-2 justify-center items-center text-sm">
-                <a href="donate.html">
-                  <button
-                    class="bg-yellow-100 border hover:bg-white border-black text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
-                  >
-                    <i class="fas fa-donate"></i>
-                    <span>Donate</span>
-                  </button>
-                </a>
-                <a href="prayer-time.html">
+    <script>
+      // JavaScript to handle the navbar toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
 
-                  <button
-                    class="bg-yellow-100 border border-black hover:bg-white text-black font-bold py-1 px-2 rounded flex items-center space-x-1"
-                  >
-                    <i class="fas fa-clock"></i>
-                    <span>Prayer Time</span>
-                  </button>
-                </a>
-              </div>
-            </div>
+      navToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Video Cards Section -->
+    <div class="container mx-auto mt-8 px-4">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!-- Single Video Card -->
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://cdn.designcrowd.com/blog/2016/April/cartoons-miscast/GR_MiscastCartoonCharacters_Banner_828x300.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">Title 1</h2>
+            <p class="text-gray-600 text-sm mt-2">Channel Name</p>
+            <p class="text-gray-500 text-xs mt-1">1M views • 2 days ago</p>
           </div>
-
-          <nav
-            id="navbar"
-            class="mx-auto max-w-7xl py-1 lg:py-2 flex justify-between gap-5 px-3 lg:px-0 items-center"
-          >
-            <a class="text-3xl font-bold leading-none" href="index.html">
-              <img
-                src="images/logo.jpeg"
-                alt="logo"
-                class="w-24 mr-6 lg:w-36"
-              />
-            </a>
-
-            <ul
-              class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 relative"
-            >
-              <div class="dropdown inline-block">
-                <a
-                  id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                  href="#"
-                >
-                  News <i class="fas fa-chevron-down ml-2"></i>
-                </a>
-
-                <div
-                  id="dropdown-content"
-                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                >
-                  <a
-                    href="news.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Events</p>
-                  </a>
-                  <a
-                    href="news.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Services</p>
-                  </a>
-                  <a
-                    href="news.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Announcements</p>
-                  </a>
-                  <a
-                    href="news.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Others</p>
-                  </a>
-                </div>
-              </div>
-              <div class="dropdown inline-block">
-                <a
-                  id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                  href="#"
-                >
-                  Services <i class="fas fa-chevron-down ml-2"></i>
-                </a>
-
-                <div
-                  id="dropdown-content"
-                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                >
-                  <a
-                    href="service.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Religous Services</p>
-                  </a>
-                  <a
-                    href="service.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Educational Services</p>
-                  </a>
-                  <a
-                    href="#"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Gift Shop</p>
-                  </a>
-                  <a
-                    href="service.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Special Needs</p>
-                  </a>
-                </div>
-              </div>
-              <div class="dropdown inline-block">
-                <a
-                  id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                  href="#"
-                >
-                  Events <i class="fas fa-chevron-down ml-2"></i>
-                </a>
-
-                <div
-                  id="dropdown-content"
-                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                >
-                  <a
-                    href="event.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Kid</p>
-                  </a>
-                  <a
-                    href="event.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Youth</p>
-                  </a>
-                  <a
-                    href="event.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Women</p>
-                  </a>
-                  <a
-                    href="event.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Men</p>
-                  </a>
-                </div>
-              </div>
-              <div class="dropdown inline-block">
-                <a
-                  id="menu-button"
-                  class="text-lg text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                  href="#"
-                >
-                  Rentals <i class="fas fa-chevron-down ml-2"></i>
-                </a>
-
-                <div
-                  id="dropdown-content"
-                  class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                >
-                  <a
-                    href="rentals.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Cultural Center</p>
-                  </a>
-                  <a
-                    href="rentals.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Restaurant</p>
-                  </a>
-                  
-                  <a
-                    href="rentals.html"
-                    class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                  >
-                    <p class="font-bold ml-4">Multipurpose Center</p>
-                  </a>
-                </div>
-              </div>
-              <li>
-                <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="school.html"
-                  >School</a
-                >
-              </li>
-
-              <li>
-                <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="contact.html"
-                  >Contact</a
-                >
-              </li>
-
-              <li>
-                <a
-                  class="text-lg px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                  href="about.html"
-                  >About</a
-                >
-              </li>
-            </ul>
-
-            <div class="lg:hidden">
-              <button
-                id="navbar-burger"
-                class="navbar-burger flex items-center text-black rounded-md bg-[#FFC55A] rounded-md p-3"
-              >
-                <svg
-                  class="block h-4 w-4 fill-current"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Services</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-              </button>
-            </div>
-
-            <style>
-              .relative.inline-block:hover .absolute.right-0.hidden {
-                display: block;
-              }
-            </style>
-          </nav>
-        </div>
-        <div class="navbar-menu relative z-50 hidden">
-          <a href="cart.html">
-            <span class="relative">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30px"
-                height="30px"
-                class="cursor-pointer fill-[#333] inline"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
-                  data-original="#000000"
-                ></path>
-              </svg>
-              <span
-                class="absolute left-auto ml-0 -top-2 rounded-full bg-[#FFC55A] px-1 py-0 text-xs text-yellow-100 font-bold"
-                >2</span
-              >
-            </span>
-          </a>
-
-          <div
-            class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
-          ></div>
-          <nav
-            class="fixed top-0 left-0 bottom-0 flex flex-col w-4/6 py-6 px-6 bg-black border-r overflow-y-auto"
-          >
-            <div class="flex items-center mb-8">
-              <a
-                class="mr-auto text-3xl font-bold leading-none"
-                href="index.html"
-              >
-                <img src="images/logo.jpeg" class="w-36" />
-              </a>
-
-              <button class="navbar-close">
-                <svg
-                  class="h-6 w-6 text-yellow-100 cursor-pointer hover:text-[#FFC55A] text-black"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div>
-              <ul class="flex flex-col gap-5 items-start">
-                <div class="dropdown">
-                  <a
-                    id="menu-button"
-                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                    href="#"
-                  >
-                    News <i class="fas fa-chevron-down ml-2"></i>
-                  </a>
-
-                  <div
-                    id="dropdown-content"
-                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                  >
-                    <a
-                      href="news.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Events</p>
-                    </a>
-                    <a
-                      href="news.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Services</p>
-                    </a>
-                    <a
-                      href="news.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Announcements</p>
-                    </a>
-                    <a
-                      href="news.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Others</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="dropdown">
-                  <a
-                    id="menu-button"
-                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                    href="#"
-                  >
-                    Services <i class="fas fa-chevron-down ml-2"></i>
-                  </a>
-
-                  <div
-                    id="dropdown-content"
-                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                  >
-                    <a
-                      href="service.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Religous Services</p>
-                    </a>
-                    <a
-                      href="service.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Educational Services</p>
-                    </a>
-                    <a
-                      href="service.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Gift Shop</p>
-                    </a>
-                    <a
-                      href="service.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Special Needs</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="dropdown">
-                  <a
-                    id="menu-button"
-                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                    href="#"
-                  >
-                    Events <i class="fas fa-chevron-down ml-2"></i>
-                  </a>
-
-                  <div
-                    id="dropdown-content"
-                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                  >
-                    <a
-                      href="event.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Kid</p>
-                    </a>
-                    <a
-                      href="event.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Youth</p>
-                    </a>
-                    <a
-                      href="event.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Women</p>
-                    </a>
-                    <a
-                      href="event.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Men</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="dropdown">
-                  <a
-                    id="menu-button"
-                    class="text-xl text-[#FFC55A] px-4 py-3 hover:bg-[#FFC55A] hover:text-black rounded-md font-bold dropbtn"
-                    href="rentals.html"
-                  >
-                    Rentals <i class="fas fa-chevron-down ml-2"></i>
-                  </a>
-
-                  <div
-                    id="dropdown-content"
-                    class="dropdown-content hidden mt-1 border-b-2 rounded-md shadow-lg"
-                  >
-                    <a
-                      href="rentals.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Residential Houses</p>
-                    </a>
-                    <a
-                      href="rentals.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Restaurant</p>
-                    </a>
-                    <a
-                      href="rentals.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Cultural Center</p>
-                    </a>
-                    <a
-                      href="rentals.html"
-                      class="border-b border-orange-300 flex items-center px-4 py-2 hover:bg-[#FFC55A] hover:text-black text-black"
-                    >
-                      <p class="font-bold ml-4">Multipurpose Center</p>
-                    </a>
-                  </div>
-                </div>
-                <li>
-                  <a
-                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="school.html"
-                    >School</a
-                  >
-                </li>
-
-                <li>
-                  <a
-                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="contact.html"
-                    >Contact</a
-                  >
-                </li>
-
-                <li>
-                  <a
-                    class="text-xl px-4 py-3 text-[#FFC55A] hover:bg-[#FFC55A] hover:text-black rounded-md font-bold"
-                    href="about.html"
-                    >About</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="mt-4">
-              <p class="my-4 text-xs text-start text-yellow-100">
-                <span>Developed © Blacktech Consultancy</span>
-              </p>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <!-- End Navbar -->
-
-      <main>
-        <!-- Hero Section -->
-        <section class="hero-section pt-20 lg:pt-48 relative bg-gray-700">
-          <div
-            class="max-w-7xl flex flex-col px-6 py-10 mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center"
-          >
-            <!-- Left Content -->
-            <div class="w-full mt-16 flex items-center justify-center">
-              <div
-                class="flex max-w-2xl flex-col justify-center items-center gap-5 text-center"
-              >
-                <h1
-                  class="text-4xl lg:text-6xl font-extrabold tracking-wide text-yellow-100 animate-fade-in-left delay-200"
-                >
-                  In the Name of Allah, The Most Beneficent, The Most Merciful
-                </h1>
-                <p
-                  class="font-bold text-sm lg:text-base text-[#EEEEEE] px-4 py-4 animate-fade-in-right delay-400"
-                >
-                  Join us for prayer, spiritual guidance, and uplifting events.
-                  Strengthen your connection with faith and find solace in our
-                  sacred space. Everyone is welcome.
-                </p>
-                <div class="mt-4">
-                  <a href="about.html">
-                    <button
-                      type="button"
-                      class="px-4 py-2 m-1 text-xl font-bold transition-transform duration-300 transform bg-[#FFC55A] rounded-full hover:scale-110 hover:bg-gray-100 focus:outline-none hover:bg-white delay-600"
-                    >
-                      Go For Know Us
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--End Hero Section-->
-        <!--Prayer Times-->
-        <section class="bg-yellow-100 py-6 lg:py-12">
-          <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
-              Prayer Times
+        </a>
+        <!-- Repeat the above div for more video cards -->
+        <a
+          href="single-content2.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://i.pinimg.com/736x/95/a1/6b/95a16bec55bc67bddd20e6222f239ab7.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
             </h2>
-
-            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-              <!-- Fajr Prayer Card -->
-              <div
-                class="bg-gradient-to-r from-blue-400 to-blue-600 shadow-lg rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              >
-                <h3 class="text-2xl font-bold text-white mb-4">Fajr</h3>
-                <p class="text-3xl text-white font-semibold mb-2">5:30 AM</p>
-                <p class="text-sm text-white opacity-75">
-                  Begins before sunrise
-                </p>
-              </div>
-
-              <!-- Dhuhr Prayer Card -->
-              <div
-                class="bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-lg rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              >
-                <h3 class="text-2xl font-bold text-white mb-4">Dhuhr</h3>
-                <p class="text-3xl text-white font-semibold mb-2">1:00 PM</p>
-                <p class="text-sm text-white opacity-75">Starts after midday</p>
-              </div>
-
-              <!-- Asr Prayer Card -->
-              <div
-                class="bg-gradient-to-r from-green-400 to-green-600 shadow-lg rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              >
-                <h3 class="text-2xl font-bold text-white mb-4">Asr</h3>
-                <p class="text-3xl text-white font-semibold mb-2">4:30 PM</p>
-                <p class="text-sm text-white opacity-75">Afternoon prayer</p>
-              </div>
-
-              <!-- Maghrib Prayer Card -->
-              <div
-                class="bg-gradient-to-r from-red-400 to-red-600 shadow-lg rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              >
-                <h3 class="text-2xl font-bold text-white mb-4">Maghrib</h3>
-                <p class="text-3xl text-white font-semibold mb-2">7:45 PM</p>
-                <p class="text-sm text-white opacity-75">After sunset</p>
-              </div>
-
-              <!-- Isha Prayer Card -->
-              <div
-                class="bg-gradient-to-r from-purple-400 to-purple-600 shadow-lg rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              >
-                <h3 class="text-2xl font-bold text-white mb-4">Isha</h3>
-                <p class="text-3xl text-white font-semibold mb-2">9:00 PM</p>
-                <p class="text-sm text-white opacity-75">Night prayer</p>
-              </div>
-            </div>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
           </div>
-        </section>
-
-        <!--End Prayer Times-->
-        <!--About -->
-        <section class="bg-yellow-50 py-16">
-          <div class="max-w-7xl mx-auto px-4">
-            <!-- Title and Paragraph -->
-            <div class="text-center mb-8">
-              <h2 class="text-4xl font-extrabold text-gray-800 mb-4">
-                Welcome To Moshjid-E-Bilal
-              </h2>
-              <p class="text-lg text-gray-700">
-                We are a Muslim community organization providing various
-                services to our fellow Muslim brothers and sisters. We offer the
-                opportunity to attend prayer 5 times and other facilities.
-              </p>
-            </div>
-
-            <!-- Two-column layout: Cards on the left, Image on the right -->
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-20 items-center"
-            >
-              <!-- Cards Section (Left Side) -->
-              <div class="space-y-6">
-                <!-- Mission Card -->
-                <div
-                  class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105"
-                >
-                  <h3 class="text-2xl font-bold text-gray-800 mb-4">
-                    Our Mission
-                  </h3>
-                  <p class="text-gray-600">
-                    To nurture a community dedicated to faith, unity, and
-                    service, while offering prayer facilities and educational
-                    programs to help members grow spiritually.
-                  </p>
-                </div>
-
-                <!-- Vision Card -->
-                <div
-                  class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105"
-                >
-                  <h3 class="text-2xl font-bold text-gray-800 mb-4">
-                    Our Vision
-                  </h3>
-                  <p class="text-gray-600">
-                    To create a welcoming space for all Muslims where they can
-                    strengthen their faith, serve the community, and foster the
-                    next generation of leaders through Islamic education.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Image Section (Right Side) -->
-              <div>
-                <img
-                  src="https://prayersconnect.com/api/image-resize/eyJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYxNiwiaGVpZ2h0IjozOTJ9fSwidXJsIjoiaHR0cHM6Ly9hcGkucHJheWVyc2Nvbm5lY3QuY29tL3JhaWxzL2FjdGl2ZV9zdG9yYWdlL2Jsb2JzL3JlZGlyZWN0L2V5SmZjbUZwYkhNaU9uc2liV1Z6YzJGblpTSTZJa0pCYUhCQmRHRkxJaXdpWlhod0lqcHVkV3hzTENKd2RYSWlPaUppYkc5aVgybGtJbjE5LS1jYzljMTM5ODMyMGUyYmJkMjZjZTk4MzY3NzcwNWI1NGNhMGY5NzYwL1NjcmVlbnNob3QlMjAyMDI0LTAyLTA0JTIwMDg0MjEzLnBuZyJ9"
-                  alt="Mosque"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--Feature section-->
-        <section class="bg-yellow-100 py-12">
-          <div class="max-w-7xl mx-auto px-4">
-            <!-- Section Title -->
-            <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
-              Follow The Path Of Islam
+        </a>
+        <!-- Repeat for additional video cards -->
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://t4.ftcdn.net/jpg/06/33/12/35/360_F_633123597_eUUvLKIBf7E5ukggCvZJ4dz02MqT5L9Q.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
             </h2>
-
-            <!-- Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- Card 1: Teaching Quran -->
-              <div
-                class="bg-white shadow-lg rounded-lg p-6 text-center transform transition hover:scale-105"
-              >
-                <div class="mb-4">
-                  <i class="fas fa-book-open text-4xl text-green-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                  Teaching Quran
-                </h3>
-                <p class="text-gray-600">
-                  Join us in learning the Quran, understanding its teachings,
-                  and implementing its wisdom in daily life.
-                </p>
-              </div>
-
-             
-              <!-- Card 3: Community Services -->
-              <div
-                class="bg-white shadow-lg rounded-lg p-6 text-center transform transition hover:scale-105"
-              >
-                <div class="mb-4">
-                  <i class="fas fa-hands-helping text-4xl text-yellow-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                  Community Services
-                </h3>
-                <p class="text-gray-600">
-                  We provide support and services to strengthen and help our
-                  Muslim community.
-                </p>
-              </div>
-
-              <!-- Card 4: Funeral Services -->
-              <div
-                class="bg-white shadow-lg rounded-lg p-6 text-center transform transition hover:scale-105"
-              >
-                <div class="mb-4">
-                  <i class="fas fa-praying-hands text-4xl text-red-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                  Funeral Services
-                </h3>
-                <p class="text-gray-600">
-                  We offer funeral services and support for families in their
-                  time of need.
-                </p>
-              </div>
-            </div>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
           </div>
-        </section>
-
-        <section class="bg-yellow-50 py-12 lg:py-20">
-          <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              
-              <!-- Left Side: Image -->
-              <div>
-                <img src="https://images.jdmagicbox.com/comp/bangalore/e5/080pxx80.xx80.200702222954.r9e5/catalogue/graveyard-near-bilal-masjid-jayanagar-bangalore-mosques-r6yibb18lm-250.jpg" alt="Mosque" class="w-full h-96 object-cover rounded-lg shadow-lg">
-              </div>
-              
-              <!-- Right Side: Pillars of Islam -->
-              <div>
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">The Pillars of Islam</h2>
-                <p class="text-lg text-gray-700 mb-6">
-                  Be sure to hold these pillars of Islam very close to your heart. May Allah guide you on the right path. Take a closer look at these.
-                </p>
-                
-                <!-- Pillars Grid Layout -->
-                <div class="grid grid-cols-2 gap-6">
-                  <!-- First Column: First 3 Pillars -->
-                  <div class="space-y-6">
-                    <!-- Shahadah -->
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
-                          1
-                        </div>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-2xl font-semibold text-gray-800 font-serif">Shahadah</h3>
-                        <p class="text-lg text-gray-600 font-light">Faith</p>
-                      </div>
-                    </li>
-        
-                    <!-- Salah -->
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
-                          2
-                        </div>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-2xl font-semibold text-gray-800 font-serif">Salah</h3>
-                        <p class="text-lg text-gray-600 font-light">Prayer</p>
-                      </div>
-                    </li>
-        
-                    <!-- Sawm -->
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <div class="bg-yellow-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
-                          3
-                        </div>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-2xl font-semibold text-gray-800 font-serif">Sawm</h3>
-                        <p class="text-lg text-gray-600 font-light">Fasting</p>
-                      </div>
-                    </li>
-                  </div>
-                  
-                  <!-- Second Column: Last 2 Pillars -->
-                  <div class="space-y-6">
-                    <!-- Zakat -->
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <div class="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
-                          4
-                        </div>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-2xl font-semibold text-gray-800 font-serif">Zakat</h3>
-                        <p class="text-lg text-gray-600 font-light">Almsgiving</p>
-                      </div>
-                    </li>
-        
-                    <!-- Hajj -->
-                    <li class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <div class="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">
-                          5
-                        </div>
-                      </div>
-                      <div class="ml-4">
-                        <h3 class="text-2xl font-semibold text-gray-800 font-serif">Hajj</h3>
-                        <p class="text-lg text-gray-600 font-light">Pilgrimage</p>
-                      </div>
-                    </li>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </a>
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://e0.pxfuel.com/wallpapers/564/44/desktop-wallpaper-youtube-channel-art-cartoon-cartoon-banner.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
+            </h2>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
           </div>
-        </section>
-        <!--Donate Now-->
-        <section class="bg-white py-12">
-          <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-              <h2 class="text-4xl font-bold text-gray-800 mb-4">Donate For Humanity</h2>
-              <p class="text-lg text-gray-700">
-                May Allah give the opportunity to help families who are in need, and offer them a safe stay and health when lives are at risk.
-              </p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              <!-- Card 1: Schools -->
-              <div class="bg-yellow-100 rounded-lg shadow-lg p-6 text-center transform transition hover:scale-105">
-                <div class="mb-4">
-                  <i class="fas fa-school text-4xl text-blue-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Schools</h3>
-                <p class="text-gray-600">
-                  Support educational institutions to provide quality education to children in need.
-                </p>
-              </div>
-              
-              <!-- Card 2: Orphanages -->
-              <div class="bg-yellow-100 rounded-lg shadow-lg p-6 text-center transform transition hover:scale-105">
-                <div class="mb-4">
-                  <i class="fas fa-child text-4xl text-yellow-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Orphanages</h3>
-                <p class="text-gray-600">
-                  Help provide a safe and nurturing environment for orphaned children.
-                </p>
-              </div>
-              
-              <!-- Card 3: Hunger Relief -->
-              <div class="bg-yellow-100 rounded-lg shadow-lg p-6 text-center transform transition hover:scale-105">
-                <div class="mb-4">
-                  <i class="fas fa-utensils text-4xl text-red-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Hunger Relief</h3>
-                <p class="text-gray-600">
-                  Assist in providing food and essentials to those suffering from hunger.
-                </p>
-              </div>
-            </div>
-            
-            <div class="text-center mt-12">
-              <a href="donate.html" class="bg-[#FFC55A] font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-white-600 transition duration-300">
-                Donate Now
-              </a>
-            </div>
+        </a>
+         <!-- Single Video Card -->
+         <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://imgcdn.stablediffusionweb.com/2024/5/3/a7f73c37-8f05-40e4-bb3f-1cfc67413668.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">Title 1</h2>
+           <p class="text-gray-600 text-sm mt-2">Channel Name</p>
+           <p class="text-gray-500 text-xs mt-1">1M views • 2 days ago</p>
+         </div>
+       </a>
+       <!-- Repeat the above div for more video cards -->
+       <a
+         href="single-content2.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://img.lovepik.com/background/20211022/medium/lovepik-cartoon-jade-rabbit-congratulate-mid-autumn-banner-background-image_605644392.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
+       <!-- Repeat for additional video cards -->
+       <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://www.shutterstock.com/image-vector/kids-holding-big-poster-happy-600nw-681272584.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
+       <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://img.freepik.com/free-vector/cute-puppy-with-wooden-sign_1308-173162.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
+        <!-- Single Video Card -->
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://cdn.designcrowd.com/blog/2016/April/cartoons-miscast/GR_MiscastCartoonCharacters_Banner_828x300.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">Title 1</h2>
+            <p class="text-gray-600 text-sm mt-2">Channel Name</p>
+            <p class="text-gray-500 text-xs mt-1">1M views • 2 days ago</p>
           </div>
-        </section>
-  <!--End Donate Now-->     
-  <!--Recent Blogs-->
-  <section class="bg-yellow-50 py-8 lg:py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center ">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">Recent News</h2>
-        <p class="text-lg text-gray-700">
-          Stay updated with our latest insights, news, and articles. Read our recent news to learn more about various topics.
-        </p>
+        </a>
+        <!-- Repeat the above div for more video cards -->
+        <a
+          href="single-content2.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://i.pinimg.com/736x/95/a1/6b/95a16bec55bc67bddd20e6222f239ab7.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
+            </h2>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+          </div>
+        </a>
+        <!-- Repeat for additional video cards -->
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://t4.ftcdn.net/jpg/06/33/12/35/360_F_633123597_eUUvLKIBf7E5ukggCvZJ4dz02MqT5L9Q.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
+            </h2>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+          </div>
+        </a>
+        <a
+          href="single-content.html"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="https://e0.pxfuel.com/wallpapers/564/44/desktop-wallpaper-youtube-channel-art-cartoon-cartoon-banner.jpg"
+            alt="Thumbnail"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">
+              Another Video Title
+            </h2>
+            <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+            <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+          </div>
+        </a>
+         <!-- Single Video Card -->
+         <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://cdn.designcrowd.com/blog/2016/April/cartoons-miscast/GR_MiscastCartoonCharacters_Banner_828x300.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">Title 1</h2>
+           <p class="text-gray-600 text-sm mt-2">Channel Name</p>
+           <p class="text-gray-500 text-xs mt-1">1M views • 2 days ago</p>
+         </div>
+       </a>
+       <!-- Repeat the above div for more video cards -->
+       <a
+         href="single-content2.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://i.pinimg.com/736x/95/a1/6b/95a16bec55bc67bddd20e6222f239ab7.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
+       <!-- Repeat for additional video cards -->
+       <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://t4.ftcdn.net/jpg/06/33/12/35/360_F_633123597_eUUvLKIBf7E5ukggCvZJ4dz02MqT5L9Q.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
+       <a
+         href="single-content.html"
+         class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+       >
+         <img
+           src="https://e0.pxfuel.com/wallpapers/564/44/desktop-wallpaper-youtube-channel-art-cartoon-cartoon-banner.jpg"
+           alt="Thumbnail"
+           class="w-full h-40 object-cover"
+         />
+         <div class="p-4">
+           <h2 class="text-lg font-semibold text-gray-800">
+             Another Video Title
+           </h2>
+           <p class="text-gray-600 text-sm mt-2">Another Channel</p>
+           <p class="text-gray-500 text-xs mt-1">500K views • 1 week ago</p>
+         </div>
+       </a>
       </div>
-      
-      <div class="max-w-7xl  mx-auto px-4 py-8">
-        
-      
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <a href="single-news.html" class="bg-white shadow-md rounded-lg overflow-hidden block">
-            <img src="https://minhajlondon.org/wp-content/uploads/2023/10/Minhaj-Sisters-5-870x400.png" alt="Event Image" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <div class="text-sm text-gray-500 mb-2">
-                <span>Published: 1st September 2024</span> | <span>Author: John Doe</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Youth Girls Halaqah First Session</h3>
-              <p class="text-gray-700">This is a short description of the event. It provides a brief overview of what the event is about.</p>
-            </div>
-          </a>
-        
-          <!-- Card 2 -->
-          <a href="single-news.html" class="bg-white shadow-md rounded-lg overflow-hidden block">
-            <img src="https://diyanetamerica.org/wp-content/uploads/2019/07/July15-15temmuz-2-dca.jpg" alt="Event Image" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <div class="text-sm text-gray-500 mb-2">
-                <span>Published: 3rd September 2024</span> | <span>Author: Jane Smith</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Democracy and National Unity Day – July 15th Program at the Mosque</h3>
-              <p class="text-gray-700">This is another short description of the event, highlighting key details and interesting points.</p>
-            </div>
-          </a>
-        
-          <!-- Card 3 -->
-          <a href="single-news.html" class="bg-white shadow-md rounded-lg overflow-hidden block">
-            <img src="https://diyanetamerica.org/wp-content/uploads/2024/06/Sunday-School-7.png" alt="Event Image" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <div class="text-sm text-gray-500 mb-2">
-                <span>Published: 5th September 2024</span> | <span>Author: Alex Brown</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Sunday School Year-End Graduation Ceremony 2023-2024</h3>
-              <p class="text-gray-700">This event description provides a summary of the event’s purpose and important information.</p>
-            </div>
-          </a>
-        </div>
-    </div>
-  </section>
-     <!--Subscribe now-->
-     <section class="bg-yellow-100 py-8">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-8">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Subscribe Now</h2>
-          <p class="text-lg text-gray-700">
-            We let you receive the latest information on Islam, as well as offers, tips, and updates.
-          </p>
-        </div>
-        
-        <div class="flex justify-center">
-          <form action="#" method="POST" class="w-full max-w-md">
-            <div class="flex flex-col sm:flex-row items-center">
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                class="w-full sm:w-2/3 px-4 py-2 mb-4 sm:mb-0 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <button
-                type="submit"
-                class="w-full sm:w-1/3 bg-[#FFC55A] font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-white transition duration-300"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-            
-
-        <!--End Feature Section-->
-      </main>
-
-      <!-- Footer -->
-      <footer class="relative bg-black pt-8 pb-6">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="flex flex-wrap text-left lg:text-left">
-            <div class="w-full lg:w-6/12 px-4">
-              <h4 class="text-2xl mb-4 text-yellow-100 font-semibold">
-                Stay Connected with Us
-              </h4>
-              <h5 class="text-lg mt-0 mb-2 text-yellow-100">
-                Follow us on social media for updates on prayer times, events,
-                and community news.
-              </h5>
-              <div class="mt-6 lg:mb-0 mb-6">
-                <button
-                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-twitter"></i>
-                </button>
-                <button
-                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-facebook-square"></i>
-                </button>
-                <button
-                  class="bg-white text-green-600 shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i class="fab fa-whatsapp"></i>
-                </button>
-              </div>
-            </div>
-            <div class="w-full lg:w-6/12 px-4">
-              <div class="flex flex-wrap items-top mb-6">
-                <div class="w-full lg:w-4/12 px-4 ml-auto">
-                  <span
-                    class="block uppercase text-yellow-100 text-lg font-semibold mb-4"
-                    >Important Links</span
-                  >
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#about-us"
-                      >
-                        About the Mosque
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#services"
-                      >
-                        Prayer Services
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#events"
-                      >
-                        Events & Programs
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#donate"
-                      >
-                        Donate
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="w-full lg:w-6/12 px-4">
-                  <span
-                    class="block uppercase text-yellow-100 text-lg font-semibold mb-4"
-                    >Additional Resources</span
-                  >
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#terms"
-                      >
-                        Terms & Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="#privacy"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="text-yellow-100 hover:text-gray-800 font-semibold block pb-2 text-sm"
-                        href="contact.html"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="my-6 border-gray-400" />
-          <div
-            class="flex flex-wrap items-center md:justify-between justify-center"
-          >
-            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div class="text-sm text-yellow-100 font-semibold py-1">
-                &copy; <span id="get-current-year"></span> Masjid E Bilal. All
-                rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- End Footer -->
-
-      <!--Menu Scrolling JS in the Menu Page-->
-      <script>
-        document
-          .getElementById("menu-toggle")
-          .addEventListener("click", function () {
-            var menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
-          });
-
-        document.querySelectorAll(".menu-link").forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            const offset = 130;
-
-            // Check if mobile menu is already hidden before scrolling
-            const mobileMenu = document.getElementById("mobile-menu");
-            if (!mobileMenu.classList.contains("hidden")) {
-              mobileMenu.classList.add("hidden");
-            }
-
-            window.scrollTo({
-              top: targetElement.offsetTop - offset,
-              behavior: "smooth",
-            });
-          });
-        });
-      </script>
-      <script src="js/index.js"></script>
-
-      <!-- Alpine.js CDN -->
-      <script
-        src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
-        defer
-      ></script>
-      <!--Order Confirm Modal JS-->
-      <script>
-        document
-          .getElementById("confirmOrderButton")
-          .addEventListener("click", function () {
-            var modal = document.getElementById("orderConfirmedModal");
-            modal.style.display = "flex";
-
-            setTimeout(function () {
-              modal.style.display = "none";
-            }, 3000); // 3000 milliseconds = 3 seconds
-          });
-      </script>
     </div>
   </body>
 </html>
