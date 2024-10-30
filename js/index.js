@@ -55,21 +55,43 @@ dots.forEach((dot, index) => {
 //Owl Carousel 
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
-    items: 4, // Number of items on large screens
+    items: 4, 
     margin: 10,
     responsive: {
       0: {
-        items: 2, // Number of items on mobile screens
+        items: 2,
       },
       768: {
-        items: 4, // Number of items on larger screens
+        items: 4,
       },
       1068: {
         items: 5,
       },
+      1268: {
+        items: 6,
+      },
     },
-    loop: true, // Enable looping
-    autoplayTimeout: 3000, // Autoplay duration
-    autoplayHoverPause: true, // Pause on hover
+    loop: true, 
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true, 
   });
 });
+     //Product Details Animation
+      const mainImage = document.getElementById("mainImage");
+          
+     
+      const thumbnails = document.querySelectorAll(".thumbnail");
+    
+      
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", () => {
+         
+          mainImage.classList.add("opacity-0");
+    
+          
+          setTimeout(() => {
+            mainImage.src = thumbnail.src;
+            mainImage.classList.remove("opacity-0");
+          }, 300); 
+        });
+      });
