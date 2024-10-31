@@ -24,15 +24,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <style>
-    /* Smooth transition effect for opacity */
+    #thankYouModal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 50;
+    }
+
     #mainImage {
-              transition: opacity 0.3s ease-in-out;
-            }
-          
-            /* Hidden state for fade-out effect */
-            .opacity-0 {
-              opacity: 0;
-            }
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .opacity-0 {
+      opacity: 0;
+    }
     .navbar {
       list-style-type: none;
       padding: 0;
@@ -170,32 +178,32 @@
                 <ul class="submenu z-50">
                   <!-- iPhone subcategory -->
                   <li class="submenu-item w-32 lg:w-48">
-                    <a href="javascript:void(0)" class="submenu-link">iPhone</a>
+                    <a href="#" class="submenu-link">iPhone</a>
 
                     <!-- Child category dropdown for iPhone models (shows only on hover over "iPhone") -->
                     <ul class="childmenu font-semibold w-40 lg:w-48">
                       <li class="childmenu-item border-b">
-                        <a href="javascript:void(0)" class="childmenu-link"
+                        <a href="product.html" class="childmenu-link"
                           >iPhone 16 Pro Max</a
                         >
                       </li>
                       <li class="childmenu-item border-b">
-                        <a href="javascript:void(0)" class="childmenu-link"
+                        <a href="product.html" class="childmenu-link"
                           >iPhone 16 Pro</a
                         >
                       </li>
                       <li class="childmenu-item border-b">
-                        <a href="javascript:void(0)" class="childmenu-link"
+                        <a href="product.html" class="childmenu-link"
                           >iPhone 16
                         </a>
                       </li>
                       <li class="childmenu-item border-b">
-                        <a href="javascript:void(0)" class="childmenu-link"
+                        <a href="product.html" class="childmenu-link"
                           >iPhone 15 Pro Max</a
                         >
                       </li>
                       <li class="childmenu-item border-b">
-                        <a href="javascript:void(0)" class="childmenu-link"
+                        <a href="product.html" class="childmenu-link"
                           >iPhone 15 Pro</a
                         >
                       </li>
@@ -331,26 +339,25 @@
             >
           </span>
           <a href="cart.html">
-
             <span class="relative">
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20px"
-              height="20px"
-              class="cursor-pointer fill-[#000] hover:fill-[#007bff] inline-block"
-              viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                class="cursor-pointer fill-[#000] hover:fill-[#007bff] inline-block"
+                viewBox="0 0 512 512"
               >
-              <path
-              d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
-              data-original="#000000"
-              ></path>
-            </svg>
-            <span
-            class="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white"
-            >4</span
-            >
-          </span>
-        </a>
+                <path
+                  d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
+                  data-original="#000000"
+                ></path>
+              </svg>
+              <span
+                class="absolute left-auto -ml-1 -top-1 rounded-full bg-red-500 px-1 py-0 text-xs text-white"
+                >4</span
+              >
+            </span>
+          </a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20px"
@@ -476,7 +483,7 @@
 
         <div class="owl-carousel owl-theme">
           <!-- Product Card 1 -->
-          
+
           <div class="item p-4">
             <a href="product-details.html" class="block">
               <div
@@ -488,20 +495,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -510,7 +517,6 @@
               </div>
             </a>
           </div>
-          
 
           <!-- Product Card 2 -->
           <div class="item p-4">
@@ -524,20 +530,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -557,20 +563,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -590,20 +596,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -623,20 +629,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -656,20 +662,20 @@
                   class="w-full h-[150px] object-contain"
                 />
                 <div class="p-4 flex flex-col justify-center items-center">
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                     Product Title 1
                   </h3>
-                  <p class="text-gray-600 text-base">$29.99</p>
-          
+                  <p class="text-gray-600 text-base font-bold">$29.99</p>
+
                   <!-- Star Rating -->
                   <div class="flex items-center mt-2">
                     <span class="text-yellow-500"> ★★★★☆ </span>
                     <span class="text-gray-600 ml-2">(4.0)</span>
                   </div>
-          
+
                   <div class="flex justify-between items-center mt-4">
                     <button
-                      class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                      class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       Add to Cart
                     </button>
@@ -678,7 +684,7 @@
               </div>
             </a>
           </div>
-                                                  
+
           <!-- Product Card 4 -->
           <div class="item p-4">
             <div
@@ -690,10 +696,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -703,7 +709,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -722,10 +728,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -735,7 +741,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -753,10 +759,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -766,7 +772,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -800,10 +806,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -813,7 +819,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -833,10 +839,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -846,7 +852,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -865,10 +871,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -878,7 +884,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -897,10 +903,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -910,7 +916,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -929,10 +935,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -942,7 +948,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -960,10 +966,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -973,7 +979,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1007,10 +1013,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1020,7 +1026,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1040,10 +1046,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1053,7 +1059,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1072,10 +1078,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1085,7 +1091,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1104,10 +1110,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1117,7 +1123,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1136,10 +1142,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1149,7 +1155,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>
@@ -1167,10 +1173,10 @@
                 class="w-full h-[150px] object-contain"
               />
               <div class="p-4 flex flex-col justify-center items-center">
-                <h3 class="text-lg font-semibold text-gray-800">
+                <h3 class="text-base mb-2 lg:text-lg text-gray-800">
                   Product Title 1
                 </h3>
-                <p class="text-gray-600 text-base">$29.99</p>
+                <p class="text-gray-600 text-base font-bold">$29.99</p>
 
                 <!-- Star Rating -->
                 <div class="flex items-center mt-2">
@@ -1180,7 +1186,7 @@
 
                 <div class="flex justify-between items-center mt-4">
                   <button
-                    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
                   >
                     Add to Cart
                   </button>

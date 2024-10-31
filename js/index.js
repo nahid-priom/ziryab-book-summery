@@ -95,3 +95,17 @@ $(document).ready(function () {
           }, 300); 
         });
       });
+      //Thank you Modal
+      function showThankYouModal() {
+        // Get modal element
+        const modal = document.getElementById('thankYouModal');
+        
+        // Show the modal by setting display to flex
+        modal.style.display = 'flex';
+        
+        // Automatically hide the modal after 2 seconds
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 2000);
+      }
+      
