@@ -409,177 +409,85 @@
       </div>
     </header>
     <main>
-      <section
-        class="max-w-6xl mx-auto my-2 lg:my-8 p-4 lg:p-8 bg-gray-50 rounded-lg shadow-lg"
-      >
-        <h2
-          class="text-3xl font-bold mb-6 text-gray-800 text-center lg:text-left"
-        >
-          Checkout
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Billing Details Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Billing Details
-            </h3>
-            <form class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="Doe"
-                  />
-                </div>
+        <section class="flex items-center justify-center py-10 bg-gray-100 px-4">
+            <div class="max-w-3xl w-full bg-white rounded-lg shadow-md p-8">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Order #10234 Details</h2>
+          
+              <!-- Order Summary -->
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700">Order Summary</h3>
+                <p class="text-gray-600">Order Date: <span class="font-medium">October 1, 2024</span></p>
+                <p class="text-gray-600">Status: 
+                  <span class="font-medium text-green-600 bg-green-100 px-2 py-1 rounded-lg">Delivered</span>
+                </p>
+                <p class="text-gray-600">Total: <span class="font-bold">$120.50</span></p>
               </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="johndoe@example.com"
-                />
+          
+              <!-- Shipping Address -->
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700">Shipping Address</h3>
+                <p class="text-gray-600">John Doe</p>
+                <p class="text-gray-600">1234 Elm Street, Apt 56</p>
+                <p class="text-gray-600">Springfield, IL 62704</p>
+                <p class="text-gray-600">United States</p>
               </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="+123 456 7890"
-                />
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2">Address</label>
-                <input
-                  type="text"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="123 Main St"
-                />
-              </div>
-              <div class="mt-6">
-                <label class="block text-gray-700 text-sm font-semibold mb-4">Shipping Method</label>
-                <div class="flex space-x-4">
-                  <!-- FedEx Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="FedEx"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">FedEx</span>
-                  </label>
-              
-                  <!-- UPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="UPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">UPS</span>
-                  </label>
-              
-                  <!-- USPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="USPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">USPS</span>
-                  </label>
-                </div>
-              </div>
-              
-            </form>
-          </div>
-
-          <!-- Order Summary Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Order Summary
-            </h3>
-            <div class="bg-white p-4 rounded-lg shadow-md space-y-4">
-              <!-- List of Products -->
-              <div class="flex items-center justify-between border-b pb-4">
-                <div class="flex items-center space-x-4">
-                  <img
-                    src="https://image.made-in-china.com/226f3j00wZCiAkhBpsoa/Phone-Spare-Parts-LCD-for-Nokia-2-4-Screen-Replacement-Mobile-LCD-Touch-Digitizer-Display.webp"
-                    alt="Product 1"
-                    class="w-16 h-16 object-cover rounded-md"
-                  />
-                  <div>
-                    <h4 class="text-gray-800 font-semibold">Product Title 1</h4>
-                    <p class="text-gray-600 text-sm">Qty: 1</p>
+          
+              <!-- Item Details -->
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-700">Items in this Order</h3>
+                <div class="mt-4">
+                  <!-- Item 1 -->
+                  <div class="flex items-center justify-between border-b py-4">
+                    <div>
+                      <p class="font-medium text-gray-800">Charging Port Flex Cable Compatible For iPhone 16 Pro Max</p>
+                      <p class="text-sm text-gray-600">Quantity: 2</p>
+                    </div>
+                    <p class="font-medium text-gray-800">$72.57</p>
+                  </div>
+                  
+                  <!-- Item 2 -->
+                  <div class="flex items-center justify-between border-b py-4">
+                    <div>
+                      <p class="font-medium text-gray-800">Front Camera Compatible For iPhone 16 Pro Max</p>
+                      <p class="text-sm text-gray-600">Quantity: 1</p>
+                    </div>
+                    <p class="font-medium text-gray-800">$89.71</p>
                   </div>
                 </div>
-                <p class="text-gray-800 font-semibold">$29.99</p>
               </div>
-              <!-- Repeat for other products -->
+          
+              <!-- Order Summary Totals -->
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-gray-600">Subtotal</p>
+                  <p class="text-gray-800 font-medium">$234.85</p>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-gray-600">Shipping</p>
+                  <p class="text-gray-800 font-medium">$10.00</p>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-gray-600">Tax</p>
+                  <p class="text-gray-800 font-medium">$15.65</p>
+                </div>
+                <div class="flex items-center justify-between font-bold text-lg mt-4">
+                  <p>Total</p>
+                  <p>$260.50</p>
+                </div>
+              </div>
+          
+              <!-- Back to Orders Button -->
+              <div class="mt-6">
+                <a href="order-details.html">
 
-              <!-- Price Details -->
-              <div class="space-y-2">
-                <div class="flex justify-between text-gray-800">
-                  <p>Subtotal:</p>
-                  <p>$59.98</p>
-                </div>
-                <div class="flex justify-between text-gray-800">
-                  <p>Shipping:</p>
-                  <p>$10.00</p>
-                </div>
-                <div
-                  class="flex justify-between text-xl font-bold text-gray-800"
-                >
-                  <p>Total:</p>
-                  <p>$69.98</p>
-                </div>
+                    <button class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200">Back to Orders</button>
+                </a>
               </div>
-              <!-- Place Order Button triggers the modal on click -->
-              <button
-                onclick="showThankYouModal()"
-                class="w-full bg-red-600 text-white py-2 rounded-md font-semibold hover:bg-black transition"
-              >
-                Place Order
-              </button>
             </div>
-          </div>
-        </div>
-        <!-- Thank You Modal (Initially Hidden) -->
-        <div
-          id="thankYouModal"
-          class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
-          style="display: none"
-        >
-          <div class="bg-white rounded-lg p-6 text-center shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
-            <p class="text-gray-600">
-              Your order has been placed successfully.
-            </p>
-          </div>
-        </div>
-      </section>
+          </section>
+          
+          
+          
     </main>
     <!-- Footer container -->
     <footer

@@ -409,177 +409,79 @@
       </div>
     </header>
     <main>
-      <section
-        class="max-w-6xl mx-auto my-2 lg:my-8 p-4 lg:p-8 bg-gray-50 rounded-lg shadow-lg"
-      >
-        <h2
-          class="text-3xl font-bold mb-6 text-gray-800 text-center lg:text-left"
-        >
-          Checkout
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Billing Details Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Billing Details
-            </h3>
-            <form class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="py-10 bg-gray-100 p-6 flex justify-center items-center">
+            <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-8">
+          
+              <!-- Profile Header -->
+              <div class="flex items-center space-x-4 border-b pb-6 mb-6">
+                <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="Profile Picture" class="w-24 h-24 rounded-full border">
+               <div class="flex flex-col lg:flex-row gap-5 justify-center items-center">
                 <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="John"
-                  />
+                    <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
+                    <p class="text-gray-600">john.doe@example.com</p>
+                    <p class="text-sm text-gray-500">Joined: January 15, 2022</p>
+                  </div>
+                  
+               </div>
+              </div>
+          
+              <!-- Profile Info Section -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Basic Information -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-4">Basic Information</h3>
+                  <p><span class="font-medium text-gray-700">Full Name:</span> John Doe</p>
+                  <p><span class="font-medium text-gray-700">Phone:</span> +1 (555) 123-4567</p>
+                  <p><span class="font-medium text-gray-700">Address:</span> 1234 Elm Street, Apt 56, Springfield, IL 62704</p>
                 </div>
-                <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="Doe"
-                  />
-                </div>
+          
+                <!-- Account Settings -->
+               
               </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="johndoe@example.com"
-                />
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="+123 456 7890"
-                />
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2">Address</label>
-                <input
-                  type="text"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="123 Main St"
-                />
-              </div>
-              <div class="mt-6">
-                <label class="block text-gray-700 text-sm font-semibold mb-4">Shipping Method</label>
-                <div class="flex space-x-4">
-                  <!-- FedEx Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="FedEx"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">FedEx</span>
-                  </label>
-              
-                  <!-- UPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="UPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">UPS</span>
-                  </label>
-              
-                  <!-- USPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="USPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">USPS</span>
-                  </label>
-                </div>
-              </div>
-              
-            </form>
-          </div>
+          
+              <!-- Recent Orders Section -->
+              <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Orders</h3>
+                <div class="space-y-4">
+                  
+                  <!-- Order 1 -->
+                  <div class="bg-gray-50 p-4 rounded-lg shadow flex justify-between items-center">
+                    <div>
+                      <p class="font-medium text-gray-700">Order #10234</p>
+                      <p class="text-gray-600">Date: October 1, 2024</p>
+                      <p class="text-gray-600">Total: $120.50</p>
+                    </div>
+                    <a href="order-view-details.html">
 
-          <!-- Order Summary Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Order Summary
-            </h3>
-            <div class="bg-white p-4 rounded-lg shadow-md space-y-4">
-              <!-- List of Products -->
-              <div class="flex items-center justify-between border-b pb-4">
-                <div class="flex items-center space-x-4">
-                  <img
-                    src="https://image.made-in-china.com/226f3j00wZCiAkhBpsoa/Phone-Spare-Parts-LCD-for-Nokia-2-4-Screen-Replacement-Mobile-LCD-Touch-Digitizer-Display.webp"
-                    alt="Product 1"
-                    class="w-16 h-16 object-cover rounded-md"
-                  />
-                  <div>
-                    <h4 class="text-gray-800 font-semibold">Product Title 1</h4>
-                    <p class="text-gray-600 text-sm">Qty: 1</p>
+                        <button class="bg-blue-800 text-white px-2 py-2 lg:px-4 lg:py-2 text-sm lg:text-base rounded-md hover:bg-blue-700 transition duration-200">View Details</button>
+                    </a>
+                  </div>
+                  
+                  <!-- Order 2 -->
+                  <div class="bg-gray-50 p-4 rounded-lg shadow flex justify-between items-center">
+                    <div>
+                      <p class="font-medium text-gray-700">Order #10233</p>
+                      <p class="text-gray-600">Date: September 15, 2024</p>
+                      <p class="text-gray-600">Total: $85.00</p>
+                    </div>
+                    <a href="order-view-details.html">
+
+                        <button class="bg-blue-800 text-white px-2 py-2 lg:px-4 lg:py-2 text-sm lg:text-base rounded-md hover:bg-blue-700 transition duration-200">View Details</button>
+                    </a>
                   </div>
                 </div>
-                <p class="text-gray-800 font-semibold">$29.99</p>
               </div>
-              <!-- Repeat for other products -->
-
-              <!-- Price Details -->
-              <div class="space-y-2">
-                <div class="flex justify-between text-gray-800">
-                  <p>Subtotal:</p>
-                  <p>$59.98</p>
-                </div>
-                <div class="flex justify-between text-gray-800">
-                  <p>Shipping:</p>
-                  <p>$10.00</p>
-                </div>
-                <div
-                  class="flex justify-between text-xl font-bold text-gray-800"
-                >
-                  <p>Total:</p>
-                  <p>$69.98</p>
-                </div>
+          
+              <!-- Logout Button -->
+              <div class="text-right">
+                <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-500 transition duration-200">Logout</button>
               </div>
-              <!-- Place Order Button triggers the modal on click -->
-              <button
-                onclick="showThankYouModal()"
-                class="w-full bg-red-600 text-white py-2 rounded-md font-semibold hover:bg-black transition"
-              >
-                Place Order
-              </button>
+              
             </div>
-          </div>
-        </div>
-        <!-- Thank You Modal (Initially Hidden) -->
-        <div
-          id="thankYouModal"
-          class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
-          style="display: none"
-        >
-          <div class="bg-white rounded-lg p-6 text-center shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
-            <p class="text-gray-600">
-              Your order has been placed successfully.
-            </p>
-          </div>
-        </div>
-      </section>
+          </section>
+          
+          
+          
     </main>
     <!-- Footer container -->
     <footer

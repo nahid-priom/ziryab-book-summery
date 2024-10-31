@@ -409,177 +409,41 @@
       </div>
     </header>
     <main>
-      <section
-        class="max-w-6xl mx-auto my-2 lg:my-8 p-4 lg:p-8 bg-gray-50 rounded-lg shadow-lg"
-      >
-        <h2
-          class="text-3xl font-bold mb-6 text-gray-800 text-center lg:text-left"
-        >
-          Checkout
-        </h2>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Billing Details Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Billing Details
-            </h3>
-            <form class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label class="block text-gray-700 text-sm mb-2"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    class="w-full border rounded-lg px-3 py-2"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="johndoe@example.com"
-                />
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2"
-                  >Phone Number</label
-                >
-                <input
-                  type="tel"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="+123 456 7890"
-                />
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm mb-2">Address</label>
-                <input
-                  type="text"
-                  class="w-full border rounded-lg px-3 py-2"
-                  placeholder="123 Main St"
-                />
-              </div>
-              <div class="mt-6">
-                <label class="block text-gray-700 text-sm font-semibold mb-4">Shipping Method</label>
-                <div class="flex space-x-4">
-                  <!-- FedEx Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="FedEx"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">FedEx</span>
-                  </label>
+        <section class="flex items-center justify-center py-10 bg-gray-100 px-4">
+            <div class="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+              <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Login to Your Account</h2>
               
-                  <!-- UPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="UPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">UPS</span>
-                  </label>
+              <form action="/login" method="POST">
+                <!-- Email Input -->
+                <div class="mb-4">
+                  <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="you@example.com">
+                </div>
+          
+                <!-- Password Input -->
+                <div class="mb-6">
+                  <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
+                  <input type="password" id="password" name="password" required class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter your password">
+                </div>
+          
+                <!-- Login Button -->
+                <button type="submit" class="w-full bg-blue-800 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">Log In</button>
+                
+                <!-- Forgot Password -->
+                <div class="mt-4 text-center">
+                  <a href="/forgot-password" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+                </div>
+              </form>
               
-                  <!-- USPS Shipping Option -->
-                  <label class="flex items-center px-4 py-3 border border-gray-300 rounded-lg cursor-pointer transition hover:bg-gray-100 focus-within:border-blue-500">
-                    <input
-                      type="radio"
-                      name="shippingMethod"
-                      value="USPS"
-                      class="form-radio h-5 w-5 text-blue-500"
-                    />
-                    <span class="ml-2 text-gray-800 font-medium">USPS</span>
-                  </label>
-                </div>
+              <!-- Registration Link for New Users -->
+              <div class="mt-6 text-center">
+                <p class="text-gray-700">Don't have an account? 
+                  <a href="registration.html" class="text-blue-600 font-semibold hover:underline">Register here</a>
+                </p>
               </div>
-              
-            </form>
-          </div>
-
-          <!-- Order Summary Section -->
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Order Summary
-            </h3>
-            <div class="bg-white p-4 rounded-lg shadow-md space-y-4">
-              <!-- List of Products -->
-              <div class="flex items-center justify-between border-b pb-4">
-                <div class="flex items-center space-x-4">
-                  <img
-                    src="https://image.made-in-china.com/226f3j00wZCiAkhBpsoa/Phone-Spare-Parts-LCD-for-Nokia-2-4-Screen-Replacement-Mobile-LCD-Touch-Digitizer-Display.webp"
-                    alt="Product 1"
-                    class="w-16 h-16 object-cover rounded-md"
-                  />
-                  <div>
-                    <h4 class="text-gray-800 font-semibold">Product Title 1</h4>
-                    <p class="text-gray-600 text-sm">Qty: 1</p>
-                  </div>
-                </div>
-                <p class="text-gray-800 font-semibold">$29.99</p>
-              </div>
-              <!-- Repeat for other products -->
-
-              <!-- Price Details -->
-              <div class="space-y-2">
-                <div class="flex justify-between text-gray-800">
-                  <p>Subtotal:</p>
-                  <p>$59.98</p>
-                </div>
-                <div class="flex justify-between text-gray-800">
-                  <p>Shipping:</p>
-                  <p>$10.00</p>
-                </div>
-                <div
-                  class="flex justify-between text-xl font-bold text-gray-800"
-                >
-                  <p>Total:</p>
-                  <p>$69.98</p>
-                </div>
-              </div>
-              <!-- Place Order Button triggers the modal on click -->
-              <button
-                onclick="showThankYouModal()"
-                class="w-full bg-red-600 text-white py-2 rounded-md font-semibold hover:bg-black transition"
-              >
-                Place Order
-              </button>
             </div>
-          </div>
-        </div>
-        <!-- Thank You Modal (Initially Hidden) -->
-        <div
-          id="thankYouModal"
-          class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
-          style="display: none"
-        >
-          <div class="bg-white rounded-lg p-6 text-center shadow-lg">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
-            <p class="text-gray-600">
-              Your order has been placed successfully.
-            </p>
-          </div>
-        </div>
-      </section>
+          </section>
+          
     </main>
     <!-- Footer container -->
     <footer
