@@ -13,6 +13,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- jQuery & Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <body>
     <header class="bg-white shadow-md">
@@ -23,7 +35,7 @@
         <div class="md:hidden">
           <i
             id="hamburger-icon"
-            class="fas fa-bars text-gray-700 text-2xl cursor-pointer"
+            class="fas fa-bars text-green-600 text-2xl cursor-pointer"
           ></i>
         </div>
 
@@ -74,7 +86,7 @@
           <div class="relative">
             <i
               id="profile-icon"
-              class="fas fa-user-circle text-green-700 hover:scale-105 transition-all duration-300 ease-in-out transform text-2xl lg:text-3xl hover:text-gray-900  cursor-pointer"
+              class="fas fa-user-circle text-green-700 hover:scale-105 transition-all duration-300 ease-in-out transform text-2xl lg:text-3xl hover:text-gray-900 cursor-pointer"
             ></i>
             <div
               id="profile-dropdown"
@@ -165,7 +177,7 @@
         <!-- Right Side - Image -->
         <div class="lg:w-1/2">
           <img
-            src="https://www.easysigns.com/uploads/content/news/Featured_Image_Blog_40_Easy_Signs.jpg"
+            src="images/hero.jpg"
             alt="Hero Image"
             class="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out"
           />
@@ -189,6 +201,159 @@
           >
             Get Started
           </button>
+        </div>
+      </div>
+    </section>
+    <!--Populer Book Summery-->
+    <section class="py-16 bg-gray-800">
+      <div class="container mx-auto px-4">
+        <!-- Section Title -->
+        <h2 class="text-3xl lg:text-5xl font-bold text-white text-center mb-12">
+          Set your goal and start your
+          <span class="text-green-600">self-growth</span> journey
+        </h2>
+
+        <!-- Categories Carousel -->
+        <div class="owl-carousel owl-theme mb-4">
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-wallet text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">Create Wealth</p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-briefcase text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Successful Career
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-users text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Build a Close Family
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-bolt text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Increase Productivity
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-balance-scale text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Achieve Life Balance
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-heartbeat text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Lead a Healthy Lifestyle
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-user-check text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">Become Confident</p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-heart text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">Improve Sex Life</p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-handshake text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">
+                Develop Healthy Relationships
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-brain text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">Boost Intelligence</p>
+            </div>
+          </div>
+          <div
+            class="category-item bg-green-600 shadow-xl rounded-lg p-1 py-3 lg:p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div class="flex items-center justify-center space-x-4">
+              <i class="fas fa-smile text-white text-base lg:text-2xl"></i>
+              <p class="text-sm lg:text-lg font-semibold text-white">Reach Happiness</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Summary Card -->
+        <div
+          class="bg-green-100 shadow-2xl rounded-lg p-6 flex flex-col md:flex-row items-center hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <!-- Book Cover Image -->
+          <div class="w-full md:w-1/3">
+            <img
+              src="https://dcassetcdn.com/design_img/2495845/92203/92203_13351519_2495845_18b5b5c2_image.jpg"
+              alt="Book Cover"
+              class="rounded-lg object-cover shadow-lg w-[200px] transform hover:scale-105 transition-all duration-300"
+            />
+          </div>
+
+          <!-- Audio & Details -->
+          <div class="w-full md:w-2/3 md:pl-6 mt-6 md:mt-0">
+            <audio controls class="w-full rounded-3xl bg-green-100 shadow-md">
+              <source src="images/book-summery.mp3" type="audio/mp3" />
+              Your browser does not support the audio element.
+            </audio>
+
+            <!-- Separator -->
+            <hr class="my-4 border-gray-300" />
+
+            <!-- Book Name & Key Points -->
+            <h3 class="text-2xl font-semibold text-green-800">
+              The 7 Habits of Highly Effective People
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-2">
+              <li>Be Proactive</li>
+              <li>Begin with the End in Mind</li>
+              <li>Put First Things First</li>
+              <li>Think Win-Win</li>
+              <li>Seek First to Understand, Then to Be Understood</li>
+              <li>Synergize</li>
+              <li>Sharpen the Saw</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -237,6 +402,23 @@
 
         languageDropdown.addEventListener("click", function (event) {
           event.stopPropagation();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+         
+          dots: false,
+          autoplay: false,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 3 },
+            1000: { items: 5 },
+          },
         });
       });
     </script>
