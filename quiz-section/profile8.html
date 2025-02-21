@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Summaries Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- jQuery & Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </head>
+  <body>
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-4"
+      >
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden">
+          <i
+            id="hamburger-icon"
+            class="fas fa-bars text-green-600 text-2xl cursor-pointer"
+          ></i>
+        </div>
+
+        <!-- Logo on the left -->
+        <a href="../index.html">
+          <div class="flex items-center">
+            <img
+              src="../images/logo.png"
+              alt="Book Summaries Logo"
+              class="w-24 lg:w-40"
+            />
+          </div>
+        </a>
+
+        <!-- Navigation list in the middle -->
+        <nav id="nav-menu" class="hidden md:flex space-x-4 lg:space-x-8">
+          <a
+            href="#"
+            class="text-gray-600 text-lg font-bold hover:text-green-600 hover:scale-105 transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            Book Summaries
+          </a>
+          <a
+            href="#"
+            class="text-gray-600 hover:text-green-600 hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            For Business
+          </a>
+          <a
+            href="#"
+            class="text-gray-600 hover:text-green-600 hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            class="text-gray-600 hover:text-green-600 hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            Blog
+          </a>
+        </nav>
+
+        <!-- Right side: Get Started button and icons -->
+        <div class="flex items-center space-x-6">
+          <button
+            class="bg-green-600 text-white px-4 py-2 text-base lg:text-lg font-bold rounded-full hover:bg-green-100 hover:scale-105 transition-all duration-300 ease-in-out transform hover:text-black"
+          >
+            Get Started
+          </button>
+          <div class="relative">
+            <i
+              id="profile-icon"
+              class="fas fa-user-circle text-green-700 hover:scale-105 transition-all duration-300 ease-in-out transform text-2xl lg:text-3xl hover:text-gray-900 cursor-pointer"
+            ></i>
+            <div
+              id="profile-dropdown"
+              class="hidden z-50 absolute right-0 mt-2 lg:mt-4 w-40 flex flex-col gap-4 p-4 bg-green-600 text-white shadow-md rounded-b-lg"
+            >
+              <a
+                href="#"
+                class="text-white text-lg font-bold hover:text-white hover:scale-105 transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+              >
+                Login
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-white hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <!-- Language Icon -->
+          <div class="relative">
+            <i
+              id="language-icon"
+              class="fas fa-globe text-green-700 hover:scale-105 transition-all duration-300 ease-in-out transform text-2xl lg:text-3xl hover:text-gray-900 cursor-pointer"
+            ></i>
+            <div
+              id="language-dropdown"
+              class="hidden z-50 absolute right-0 mt-2 lg:mt-4 w-40 flex flex-col gap-4 p-4 bg-green-600 text-white shadow-md rounded-b-lg"
+            >
+              <a
+                href="#"
+                class="text-white text-lg font-bold hover:text-white hover:scale-105 transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+              >
+                Arabic
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-white hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+              >
+                Spanish
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-nav"
+        class="hidden md:hidden bg-white shadow-md rounded-b-2xl"
+      >
+        <nav
+          class="flex flex-col pl-12 bg-green-600 space-y-4 p-4 rounded-b-2xl"
+        >
+          <a
+            href="#"
+            class="text-gray-100 text-lg font-bold hover:text-white hover:scale-105 transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            Book Summaries
+          </a>
+          <a
+            href="#"
+            class="text-gray-100 hover:text-white hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            For Business
+          </a>
+          <a
+            href="#"
+            class="text-gray-100 hover:text-white hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            class="text-gray-100 hover:text-white hover:scale-105 text-lg font-bold transition-all duration-300 ease-in-out transform hover:underline hover:underline-offset-4"
+          >
+            Blog
+          </a>
+        </nav>
+      </div>
+    </header>
+    <section class="bg-green-50 flex flex-col items-center pt-20 text-center px-6 min-h-screen">
+        <div class="bg-white p-10 shadow-xl rounded-lg w-full max-w-2xl">
+          <!-- Title -->
+          <h2 class="text-3xl font-bold text-green-800 mb-6">
+            What describes you more?
+          </h2>
+      
+          <!-- Button Options -->
+          <div class="flex flex-col items-center justify-center space-y-4 py-4">
+            <!-- Leader Button -->
+            <button 
+              class="option-btn bg-green-100 border border-green-300 px-6 py-3 hover:text-white rounded-full text-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center space-x-2"
+              onclick="selectOption(this)"
+            >
+              <span class="text-xl">👑</span> <!-- Leader Icon -->
+              <span> A Leader</span>
+            </button>
+      
+            <!-- Follower Button -->
+            <button 
+              class="option-btn bg-green-100 border border-green-300 px-6 py-3  hover:text-white rounded-full text-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center space-x-2"
+              onclick="selectOption(this)"
+            >
+              <span class="text-xl">👥</span> <!-- Follower Icon -->
+              <span> A Follower</span>
+            </button>
+      
+            <!-- A Bit of Both Button -->
+            <button 
+              class="option-btn bg-green-100 border border-green-300 px-6 py-3  hover:text-white rounded-full text-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center space-x-2"
+              onclick="selectOption(this)"
+            >
+              <span class="text-xl">🤝</span> <!-- A Bit of Both Icon -->
+              <span> A Bit of Both</span>
+            </button>
+          </div>
+      
+          <!-- Buttons to Go Back or Continue -->
+          <div class="flex justify-center space-x-4 mt-12">
+            <button onclick="window.history.back()"
+              class="bg-gray-400 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-500 transition duration-300">
+              Go Back
+            </button>
+      
+            <button onclick="window.location.href='profile9.html'"
+              class="bg-green-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition duration-300">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- JavaScript for managing selected option -->
+      <script>
+        function selectOption(button) {
+          // Remove the active class from all options
+          const options = document.querySelectorAll('.option-btn');
+          options.forEach(option => {
+            option.classList.remove('bg-green-600', 'text-white');
+            option.classList.add('bg-green-100', 'border-green-300');
+          });
+      
+          // Add the active class to the selected button
+          button.classList.add('bg-green-600', 'text-white');
+          button.classList.remove('bg-green-100', 'border-green-300');
+        }
+      </script>
+      
+
+    <!-- Footer Section -->
+    <footer class="bg-green-900 text-white py-10">
+      <div
+        class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-5 gap-8"
+      >
+        <!-- Brand & About -->
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Ziryab</h2>
+          <p class="text-gray-300 text-sm">
+            Your daily dose of book summaries, helping you learn more in less
+            time.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trending Topics -->
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Trending Topics</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">Seduction</li>
+            <li class="text-gray-300">Self-Help for Women</li>
+            <li class="text-gray-300">Masculinity</li>
+            <li class="text-gray-300">Law of Attraction</li>
+          </ul>
+        </div>
+
+        <!-- Featured Summaries -->
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Featured Summaries</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">She Comes First</li>
+            <li class="text-gray-300">The Power of Your Subconscious Mind</li>
+            <li class="text-gray-300">Orientalism</li>
+            <li class="text-gray-300">Maid</li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition text-2xl"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition text-2xl"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition text-2xl"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition text-2xl"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="text-center text-gray-400 text-sm mt-8 border-t border-gray-600 pt-4"
+      >
+        &copy; 2025 Ziryab. All Rights Reserved.
+      </div>
+    </footer>
+    <script>
+      // Toggle mobile menu
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      hamburgerIcon.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Profile Dropdown
+        const profileIcon = document.getElementById("profile-icon");
+        const profileDropdown = document.getElementById("profile-dropdown");
+
+        // Language Dropdown
+        const languageIcon = document.getElementById("language-icon");
+        const languageDropdown = document.getElementById("language-dropdown");
+
+        profileIcon.addEventListener("click", function (event) {
+          event.stopPropagation();
+          profileDropdown.classList.toggle("hidden");
+          languageDropdown.classList.add("hidden"); // Hide language dropdown if open
+        });
+
+        languageIcon.addEventListener("click", function (event) {
+          event.stopPropagation();
+          languageDropdown.classList.toggle("hidden");
+          profileDropdown.classList.add("hidden"); // Hide profile dropdown if open
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function () {
+          profileDropdown.classList.add("hidden");
+          languageDropdown.classList.add("hidden");
+        });
+
+        // Prevent closing dropdown when clicking inside
+        profileDropdown.addEventListener("click", function (event) {
+          event.stopPropagation();
+        });
+
+        languageDropdown.addEventListener("click", function (event) {
+          event.stopPropagation();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+
+          dots: false,
+          autoplay: false,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 3 },
+            1000: { items: 5 },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
